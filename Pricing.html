@@ -1609,6 +1609,25 @@
           margin: 0 auto;
         }
       }
+
+      .book-demo-btn {
+        position: fixed;
+        bottom: 45px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-image: url("img/RM Home Page Icons/demo 1.png");
+        background-size: cover;
+        background-position: center;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1000;
+      }
+
+      .book-demo-btn:hover {
+        opacity: 0.8;
+      }
     </style>
   </head>
   <body>
@@ -1699,6 +1718,7 @@
         </div>
       </header>
       <div role="main" class="main">
+        <button class="book-demo-btn" id="openModalBtn2"></button>
         <section class="section bg-transparent position-relative border-0 mt-5-5 p-0">
           <div class="text-center" style="max-width: 1000px; margin: auto">
             <h1 class="font-weight-bold text-color-dark text-10 mt-5-5 text-center">Request Price</h1>
