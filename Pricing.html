@@ -1628,86 +1628,181 @@
       .book-demo-btn:hover {
         opacity: 0.8;
       }
+
+      @media (max-width: 900px) {
+        .pricing-table {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .pricing-card {
+          width: 90%;
+          max-width: 320px;
+        }
+      }
+
+      .body-pricing {
+        font-family: Arial, sans-serif;
+
+        padding: 20px;
+      }
+      .pricing-table {
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .table-header {
+        display: flex;
+        background: white;
+        color: #000;
+        font-size: 18px;
+        font-weight: bold;
+        height: 100px;
+      }
+      .table-header div {
+        flex: 1;
+        text-align: center;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+      }
+      .table-row {
+        display: flex;
+        padding: 0; /* Remove inner padding */
+      }
+      .table-row div {
+        flex: 1;
+        text-align: center;
+        padding: 25px; /* Ensure text inside has spacing */
+        background: white; /* Default background */
+      }
+      .feature-name {
+        text-align: left !important;
+
+        flex: 1.5;
+        background: white; /* Ensure this stays white */
+      }
+      .checkmark {
+        color: green;
+        font-size: 18px;
+      }
+      .cross {
+        color: red;
+        font-size: 18px;
+      }
+      .premium {
+        background: #e0e0e0 !important; /* Make the entire column grey */
+      }
+
+      /* Ensure the entire column is grey */
+      .table-row .premium {
+        background: #e0e0e0 !important;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .table-header {
+          flex-direction: column;
+          text-align: center;
+        }
+        .table-row {
+          flex-direction: column;
+          text-align: center;
+        }
+        .feature-name {
+          text-align: center !important;
+          margin-bottom: 5px;
+        }
+        .table-row div {
+          background: white !important; /* Reset backgrounds */
+        }
+        .table-row .premium {
+          background: #f7f7f7 !important; /* Keep premium grey */
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="body">
-      <header
-        id="header"
-        data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 70, 'stickySetTop': '-70px', 'stickyChangeLogo': true}"
-        style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2)"
-      >
-        <div class="header-body border-0 box-shadow-none">
-          <div class="header-container container">
-            <div class="header-row py-2" style="height: 65px">
-              <div class="header-column">
-                <div class="header-row d-flex align-items-center">
-                  <div class="header-logo mb-0" style="margin-top: 4px">
-                    <a href="Home.html">
-                      <img alt="RM" width="180" height="50" src="img\WebImages\final logo.png" />
-                    </a>
-                  </div>
-                  <!-- <h1 class="ml-0 mb-0 gradient-bg-new2" style="font-weight:700;">ROUTE MAESTRO</h1> -->
+    <header
+      id="header"
+      data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 70, 'stickySetTop': '-70px', 'stickyChangeLogo': true}"
+      style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2)"
+    >
+      <div class="header-body border-0 box-shadow-none">
+        <div class="header-container container">
+          <div class="header-row py-2" style="height: 65px">
+            <div class="header-column">
+              <div class="header-row d-flex align-items-center">
+                <div class="header-logo mb-0" style="margin-top: 4px">
+                  <a href="Home.html">
+                    <img alt="RM" width="180" height="50" src="img\WebImages\final logo.png" />
+                  </a>
                 </div>
+                <!-- <h1 class="ml-0 mb-0 gradient-bg-new2" style="font-weight:700;">ROUTE MAESTRO</h1> -->
               </div>
-              <div class="header-column">
-                <div class="header-nav-bar z-index-0">
-                  <div class="container">
-                    <div class="header-row">
-                      <div class="header-column">
-                        <div
-                          class="header-row align-items-center justify-content-end"
-                          style="margin-top: -2px; margin-left: 107px"
-                        >
-                          <div class="header-nav header-nav-links justify-content-start mb-3">
-                            <div
-                              class="header-nav-main header-nav-main-text-capitalize header-nav-main-effect-2 header-nav-main-sub-effect-1"
-                            >
-                              <nav class="collapse">
-                                <ul class="nav nav-pills" id="mainNav">
-                                  <li>
-                                    <a class="nav-link" href="Home.html"> Home </a>
-                                  </li>
-                                  <li class="dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#"> Services </a>
-                                    <ul class="dropdown-menu">
-                                      <li>
-                                        <a href="ai-trip-planner.html" class="dropdown-item"
-                                          >AI Trip Planner & Itinerary Management</a
-                                        >
-                                      </li>
-                                      <li>
-                                        <a href="integrated-booking-solution.html" class="dropdown-item"
-                                          >Integrated Booking Solution</a
-                                        >
-                                      </li>
-                                    </ul>
-                                  </li>
+            </div>
+            <div class="header-column">
+              <div class="header-nav-bar z-index-0">
+                <div class="container">
+                  <div class="header-row">
+                    <div class="header-column">
+                      <div
+                        class="header-row align-items-center justify-content-end"
+                        style="margin-top: -2px; margin-left: 107px"
+                      >
+                        <div class="header-nav header-nav-links justify-content-start mb-3">
+                          <div
+                            class="header-nav-main header-nav-main-text-capitalize header-nav-main-effect-2 header-nav-main-sub-effect-1"
+                          >
+                            <nav class="collapse">
+                              <ul class="nav nav-pills" id="mainNav">
+                                <li>
+                                  <a class="nav-link" href="Home.html"> Home </a>
+                                </li>
+                                <li class="dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#"> Services </a>
+                                  <ul class="dropdown-menu">
+                                    <li>
+                                      <a href="ai-trip-planner.html" class="dropdown-item"
+                                        >AI Trip Planner & Itinerary Management</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a href="integrated-booking-solution.html" class="dropdown-item"
+                                        >Integrated Booking Solution</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </li>
 
-                                  <li>
-                                    <a class="nav-link active" href="Pricing.html">
-                                      Pricing
-                                      <!-- about us in actual -->
-                                    </a>
-                                  </li>
-                                </ul>
-                              </nav>
-                            </div>
+                                <li>
+                                  <a class="nav-link active" href="Pricing.html">
+                                    Pricing
+                                    <!-- about us in actual -->
+                                  </a>
+                                </li>
+                              </ul>
+                            </nav>
                           </div>
-                          <a
-                            href="Contact.html"
-                            class="position-relative top-2 btn btn-custom1 btn-outline btn-rounded text-2 font-weight-bold px-2 mb-3"
-                            id="openModalBtn1"
-                            >Contact Us</a
-                          >
-                          <button
-                            class="btn header-btn-collapse-nav"
-                            data-bs-toggle="collapse"
-                            data-bs-target=".header-nav-main nav"
-                          >
-                            <i class="fas fa-bars"></i>
-                          </button>
                         </div>
+                        <a
+                          href="Contact.html"
+                          class="position-relative top-2 btn btn-custom1 btn-outline btn-rounded text-2 font-weight-bold px-2 mb-3"
+                          id="openModalBtn1"
+                          >Contact Us</a
+                        >
+                        <button
+                          class="btn header-btn-collapse-nav"
+                          data-bs-toggle="collapse"
+                          data-bs-target=".header-nav-main nav"
+                        >
+                          <i class="fas fa-bars"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1716,175 +1811,147 @@
             </div>
           </div>
         </div>
-      </header>
-      <div role="main" class="main">
-        <button class="book-demo-btn" id="openModalBtn2"></button>
-        <section class="section bg-transparent position-relative border-0 mt-5-5 p-0">
-          <div class="text-center" style="max-width: 1000px; margin: auto">
-            <h1 class="font-weight-bold text-color-dark text-10 mt-5-5 text-center">Request Price</h1>
+      </div>
+    </header>
+    <div role="main" class="main">
+      <button class="book-demo-btn" id="openModalBtn2"></button>
 
-            <div
-              class="row justify-content-center position-relative gy-5 z-index-1"
-              style="margin-top: 15px; margin-bottom: 55px; border-color: #07072c; border-width: 2px"
-            >
-              <div
-                class="col-md-3 col-lg-3 text-center appear-animation"
-                data-appear-animation="fadeInLeftShorterPlus"
-                data-appear-animation-delay="100"
-              >
-                <img
-                  width="50"
-                  height="50"
-                  src="img\WebImages\Route Maestro Website Updated Images\viber.svg"
-                  alt="Call"
-                />
-                <h3 class="text-color-dark text-transform-none text-5-6 font-weight-semibold mb-3 mt-4">
-                  Give Us A Call
-                </h3>
-                <p class="text-3 mb-0 text-color-dark">+91-9356385744</p>
-              </div>
-              <div
-                class="col-md-3 col-lg-3 text-center appear-animation"
-                data-appear-animation="fadeInLeftShorterPlus"
-                data-appear-animation-delay="100"
-              >
-                <img
-                  width="50"
-                  height="50"
-                  src="img\WebImages\Route Maestro Website Updated Images\email (3).svg"
-                  alt="Email"
-                />
-                <h3 class="text-color-dark text-transform-none text-5-6 font-weight-semibold mb-3 mt-4">
-                  Send An Email
-                </h3>
-                <p class="text-3 mb-0 text-color-dark">support@ascentialabs.com</p>
-              </div>
-              <div
-                class="col-md-3 col-lg-3 text-center appear-animation"
-                data-appear-animation="fadeInRightShorterPlus"
-                data-appear-animation-delay="100"
-              >
-                <img
-                  width="50"
-                  height="50"
-                  src="img\WebImages\Route Maestro Website Updated Images\whatsapp (1).png"
-                  alt="Whatsapp"
-                  class="img-fluid"
-                />
-                <h3 class="text-color-dark text-transform-none text-5-6 font-weight-semibold mb-3 mt-4">
-                  Connect Whatsapp
-                </h3>
-                <p class="text-3 mb-0" style="text-decoration: underline; color: #fe6652">Click Here</p>
-              </div>
-              <!-- <div class="col-md-3 col-lg-3 text-center appear-animation" data-appear-animation="fadeInRightShorterPlus" data-appear-animation-delay="100">
-							<img width="50" height="50" src="img\WebImages\travel-agent (2) (2).png" alt="Seller" />
-							<h3 class="text-color-dark text-transform-none text-5-6 font-weight-semibold mb-3 mt-4" style="text-decoration: underline;">Sellers</h3>
-							<p class="text-3 mb-0 text-white">Hotels can use RouteMaestro’s AI to generate Hotel Specific Bookable Trips that leverage Hotel Services & related activities to create Highly Personalized Trips for that destination.</p>
-						</div> -->
-            </div>
+      <!-- section-1-pricing -->
+      <div
+        class="flex flex-column"
+        style="background-color: #323268; font-size: 36px; color: #fff; text-align: center; padding: 25px"
+      >
+        Plans designed for Travel Businesses of all sizes
+      </div>
+
+      <!-- section-2-pricing -->
+      <section class="body-pricing">
+        <div class="pricing-table">
+          <!-- Header -->
+          <div class="table-header">
+            <div>Compare Plans & Features</div>
+            <div>Free</div>
+    
+            <div class="premium">Premium</div>
           </div>
-
-          <div class="container custom-container-background py-5">
-            <div class="row position-relative z-index-1 pt-5-5">
-              <div class="col">
-                <form class="contact-form custom-form-style-1" id="contactForm">
-                  <div class="alert alert-success" id="successMessage">
-                    <strong>Success!</strong> Your message has been sent to us.
-                  </div>
-
-                  <div class="alert alert-danger" id="errorMessage">
-                    <strong>Error!</strong> There was an error sending your message.
-                    <span id="errorDetail"></span>
-                  </div>
-
-                  <div class="row row-gutter-sm">
-                    <div class="form-group col-lg-6 mb-4">
-                      <input type="text" class="form-control" name="name" id="name" required placeholder="Your Name" />
-                    </div>
-                    <div class="form-group col-lg-6 mb-4">
-                      <input
-                        id="phone"
-                        type="tel"
-                        class="form-control phone-input"
-                        name="phone"
-                        placeholder="Phone Number"
-                      />
-                    </div>
-                  </div>
-                  <div class="row row-gutter-sm">
-                    <div class="form-group col-lg-6 mb-4">
-                      <input
-                        type="email"
-                        class="form-control"
-                        name="email"
-                        id="email"
-                        required
-                        placeholder="Your Email"
-                      />
-                    </div>
-                    <div class="form-group col-lg-6 mb-4">
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="subject"
-                        id="subject"
-                        required
-                        placeholder="Subject"
-                      />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-group col mb-4">
-                      <textarea
-                        class="form-control"
-                        name="message"
-                        id="message"
-                        required
-                        placeholder="Your Message"
-                        rows="10"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-group col mb-3">
-                      <button type="submit" class="btn-custom3 btn-rounded text-3-5 px-2 py-2">Send Message</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
+    
+          <!-- Content Features -->
+          <div class="table-row">
+            <div class="feature-name">New apps & screen releases</div>
+            <div>Latest 8 apps</div>
+    
+            <div class="premium">Unlimited + Priority Access</div>
+          </div>
+          <div class="table-row">
+            <div class="feature-name">Access to latest versions</div>
+            <div class="cross">✗</div>
+    
+            <div class="premium">✓ (Instant Updates)</div>
+          </div>
+          <div class="table-row">
+            <div class="feature-name">Previous versions access</div>
+            <div>Limited to 2 rows</div>
+    
+            <div class="premium">Unlimited + History View</div>
+          </div>
+    
+          <!-- Features -->
+          <div class="table-row">
+            <div class="feature-name">Collections</div>
+            <div>Up to 5</div>
+    
+            <div class="premium">Unlimited + AI Sorting</div>
+          </div>
+          <div class="table-row">
+            <div class="feature-name">Copy to clipboard</div>
+            <div class="checkmark">✓</div>
+    
+            <div class="premium">✓</div>
+          </div>
+          <div class="table-row">
+            <div class="feature-name">Batch download</div>
+            <div class="cross">✗</div>
+    
+            <div class="premium">✓ (Faster Speeds)</div>
+          </div>
+    
+          <!-- Collaboration -->
+          <div class="table-row">
+            <div class="feature-name">Team members</div>
+            <div>Just you</div>
+    
+            <div class="premium">Unlimited</div>
+          </div>
+          <div class="table-row">
+            <div class="feature-name">Team collections</div>
+            <div class="cross">✗</div>
+    
+            <div class="premium">✓ + Shared AI Tools</div>
+          </div>
+    
+          <!-- Billing -->
+          <div class="table-row">
+            <div class="feature-name">Flexible payment options</div>
+            <div class="cross">✗</div>
+    
+            <div class="premium">✓ + Discounts</div>
           </div>
         </section>
-      </div>
+
+
+     
     </div>
+
+    <!-- section-7-cta-section -->
     <section
-      class="route-maestro-section section section-height-3 position-relative z-index-1 border-0 m-0 gradient-bg"
+      style="
+        background-color: #07072c;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      "
     >
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
-            <img
-              height="40px"
-              width="300px"
-              src="img/WebImages/CTA Image (3).png"
-              alt="Mobile Phone"
-              class="img-fluid"
-            />
-          </div>
-          <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
-            <div class="sectionmobiletext text-color-light font-weight-bold text-7 mb-4 line-height-1 text-center">
-              See RouteMaestro In Action
-            </div>
-            <a
-              href="Pricing.html"
-              class="sectionmobilebtn btn btn-custom11 btn-rounded font-weight-bold border-0 text-3 px-5 btn-py-3"
-              >Get In Touch</a
-            >
-          </div>
+      <div
+        style="
+          display: flex;
+          max-width: 1200px;
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+          background: url('img/RM Home Page Icons/RouteMaestrobg.webp') no-repeat center center/cover;
+          height: 500px;
+        "
+      >
+        <div style="flex: 1; align-items: center">
+          <img
+            src="img/RM Home Page Icons/RouteMaestrofigurecta.png"
+            alt="Centered Image"
+            style="max-width: 80%; height: auto"
+          />
+        </div>
+        <div style="flex: 1.5; color: white; text-align: center; padding: 20px">
+          <h2 style="font-size: 42px; margin-bottom: 40px; color: #fff">See RouteMaestro In Action</h2>
+          <a
+            class="btnnew"
+            href="#"
+            style="
+              background: #fe6652;
+              display: flex;
+              justify-content: center;
+              color: white;
+              text-decoration: none;
+              border-radius: 5px;
+              transition: 0.3s;
+            "
+            >Schedule A Demo</a
+          >
         </div>
       </div>
     </section>
 
+    <!-- section-8-footer -->
     <div class="footermobile" style="background: #07072c; height: 450px">
       <footer id="footer" class="position-relative bg-transparent border-top-0">
         <div class="container pt-5-5 pb-3">
@@ -1894,25 +1961,25 @@
               <div style="display: flex; align-items: center; justify-content: center">
                 <img
                   alt="Route Maestro"
-                  width="50"
-                  height="50"
+                  width="250"
+                  height="45"
                   style="margin-bottom: 10px"
-                  src="img\WebImages\footerlogonew.png"
+                  src="img/RM Home Page Icons/RouteMaestrologo.png"
                 />
-                <p style="margin-left: 7px; font-size: x-large; color: white">ROUTEMAESTRO</p>
+                <!-- <p style="margin-left: 7px; font-size: x-large; color: white">ROUTEMAESTRO</p> -->
               </div>
-              <div style="align-items: center; justify-content: center; margin-top: 20px; margin-left: 75px">
-                <a href="https://ascentialabs.com/" target="_blank">
-                  <img
-                    class="Ascentia"
-                    alt="Ascentia Labs"
-                    width="240"
-                    height="40"
-                    style="margin-bottom: 10px"
-                    src="img/WebImages/Ascentia Logo (1).png"
-                  />
-                </a>
-              </div>
+              <!-- <div style="align-items: center; justify-content: center; margin-top: 20px; margin-left: 75px">
+            <a href="https://ascentialabs.com/" target="_blank">
+              <img
+                class="Ascentia"
+                alt="Ascentia Labs"
+                width="240"
+                height="40"
+                style="margin-bottom: 10px"
+                src="img/WebImages/Ascentia Logo (1).png"
+              />
+            </a>
+          </div> -->
             </div>
 
             <!-- Column 2: Customer Service -->
@@ -1951,10 +2018,6 @@
                     >Contact Us</a
                   >
                 </li>
-                <!-- <li style="margin-left: 30px">
-                <a href="Pricing.html" class="text-color-grey text-color-hover-primary"
-                  style="color: white !important; font-size: 16px">Pricing</a>
-              </li> -->
               </ul>
             </div>
             <!-- Column 3: Catch Us On Social Media -->
@@ -1986,7 +2049,7 @@
           <hr style="border: 1px solid #ffffff" />
           <div class="container" style="height: auto !important">
             <div class="d-flex flex-column align-items-center">
-              <div class="d-flex justify-content-center mt-2 mb-2">
+              <div class="d-flex justify-content-center mt-2 mb-4">
                 <p class="text-center text-3 mb-0 text-white mx-3" style="font-size: large !important">
                   Privacy Policy
                 </p>

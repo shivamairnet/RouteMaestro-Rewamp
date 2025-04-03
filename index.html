@@ -406,19 +406,22 @@
         #footer .col-lg-4 {
           text-align: center;
           margin-top: 1rem;
+          margin-top: 0px !important;
         }
 
         #footer .font-weight-bold {
           font-size: 1.25rem;
+          margin-left: 0 !important ;
+          margin-bottom: 15px;
+          margin-top: 20px;
         }
 
         #footer .text-3 {
           font-size: 1rem;
         }
 
+        /* Adjust logo size and text */
         #footer img {
-          width: 40px;
-          height: 40px;
         }
 
         #footer p {
@@ -426,8 +429,11 @@
         }
 
         #footer .footer-copyright hr {
+          /* border: 1px solid #ffffff !important; */
           width: 100% !important;
+          /* Ensure it spans full width */
           margin: 1rem 0 !important;
+          /* Adjust margin for spacing */
         }
 
         #footer .footer-copyright .text-3 {
@@ -440,6 +446,7 @@
 
         #footer .social-icons {
           text-align: center;
+          /* Center-align social icons */
           margin-left: 0px;
         }
 
@@ -449,13 +456,11 @@
         }
 
         #footer .social-icons li {
-      
           text-align: center;
           margin-left: 0px !important;
         }
 
         #footer .social-icons i {
-         
           text-align: center;
           margin-left: 0px !important;
         }
@@ -969,6 +974,77 @@
 }
 }
 
+@media (max-width: 1024px) {
+        .accordion {
+          width: 90% !important;
+        }
+
+        .faq {
+          padding: 12px !important;
+        }
+
+        .faq-header span {
+          font-size: 18px !important;
+        }
+
+        .arrow-new {
+          width: 28px !important;
+          height: 28px !important;
+          font-size: 12px !important;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .accordion {
+          width: 95% !important;
+        }
+
+        .faq-header span {
+          font-size: 17px !important;
+        }
+
+        .arrow-new {
+          width: 26px !important;
+          height: 26px !important;
+          font-size: 12px !important;
+          line-height: normal !important; /* Ensures text inside isn't misaligned */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .accordion {
+          width: 100% !important;
+        }
+
+        h2 {
+          font-size: 28px !important;
+        }
+
+        .faq {
+          padding: 10px !important;
+        }
+
+        .faq-header span {
+          font-size: 16px !important;
+          width: 80%;
+        }
+
+        .arrow-new {
+          width: 24px !important;
+          height: 24px !important;
+          font-size: 12px !important;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
     </style>
   </head>
 
@@ -1006,7 +1082,7 @@
                             <nav class="collapse">
                               <ul class="nav nav-pills" id="mainNav">
                                 <li>
-                                  <a class="nav-link active" href="Home.html"> Home </a>
+                                  <a class="nav-link active" href="home.html"> Home </a>
                                 </li>
                                 <li class="dropdown">
                                   <a class="nav-link dropdown-toggle" href="#"> Services </a>
@@ -1024,7 +1100,7 @@
                                   </ul>
                                 </li>
                                 <li>
-                                  <a class="nav-link" href="Pricing.html">
+                                  <a class="nav-link" href="pricing.html">
                                     Pricing
                                     <!-- about us in actual -->
                                   </a>
@@ -1034,7 +1110,7 @@
                           </div>
                         </div>
                         <a
-                          href="Contact.html"
+                          href="contact.html"
                           class="position-relative top-2 btn btn-custom1 btn-outline btn-rounded text-2 font-weight-bold px-2 mb-3"
                           >Contact Us</a
                         >
@@ -1059,7 +1135,52 @@
     <div role="main" class="main">
       <button class="book-demo-btn" id="openModalBtn2"></button>
 
-      <!-- section-1-maximize-travel-business-profits -->
+      <!-- <section
+      style="
+        height: 480px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f7f7f7;
+        padding: 40px;
+      "
+    >
+      <div style="max-width: 1160px; width: 100%; display: flex; align-items: center; justify-content: space-between">
+      
+        <div style="width: 35%; padding-right: 20px">
+          <h1 style="font-size: 36px; color: #2f3268; margin-bottom: 20px; font-weight: bold">
+            Digitize Your Travel Infrastructure
+          </h1>
+          <p style="font-size: 18px; line-height: 1.8rem; color: #2f3268; margin-bottom: 20px">
+            An AI Powered Dynamic Travel Packaging & Booking Platform
+          </p>
+          <button
+            style="
+              padding: 10px 20px;
+              background-color: #ff4040;
+              color: white;
+              border: none;
+              font-size: 18px;
+              cursor: pointer;
+              border-radius: 5px;
+            "
+          >
+            Schedule A Demo
+          </button>
+        </div>
+
+       
+        <div style="width: 65%">
+          <img
+            src="img/RM Home Page Icons/landing-page-image.webp"
+            alt="AI Powered Image"
+            style="width: 100%; border-radius: 10px"
+          />
+        </div>
+      </div>
+    </section> -->
+
+      <!-- section-1-digitize-the-infrastructure -->
       <section
         class="gradient-bg-new"
         style="
@@ -1068,10 +1189,9 @@
           align-items: center;
           justify-content: space-between;
           align-items: center;
-
           margin: auto;
           padding: 50px;
-          height: 500px;
+          height: 900px;
         "
       >
         <div class="container" style="padding-right: 20px">
@@ -1079,31 +1199,33 @@
             class="text-white line-height-2 appear-animation text-center text-ignite mb-3"
             data-appear-animation="fadeInUpShorterPlus"
             data-appear-animation-delay="100"
-            style="font-size: 36px; font-weight: 600"
+            style="font-size: 36px; font-weight: 600;letter-spacing: normal;"
           >
             Digitize Your Travel Infrastructure
           </h1>
-          <p style="font-size: 18px; color: #fff; text-align: center" style="font-weight: 600">
+          <p style="font-size: 18px; color: #fff; text-align: center" style="font-weight: 600;letter-spacing: normal;">
             An AI Powered Dynamic Travel Packaging & Booking Platform
           </p>
-          <div style="text-align: center">
+          <div style="text-align: center;display: flex;flex-direction: column;justify-content: center;align-items: center;">
             <button class="btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2" style="width: 150px">
               Schedule A Demo
             </button>
+            <img src="img/RM Home Page Icons/landing-page-image.webp" alt="" height="600px" width="1050px" style="margin: auto;" />
+
           </div>
-          <img src="" alt="" />
         </div>
       </section>
 
-      <!--section-2-digitize-travel-infrastructure -->
+      <!--section-2-maximize-travel-business-profits -->
       <section class="section bg-transparent position-relative border-0 m-0 p-0">
         <div
           style="
             height: 4px;
             width: 150px;
             background: linear-gradient(to right, #ff4040, #323268);
-            margin: 30px auto;
+            margin: 30px auto 0px;
             border-radius: 2px;
+            margin-top: 15px ;
           "
         ></div>
 
@@ -1115,7 +1237,7 @@
                 data-appear-animation="fadeInRightShorterPlus"
                 data-appear-animation-delay="100"
               >
-                <strong>Maximize Your Travel Business Profits</strong>
+                Maximize Your Travel <strong> Business Profits</strong>
               </h2>
               <p
                 class="text-color-dark text-5 mb-4 appear-animation"
@@ -1132,25 +1254,25 @@
               <div class="card">
                 <div class="card-icon">
                   <img
-                    src="img/WebImages/Route Maestro Website Updated Images/Avg Profitability(1).png"
+                    src="img/RM Home Page Icons/Avg Profitability (2).png"
                     alt="Profitability Icon"
                   />
                 </div>
               </div>
               <div class="card">
                 <div class="card-icon">
-                  <img src="img/WebImages/Route Maestro Website Updated Images/Expense.png" alt="Expense Icon" />
+                  <img src="img/RM Home Page Icons/Avg Expense.png" alt="Expense Icon" />
                 </div>
               </div>
               <div class="card">
                 <div class="card-icon">
-                  <img src="img/WebImages/Route Maestro Website Updated Images/Input Time.png" alt="Input Time Icon" />
+                  <img src="img/RM Home Page Icons/Avg Time Input.png" alt="Input Time Icon" />
                 </div>
               </div>
               <div class="card">
                 <div class="card-icon">
                   <img
-                    src="img/WebImages/Route Maestro Website Updated Images/Client Conversion(1).png"
+                    src="img/RM Home Page Icons/Avg Client Conversion.png"
                     alt="Client Conversion Icon"
                   />
                 </div>
@@ -1161,7 +1283,7 @@
       </section>
 
       <!-- section-3-next-gen-travel-->
-      <section class="zigzag-section section bg-transparent position-relative border-0 m-0 p-0">
+      <section class="zigzag-section section bg-transparent position-relative border-0 m-0 p-0" style="background-color: #f3f3f3 !important;">
         <div class="container custom-container-background z-index-1 py-2">
           <div class="row align-items-center pb-3">
             <!-- <div class="col text-center" style="margin-top: 370px; margin-bottom: 30px;"> -->
@@ -1179,8 +1301,9 @@
                 class="text-color-dark font-weight-medium text-8 mt-4-5 mb-5-5 appear-animation"
                 data-appear-animation="fadeInUpShorterPlus"
                 data-appear-animation-delay="100"
+
               >
-                <strong>Next Gen Travel Technology Solution For Travel Business</strong>
+                Next Gen <strong> Travel Technology Solution </strong> <br> For Travel Business
               </h2>
             </div>
           </div>
@@ -1192,7 +1315,7 @@
               data-appear-animation-delay="100"
             >
               <img
-                src="img/WebImages/Travel Routes (1).png"
+                src="img/RM Home Page Icons/generating-door-door-routes.webp"
                 loading="eager"
                 class="img-fluid mb-4 mb-lg-0"
                 alt="World Travel Route Map"
@@ -1207,8 +1330,7 @@
                 <strong>Generating Door-To-Door Travel Routes</strong>
               </h2>
               <p class="text-3-5 line-height-8 mb-4 text-left">
-                Route Maestro generates all possible Multi-Modal Door-to-Door Routes, seamlessly combining Air Travel
-                with various local transportation across Trains, Buses, Taxis, & other transit choices within each city.
+                RouteMaestro generates all possible multi-modal travel routes, seamlessly combining air travel  routes with various local transit routes across trains, buses, taxis, & other transit choices within each city.
               </p>
             </div>
           </div>
@@ -1220,12 +1342,10 @@
               data-appear-animation-delay="100"
             >
               <h2 class="text-color-dark font-weight-medium text-8 mb-4-5 text-right">
-                <strong>Real-Time Direct Inventory</strong>
+                <strong>Comprehensive Diverse Global Travel Inventory</strong>
               </h2>
               <p class="text-3-5 line-height-8 mb-4 text-right">
-                RouteMaestro’s AI generates Holidays from 1,000,000+ Hotels, 1000+ Airlines, 100,000+ Sightseeing &
-                Transfers, Globally. Integration of Global Distribution Systems (GDS) and other Inventory APIs in our
-                platform ensures Real-Time Availability of a vast inventory across all packages.
+                Choose from multiple global travel inventories, across flights, hotels, sightseeing, activities, transfers and start generating personalised trips, instantly.
               </p>
             </div>
             <div
@@ -1233,7 +1353,7 @@
               style="display: flex; justify-content: center; align-items: center"
             >
               <img
-                src="img/WebImages\Route Maestro Website Updated Images\REinvent.jpg"
+                src="img/RM Home Page Icons/Comprehensive Diverse Global Travel Inventory.webp"
                 loading="eager"
                 class="img-fluid mb-4 mb-lg-0 appear-animation"
                 data-appear-animation="fadeInLeftShorterPlus"
@@ -1267,7 +1387,7 @@
               data-appear-animation-delay="100"
             >
               <img
-                src="img/WebImages\Route Maestro Website Updated Images\Package.png"
+                src="img/RM Home Page Icons/AI Powered Dynamic Packaging & Itinerary Management.webp"
                 class="img-fluid mb-4 mb-lg-0"
                 alt="Itinerary"
               />
@@ -1278,12 +1398,10 @@
               data-appear-animation-delay="100"
             >
               <h2 class="text-color-dark font-weight-medium text-8 mb-4-5 text-left line-height-1">
-                <strong>Generate Personalised Trips For Your Client</strong>
+                <strong>AI Powered Dynamic Packaging & Itinerary Management</strong>
               </h2>
               <p class="text-3-5 line-height-8 mb-4 text-left">
-                RouteMaestro leverages AI-ML to generate Personalized Travel Trips based on real-time availability,
-                personalized across Hotels, Sightseeings, Restaurants & more according to Traveller Persona, within 2
-                Minutes!
+                RouteMaestro utilizes AI-ML to craft personalized travel experiences, enabling users to effortlessly plan, manage, and book their trips anytime and from anywhere.
               </p>
             </div>
           </div>
@@ -1298,13 +1416,12 @@
                 <strong>Seamless Travel Scheduling</strong>
               </h2>
               <p class="text-3-5 line-height-8 mb-4 text-right">
-                Route Maestro generates Minute-by-Minute Travel Holidays relative to every service precisely scheduled
-                down to the minute, to optimize the travel journey.
+                Route Maestro generates Minute-by-Minute Travel Holidays relative to every service precisely scheduled down to the minute, to optimize the travel journey.
               </p>
             </div>
             <div class="col-lg-5 order-2 text-center text-lg-end order-1 order-lg-2 mr-5 nextgentext">
               <img
-                src="img/WebImages\Route Maestro Website Updated Images\Time Scheduling tester.png"
+                src="img/RM Home Page Icons/Seamless Travel Scheduling.webp"
                 class="img-fluid mb-4 mb-lg-0 appear-animation"
                 data-appear-animation="fadeInLeftShorterPlus"
                 data-appear-animation-delay="100"
@@ -1320,7 +1437,7 @@
               data-appear-animation-delay="100"
             >
               <img
-                src="img/WebImages/latest pictures/Payment Options (1).png"
+                src="img/RM Home Page Icons/Secure & Easy Payment Options.webp"
                 class="img-fluid mb-4 mb-lg-0"
                 alt="Payment Options"
               />
@@ -1334,7 +1451,7 @@
                 <strong>Secure & Easy Payment Options</strong>
               </h2>
               <p class="text-3-5 line-height-8 mb-4 text-left">
-                Easily pay with cards (Credit & Debit), Net-Banking, or E-Wallet with secure payment gateways.
+                RouteMaestro has seamlessly partnered with multiple payment gateways, offering its clients the flexibility to choose from their preferred payment gateway.
               </p>
             </div>
           </div>
@@ -1347,13 +1464,13 @@
           style="
             margin-top: 15px;
             font-size: 36px;
-            font-weight: 600;
+            
             color: #323268;
             text-align: center;
             margin-bottom: 30px;
           "
         >
-          Solutions For <strong> Different Sectors </strong> In Travel Industry
+          Solutions For <strong> Different <br> Sectors </strong> In Travel Industry
         </h2>
         <div style="display: flex; justify-content: center; align-items: center">
           <div
@@ -1422,7 +1539,7 @@
                   "
                 >
                 <div class="text-left flex flex-column justify-content-center align-items-center" style="text-align: left;padding: 7px;">
-                  <img src="img/RM Home Page Icons/Travel Companies Agent.png" alt="" height="50px" width="50px" style="margin-bottom: 10px;margin-top: 10px;">
+                  <img src="img/RM Home Page Icons/Travel Companies Agent.png" alt="" height="50px" width="50px" style="margin-bottom: 10px;">
                   <p style="color: #fff;"> RouteMaestro’s AI generates Door-To-Door Traveller Personalized Trips in under 2 Minutes, reducing
                     operational costs & enhancing Profit Margins for agents.</p>
                 </div>
@@ -1672,6 +1789,7 @@
           padding: 20px;
           width: 950px;
           margin: auto;
+          height: 200px;
         ">
       <div class="freedom-section-div" style="
             display: flex;
@@ -1682,17 +1800,17 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           ">
         <img class="freedom-section-img" src="img/RM Home Page Icons/Flight.png" alt="Image" style="
-              width: 30px;
-              height: 30px;
+              width: 45px;
+              height: 45px;
               border-radius: 20%;
               margin-right: 15px;
               margin-top: -69px;
             " />
         <div>
-          <h3 style="margin: 0; font-size: 18px; color: #333">
+          <h2 style="margin: 0; font-size: 18px; color: #333;font-weight: 600;line-height: normal;">
             Flights
-          </h3>
-          <p style="margin: 5px 0 0; font-size: 14px; color: #666">
+          </h2>
+          <p style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
             Book and offer your customers access to a wide range of domestic and international airlines, ensuring they
             get the best fares and travel options.
           </p>
@@ -1708,17 +1826,17 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           ">
         <img class="freedom-section-img" src="img/RM Home Page Icons/Hotels.png" alt="Image" style="
-              width: 30px;
-              height: 30px;
+              width: 45px;
+              height: 45px;
               border-radius: 20%;
               margin-right: 15px;
               margin-top: -69px;
             " />
         <div>
-          <h3 style="margin: 0; font-size: 18px; color: #333">
+          <h2 style="margin: 0; font-size: 18px; color: #333;font-weight: 600;line-height: normal;">
             Hotels
-          </h3>
-          <p style="margin: 5px 0 0; font-size: 14px; color: #666">
+          </h2>
+          <p style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
             Connect with thousands of hotels, from budget stays to luxury resorts, offering choices that suit every
             traveler’s preference.
           </p>
@@ -1734,17 +1852,17 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           ">
         <img class="freedom-section-img" src="img/RM Home Page Icons/Sightseeing.png" alt="Image" style="
-              width: 30px;
-              height: 30px;
+              width: 45px;
+              height: 45px;
               border-radius: 20%;
               margin-right: 15px;
-              margin-top: -69px;
+              margin-top: -72px;
             " />
         <div>
-          <h3 style="margin: 0; font-size: 18px; color: #333">
+          <h2 style="margin: 0; font-size: 18px; color: #333;font-weight: 600;line-height: normal;">
             Sightseeing & Activities
-          </h3>
-          <p style="margin: 5px 0 0; font-size: 14px; color: #666">
+          </h2>
+          <p style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
             Offer curated sightseeing, activities, and unique experiences to make your customers' travel journeys
             memorable and hassle-free.
           </p>
@@ -1760,15 +1878,15 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           ">
         <img class="freedom-section-img" src="img/RM Home Page Icons/Transfers.png" alt="Image" style="
-              width: 30px;
-              height: 30px;
+              width: 45px;
+              height: 45px;
               border-radius: 20%;
               margin-right: 15px;
-              margin-top: -69px;
+              margin-top: -90px;
             " />
         <div>
-          <h3 style="margin: 0; font-size: 18px; color: #333">Transfers</h3>
-          <p style="margin: 5px 0 0; font-size: 14px; color: #666">
+          <h2 style="margin: 0; font-size: 18px; color: #333;font-weight: 600;line-height: normal;">Transfers</h2>
+          <p style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
             Provide your customers with smooth and reliable transfers with diverse transportation options, ensuring
             seamless connectivity at every stage of their travel journey.
         </div>
@@ -1797,7 +1915,7 @@
           "
         ></div>
 
-        <h2 class="mb-5-5 mt-2 text-center" style="font-size: 36px; font-weight: 600; color: #323268">
+        <h2 class="mb-5-5 mt-2 text-center" style="font-size: 36px; color: #323268">
           Frequently Asked Questions
         </h2>
 
@@ -1838,7 +1956,7 @@
                 >&#9654;</span
               >
             </div>
-            <div class="faq-content" style="display: none; padding-top: 10px">
+            <div class="faq-content" style="display: none; padding-top: 10px;font-size: 16px;font-weight: 500;">
               Simply enter your travelers travel preferences like preferred destinations, travel dates, budget, type and
               interests, and our AI will instantly generates a tailored itinerary based on the traveler preferences in
               under 1 minute.
@@ -1880,7 +1998,7 @@
                 >&#9654;</span
               >
             </div>
-            <div class="faq-content" style="display: none; padding-top: 10px">
+            <div class="faq-content" style="display: none; padding-top: 10px;font-size: 16px;font-weight: 500;">
               You can contact us via email or our contact form.
             </div>
           </div>
@@ -2023,34 +2141,68 @@
       </section>
 
       <!-- section-7-cta-section -->
-      <section
-        class="route-maestro-section section section-height-3 position-relative z-index-1 border-0 m-0"
-        style="background-color: #07072c"
-      >
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
-              <img
-                height="40px"
-                width="300px"
-                src="img/WebImages/CTA Image (3).png"
-                alt="Mobile Phone"
-                class="img-fluid"
-              />
-            </div>
-            <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
-              <div class="sectionmobiletext text-color-light font-weight-bold text-7 mb-4 line-height-1 text-center">
-                See RouteMaestro In Action
-              </div>
-              <a
-                href="#"
-                class="sectionmobilebtn btn btn-custom11 btn-rounded font-weight-bold border-0 text-3 px-5 btn-py-3"
-                >Get In Touch</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
+         <!-- section-7-cta-section -->
+         <section
+         class="d-none d-md-block"
+         style="
+           background-color: #07072c;
+           height: 600px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           padding: 20px;
+         "
+       >
+         <div
+           style="
+             display: flex;
+             max-width: 1200px;
+             width: 100%;
+             align-items: center;
+             justify-content: space-between;
+             background: url('img/RM Home Page Icons/RouteMaestrobg.webp') no-repeat center center/cover;
+             height: 500px;
+           "
+         >
+           <div style="flex: 1; display: flex; justify-content: center; align-items: center">
+             <img
+               src="img/RM Home Page Icons/RouteMaestrofigurecta.png"
+               alt="Centered Image"
+               style="max-width: 80%; height: auto"
+             />
+           </div>
+           <div style="flex: 1.5; color: white; text-align: center; padding: 20px">
+             <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
+             <a
+               class="btnnew"
+               href="#"
+               style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
+               >Schedule A Demo</a
+             >
+           </div>
+         </div>
+       </section>
+ 
+       <!-- section-7-mobile -->
+       <section
+         class="d-md-none d-block"
+         style="background-color: #07072c; height: 500px; align-items: center; justify-content: center; padding: 20px"
+       >
+         <div style="color: white; text-align: center; padding: 20px">
+           <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
+           <a
+             class=""
+             href="#"
+             style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
+             >Schedule A Demo</a
+           >
+           <img
+             src="img/RM Home Page Icons/RouteMaestrofigurecta.png"
+             alt="Centered Image"
+             style="max-width: 80%; height: auto"
+           />
+         </div>
+       </section>
     </div>
 
     <!-- section-8-footer -->
@@ -2063,14 +2215,14 @@
               <div style="display: flex; align-items: center; justify-content: center">
                 <img
                   alt="Route Maestro"
-                  width="50"
-                  height="50"
+                  width="250"
+                  height="45"
                   style="margin-bottom: 10px"
-                  src="img\WebImages\footerlogonew.png"
+                  src="img/RM Home Page Icons/RouteMaestrologo.png"
                 />
-                <p style="margin-left: 7px; font-size: x-large; color: white">ROUTEMAESTRO</p>
+                <!-- <p style="margin-left: 7px; font-size: x-large; color: white">ROUTEMAESTRO</p> -->
               </div>
-              <div style="align-items: center; justify-content: center; margin-top: 20px; margin-left: 75px">
+              <!-- <div style="align-items: center; justify-content: center; margin-top: 20px; margin-left: 75px">
                 <a href="https://ascentialabs.com/" target="_blank">
                   <img
                     class="Ascentia"
@@ -2081,7 +2233,7 @@
                     src="img/WebImages/Ascentia Logo (1).png"
                   />
                 </a>
-              </div>
+              </div> -->
             </div>
 
             <!-- Column 2: Customer Service -->
@@ -2152,7 +2304,7 @@
           <hr style="border: 1px solid #ffffff" />
           <div class="container" style="height: auto !important">
             <div class="d-flex flex-column align-items-center">
-              <div class="d-flex justify-content-center mt-2 mb-2">
+              <div class="d-flex justify-content-center mt-2 mb-4">
                 <p class="text-center text-3 mb-0 text-white mx-3" style="font-size: large !important">
                   Privacy Policy
                 </p>

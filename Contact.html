@@ -1,793 +1,788 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- Basic -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find The Best Pricing Plan For Your Company | Route Maestro</title>
 
-		<title>Find The Best Pricing Plan For Your Company | Route Maestro</title>	
+    <meta name="keywords" content="RouteMaestro" />
+    <meta name="description" content="RouteMaestro" />
+    <meta name="author" content="RouteMaestro" />
+    <meta name="robots" content="index, follow" />
 
-		<meta name="keywords" content="RouteMaestro" />
-		<meta name="description" content="RouteMaestro">
-		<meta name="author" content="RouteMaestro">
-		<meta name= "robots" content="index, follow">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img\WebImages\image (2).png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img\WebImages\image (2).png" />
 
-			<!-- Favicon -->
-		<link rel="shortcut icon" href="img\WebImages\image (2).png" type="image/x-icon"/>
-		<link rel="apple-touch-icon" href="img\WebImages\image (2).png" >
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no" />
 
+    <!-- Web Fonts  -->
+    <link
+      id="googleFonts"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CPlayfair+Display:400&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-		<!-- Mobile Metas -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="vendor/animate/animate.compat.css" />
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css" />
+    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css" />
 
-		<!-- Web Fonts  -->
-		<link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CPlayfair+Display:400&display=swap" rel="stylesheet" type="text/css">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme-elements.css" />
+    <link rel="stylesheet" href="css/theme-blog.css" />
+    <link rel="stylesheet" href="css/theme-shop.css" />
 
-		<!-- Vendor CSS -->
-		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
-		<link rel="stylesheet" href="vendor/animate/animate.compat.css">
-		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
-		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
-		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
-		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/demos/demo-insurance.css" />
 
-		<!-- Theme CSS -->
-		<link rel="stylesheet" href="css/theme.css">
-		<link rel="stylesheet" href="css/theme-elements.css">
-		<link rel="stylesheet" href="css/theme-blog.css">
-		<link rel="stylesheet" href="css/theme-shop.css">
+    <!-- Skin CSS -->
+    <link id="skinCSS" rel="stylesheet" href="css/skins/skin-insurance.css" />
 
-		<!-- Demo CSS -->
-		<link rel="stylesheet" href="css/demos/demo-insurance.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
 
-		<!-- Skin CSS -->
-		<link id="skinCSS" rel="stylesheet" href="css/skins/skin-insurance.css">
+    <!-- Head Libs -->
+    <script src="vendor/modernizr/modernizr.min.js"></script>
 
-		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="css/custom.css">
+    <style>
+      .gradient-bg-new2 {
+        background: linear-gradient(90deg, #2f3268 21.5%, #ff4040 43%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700 !important;
+      }
 
-		<!-- Head Libs -->
-		<script src="vendor/modernizr/modernizr.min.js"></script>
+      .gradient-bg-new {
+        background: linear-gradient(90.07deg, #07072c 67.84%, #ff4040 125.76%);
 
-		<style>
+        /* background: linear-gradient(111.48deg, #00224D 1.02%, #5D0E41 23.11%, #A0153E 49.03%, #FF4D71 77.26%); */
+      }
 
-.gradient-bg-new2{
-    background: linear-gradient(90deg, #2F3268 21.5%, #FF4040 43%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700 !important;
-}
+      .gradient-bg {
+        background: linear-gradient(90deg, #ff4040 0%, #c729a1 35.19%, #ad17cf 62.15%, #9b09ed 96.58%, #2f3268 121.58%);
+        display: flex;
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+      }
 
+      .btn-custom {
+        background: #fe6652;
+        color: white;
+        border: none;
+        padding: 0.25rem 0.25rem;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        font-size: 1.3rem !important;
+        align-items: center;
+        width: 275px !important;
+        margin-left: 35px !important;
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+      }
 
-.gradient-bg-new{
-	background: linear-gradient(90.07deg, #07072C 67.84%, #FF4040 125.76%);
+      .btn-custom4 {
+        background: #fe6652;
+        color: white;
+        border: none;
+        padding: 0.25rem 0.25rem;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        font-size: 1.2rem !important;
+        align-items: center;
+        width: 174px !important;
+        margin-top: 50px;
+        margin-left: 70px !important;
+        margin-right: -22px !important;
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+      }
 
-    /* background: linear-gradient(111.48deg, #00224D 1.02%, #5D0E41 23.11%, #A0153E 49.03%, #FF4D71 77.26%); */
-}
+      .btn-custom7 {
+        margin-top: 5px;
+        background: #e2472b;
+        color: white;
+        border: none;
 
+        border-radius: 0.5rem;
+        font-weight: bold;
+        font-size: 1.3rem !important;
+        align-items: center;
+        width: 174px !important;
+        margin-left: 50px !important;
 
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+      }
 
-.gradient-bg {
-  background: linear-gradient(90deg, #FF4040 0%, #C729A1 35.19%, #AD17CF 62.15%, #9B09ED 96.58%, #2F3268 121.58%);
-  display: flex;
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-}
+      .btn-custom9 {
+        background: #fe6652;
+        color: white;
+        border: none;
+        /* padding: 0.5rem 1rem;  */
+        border-radius: 0.5rem;
+        font-weight: bold;
+        font-size: 1.3rem !important;
+        align-items: center;
+        width: 251px !important;
+        margin-left: 50px !important;
+        /* margin-right: 18px !important; */
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+      }
+      .btn-custom3 {
+        background: #fe6652;
+        color: white;
+        border: none;
+        padding: 0.25rem 0.25rem;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        font-size: 1.3rem !important;
+        align-items: center;
+        width: 265px !important;
+        margin-left: 35px !important;
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+      }
 
+      .btn-custom4:hover {
+        background: #e2472b; /* Change color on hover */
+        /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
+        color: #fff; /* Change text color on hover */
+      }
 
-.btn-custom{
-  background: #FE6652; 
-  color: white; 
-  border: none; 
-  padding: 0.25rem 0.25rem; 
-  border-radius: 0.5rem; 
-  font-weight: bold;
-  font-size: 1.3rem !important; 
-  align-items: center;
-  width: 275px !important;
-  margin-left: 35px !important;
-  padding-right: 0.5rem !important;
-  padding-left: 0.5rem !important;
-  
-}
+      .btn-custom3:hover {
+        background: #e2472b; /* Change color on hover */
+        /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
+        color: #fff; /* Change text color on hover */
+      }
 
-.btn-custom4{
-  background: #FE6652; 
-  color: white; 
-  border: none; 
-  padding: 0.25rem 0.25rem; 
-  border-radius: 0.5rem; 
-  font-weight: bold;
-  font-size: 1.2rem !important; 
-  align-items: center;
-  width: 174px !important;
-  margin-top: 50px;
-  margin-left: 70px !important;
-  margin-right: -22px !important;
-  padding-right: 0.5rem !important;
-  padding-left: 0.5rem !important;
-  
-}
+      .btn-custom:hover {
+        background: #e2472b; /* Change color on hover */
+        /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
+        color: #fff; /* Change text color on hover */
+      }
 
-.btn-custom7{
-	margin-top: 5px;
-  background: #e2472b; 
-  color:white; 
-  border: none; 
-  
-  border-radius: 0.5rem; 
-  font-weight: bold;
-  font-size: 1.3rem !important; 
-  align-items: center;
-  width: 174px !important;
-  margin-left: 50px !important;
+      .btn-custom1:hover {
+        background: white; /* Change color on hover */
+        /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
+        color: #fe6652; /* Change text color on hover */
+        border-color: #07072c;
+      }
 
-  padding-right: 0.5rem !important;
-  padding-left: 0.5rem !important;
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
-  
-  
-}
+      .btn-custom7.close-btn {
+        background: #e2472b; /* Change color on hover */
+        /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
+        color: #fff; /* Change text color on hover */
+      }
 
-.btn-custom9{
-  background: #FE6652; 
-  color: white; 
-  border: none; 
-  /* padding: 0.5rem 1rem;  */
-  border-radius: 0.5rem; 
-  font-weight: bold;
-  font-size: 1.3rem !important; 
-  align-items: center;
-  width: 251px !important;
-  margin-left: 50px !important;
-  /* margin-right: 18px !important; */
-  padding-right: 0.5rem !important;
-  padding-left: 0.5rem !important;
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
-  
-  
-}
-.btn-custom3{
-  background: #FE6652; 
-  color: white; 
-  border: none; 
-  padding: 0.25rem 0.25rem; 
-  border-radius: 0.5rem; 
-  font-weight: bold;
-  font-size: 1.3rem !important; 
-  align-items: center;
-  width: 265px !important;
-  margin-left: 35px !important;
-  padding-right: 0.5rem !important;
-  padding-left: 0.5rem !important;
-  
-}
+      .btn-custom9:hover {
+        background: #e2472b; /* Change color on hover */
+        /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
+        color: #fff; /* Change text color on hover */
+      }
 
-.btn-custom4:hover {
-  background: #e2472b; /* Change color on hover */
-  /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
-  color: #fff; /* Change text color on hover */
-}
+      .section1 {
+        background-image: url("img/WebImages/CTA Route Maestro.png");
+        background-size: cover; /* Ensures the image covers the entire section */
+        background-position: center; /* Centers the image within the section */
+        background-repeat: no-repeat; /* Prevents repeating the image */
+        /* background-attachment: fixed;      */
+      }
 
-.btn-custom3:hover {
-  background: #e2472b; /* Change color on hover */
-  /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
-  color: #fff; /* Change text color on hover */
-}
+      .btn-custom1 {
+        background: #fe6652;
+        padding-right: 0.25rem !important;
+        padding-left: 0.25rem !important;
+        color: white;
+        padding: 0.45rem 0.45rem;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        font-size: 0.9rem !important;
+        align-items: center;
+        width: 150px !important;
+        margin-left: 30px !important;
+        margin-bottom: 3px;
+      }
 
-.btn-custom:hover {
-  background: #e2472b; /* Change color on hover */
-  /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
-  color: #fff; /* Change text color on hover */
-}
+      .btn-custom7:hover {
+        background: #e2472b; /* Change color on hover */
+        /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
+        color: #fff; /* Change text color on hover */
+      }
+      .btn-custom2 {
+        background: rgba(250, 213, 27, 1);
+        color: #000;
+        border: none;
+        /* padding: 0.25rem 0.25rem;  */
+        border-radius: 0.5rem;
+        font-weight: bold;
+        font-size: 1.3rem !important;
+        align-items: center !important;
+        width: 300px !important;
+        margin-left: 35px !important;
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+      }
 
-.btn-custom1:hover {
-  background: white; /* Change color on hover */
-  /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
-  color: #FE6652; /* Change text color on hover */
-  border-color: #07072C; 
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
 
-}
+      .modal-content {
+        text-align: center;
+        background-color: #fefefe;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+      }
 
-.btn-custom7.close-btn {
-  background: #e2472b; /* Change color on hover */
-  /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
-  color: #fff; /* Change text color on hover */
-}
+      .close-btn {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
 
-.btn-custom9:hover {
-  background: #e2472b; /* Change color on hover */
-  /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
-  color: #fff; /* Change text color on hover */
-}
+      .close-btn:hover,
+      .close-btn:focus {
+        color: black;
+        text-decoration: none;
+      }
 
-.section1 {
-    background-image: url('img/WebImages/CTA Route Maestro.png');
-    background-size: cover;          /* Ensures the image covers the entire section */
-    background-position: center;      /* Centers the image within the section */
-    background-repeat: no-repeat;     /* Prevents repeating the image */
-    /* background-attachment: fixed;      */
-}
+      .modal-left,
+      .modal-right {
+        flex: 1;
+        padding: 10px;
+      }
 
-.btn-custom1{
-  background: #FE6652; 
-  padding-right: 0.25rem !important;
-  padding-left: 0.25rem !important;
-  color: white; 
-  padding: 0.45rem 0.45rem; 
-  border-radius: 0.5rem; 
-  font-weight: bold;
-  font-size: 0.9rem !important; 
-  align-items: center;
-  width: 150px !important;
-  margin-left: 30px !important;
-  margin-bottom: 3px;
-}
+      .modal-right img {
+        width: 100%;
+        height: auto;
+      }
 
-.btn-custom7:hover {
-  background: #e2472b; /* Change color on hover */
-  /* box-shadow: 0 0 10px rgba(255, 193, 7, 0.6), 0 0 20px rgba(255, 193, 7, 0.6); */
-  color: #fff; /* Change text color on hover */
-}
-.btn-custom2{
-background: rgba(250, 213, 27, 1); 
-  color: #000; 
-  border: none; 
-  /* padding: 0.25rem 0.25rem;  */
-  border-radius: 0.5rem; 
-  font-weight: bold;
-  font-size: 1.3rem !important; 
-  align-items: center !important;
-  width: 300px !important;
-  margin-left: 35px !important;
-  padding-right: 0.5rem !important;
-  padding-left: 0.5rem !important;
-  
-}
-		
-/* css styling */
-/* Modal Background */
-.modal {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Sit on top */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgba(0,0,0,0.4); /* Black with opacity */
-    }
+      .form-group {
+        margin-bottom: 15px;
+      }
 
-    /* Modal Content */
-    .modal-content {
-	  text-align: center;
-      background-color: #fefefe;
-      margin: 10% auto; /* Centered */
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%; /* Width of the modal */
-      display: flex; /* Flexbox for columns */
-      flex-direction: row; /* Horizontal alignment */
-    }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
 
-    /* Close Button */
-    .close-btn {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+      }
 
-    .close-btn:hover,
-    .close-btn:focus {
-      color: black;
-      text-decoration: none;
-    }
+      .btn-custom6 {
+        background-color: #f0a500;
+        color: #fff;
+      }
 
-    /* Column Styles */
-    .modal-left, .modal-right {
-      flex: 1; /* Equal size columns */
-      padding: 10px;
-    }
+      .modal-title {
+        margin: 10px 0;
+      }
 
-    .modal-right img {
-      width: 100%; /* Full width of the column */
-      height: auto; /* Maintain aspect ratio */
-    }
+      .bg-travel {
+        background-image: url("img/WebImages/Devices Section (1).png");
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+      }
 
-    /* Form Styling */
-    .form-group {
-      margin-bottom: 15px;
-    }
+      .container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin-top: -43px;
+      }
+      form {
+        max-width: 50%;
+        background-color: #07072c;
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      }
 
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-    }
+      .form-group {
+        margin-bottom: 15px;
+      }
 
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 5px;
-      box-sizing: border-box;
-    }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
 
+      input,
+      textarea {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #07072c;
+      }
 
-    .btn-custom6 {
-      background-color: #f0a500; /* Customize button color */
-      color: #fff;
-    }
+      .icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ccc;
+      }
 
-    /* Modal Title */
-    .modal-title {
-      margin: 10px 0;
-    }
+      textarea {
+        resize: vertical;
+      }
 
-.bg-travel {
-  background-image: url('img/WebImages/Devices Section (1).png');
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh; /* Ensures the div takes at least the full height of the viewport */
-}
-/* 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #07072C;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-} */
+      .checkbox {
+        display: flex;
+        align-items: center;
+      }
 
-.container1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-	margin-top: -43px;
-}
-form {
-	/* width: 100%; */
-	max-width: 50%;  
-	/* margin-left: 40px;
-	margin-right: 40px; */
-    background-color: #07072C;
-    padding: 50px ;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
+      button {
+        background-color: #ff5722;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input, textarea {
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color:#fff;
-    color:#07072C;
-}
-
-.icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #ccc;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.checkbox {
-    display: flex;
-    align-items: center;
-}
-
-button {
-    background-color: #ff5722;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-
-    .input-container {
+      .input-container {
         position: relative;
         display: flex;
         align-items: center;
-    }
+      }
 
-    .input-container input {
+      .input-container input {
         width: 100%;
-        padding-right: 50px; /* Add padding to make room for the icon */
+        padding-right: 50px;
         box-sizing: border-box;
-    }
+      }
 
-    .input-container .input-icon {
+      .input-container .input-icon {
         position: absolute;
-        right: 10px; /* Adjust this value as needed */
+        right: 10px;
         display: flex;
         align-items: center;
         height: 100%;
-    }
+      }
 
-    .input-container .input-icon img {
-        max-height: 30px; /* Adjust the height as needed */
+      .input-container .input-icon img {
+        max-height: 30px;
         width: auto;
-    }
+      }
 
-	@media (max-width: 767px) {
-  /* Center-align text and images in columns */
-  .col-lg-5, .col-lg-6 {
-    text-align: center; /* Center-align text and images */
-  }
+      @media (max-width: 767px) {
+        .col-lg-5,
+        .col-lg-6 {
+          text-align: center;
+        }
 
-  /* Center-align images */
-  .col-lg-5 img, .col-lg-6 img {
-    display: block; /* Ensure image is block-level */
-    margin-left: auto;
-    margin-right: auto; /* Center-align images */
-	margin-top: -50px !important;
-  }
+        .col-lg-5 img,
+        .col-lg-6 img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: -50px !important;
+        }
 
-  /* Remove side margins in columns for mobile view */
-  .col-lg-5, .col-lg-6 {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-	
-  }
+        .col-lg-5,
+        .col-lg-6 {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
 
-  /* Ensure headings and paragraphs are centered */
-  .col-lg-5 h2, .col-lg-6 h2,
-  .col-lg-5 p, .col-lg-6 p {
-    text-align: center;
-	margin-top:10px !important;
-	/* margin-bottom: 10px !important; */
-  }
+        .col-lg-5 h2,
+        .col-lg-6 h2,
+        .col-lg-5 p,
+        .col-lg-6 p {
+          text-align: center;
+          margin-top: 10px !important;
+        }
 
-  .image-container {
-    margin-top: 70px !important;
-	
-}
-}
+        .image-container {
+          margin-top: 70px !important;
+        }
+      }
 
+      @media (max-width: 767px) {
+        #footer {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          height: 500px;
+        }
 
-@media (max-width: 767px) {
-  #footer {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-	
-  }
+        #footer .container {
+          padding-right: 15px;
+          padding-left: 15px;
+          height: 555px !important;
+          background-color: #07072c !important;
+        }
 
-  #footer .container {
-    padding-right: 15px;
-    padding-left: 15px;
-	height: 550px !important;
-	background-color: #07072C !important;
-  }
+        #footer .row {
+          flex-direction: column;
+          align-items: center;
+        }
 
-  #footer .row {
-    flex-direction: column;
-    align-items: center;
-  }
+        #footer .col-lg-4 {
+          text-align: center;
+          margin-top: 1rem;
+          margin-top: 0px !important;
+        }
 
-  #footer .col-lg-4 {
-    text-align: center;
-    margin-top: 1rem;
-  }
+        #footer .font-weight-bold {
+          font-size: 1.25rem;
+          margin-left: 0 !important ;
+          margin-bottom: 15px;
+          margin-top: 20px;
+        }
 
-  #footer .font-weight-bold {
-    font-size: 1.25rem;
-  }
+        #footer .text-3 {
+          font-size: 1rem;
+        }
 
-  #footer .text-3 {
-    font-size: 1rem;
-  }
+        /* Adjust logo size and text */
+        #footer img {
+        }
 
-  /* Adjust logo size and text */
-  #footer img {
-    width: 40px;
-    height: 40px;
-  }
+        #footer p {
+          font-size: large !important;
+        }
 
-  #footer p {
-    font-size: large !important;
-  }
+        #footer .footer-copyright hr {
+          /* border: 1px solid #ffffff !important; */
+          width: 100% !important;
+          /* Ensure it spans full width */
+          margin: 1rem 0 !important;
+          /* Adjust margin for spacing */
+        }
 
-  #footer .footer-copyright hr {
-    /* border: 1px solid #ffffff !important; */
-    width: 100% !important; /* Ensure it spans full width */
-    margin: 1rem 0 !important; /* Adjust margin for spacing */
-  }
+        #footer .footer-copyright .text-3 {
+          font-size: 1rem !important;
+        }
 
-  #footer .footer-copyright .text-3 {
-    font-size: 1rem !important;
-  }
+        #footer .footer-copyright {
+          height: 20px !important;
+        }
 
-  #footer .social-icons {
-    text-align: center; /* Center-align social icons */
-  }
+        #footer .social-icons {
+          text-align: center;
+          /* Center-align social icons */
+          margin-left: 0px;
+        }
 
-  #footer .social-icons li {
-    display: none;
-  }
+        #footer .social-icons ul {
+          text-align: center;
+          margin-left: 0px !important;
+        }
 
-  #footer .social-icons i {
-	display: none;
-    /* font-size: 24px;  */
-  }
-}
+        #footer .social-icons li {
+          text-align: center;
+          margin-left: 0px !important;
+        }
 
-@media (max-width: 767px) {
-	/* ignit section */
-    .text-ignite {
-        margin-top: -15px !important; /* Adjust this value as needed */
-    }
+        #footer .social-icons i {
+          text-align: center;
+          margin-left: 0px !important;
+        }
+      }
 
-	.buttons{
-		margin-left: 15px !important;
-		margin-right: 15px !important;
-		margin-top: 20px;
-	}
+      @media (max-width: 767px) {
+        .text-ignite {
+          margin-top: -15px !important;
+        }
 
-	/* next gen section */
-	.nextgentext{
-        margin-left: 5px !important;
-		margin-right: 5px !important;
+        .buttons {
+          margin-left: 15px !important;
+          margin-right: 15px !important;
+          margin-top: 20px;
+        }
 
-	}
+        /* next gen section */
+        .nextgentext {
+          margin-left: 5px !important;
+          margin-right: 5px !important;
+        }
 
-	.space{
-		margin-top: 10px !important;
-		margin-bottom: 10px !important;
-	}
+        .space {
+          margin-top: 10px !important;
+          margin-bottom: 10px !important;
+        }
 
-	.spacereducesky{
-		margin-top:-25px !important;
-		padding-top: 0px !important;
-	
-	}
+        .spacereducesky {
+          margin-top: -25px !important;
+          padding-top: 0px !important;
+        }
 
-	.ctasection{
-		margin-top: 580px !important;
-		height: 600px !important;
-	}
+        .ctasection {
+          margin-top: 580px !important;
+          height: 600px !important;
+        }
 
-	.ctah2{
-	 margin-left: 25px !important;
+        .ctah2 {
+          margin-left: 25px !important;
+        }
 
-	}
-	 
-	.overlay-image {
-		margin-top:20px !important;
-    position: absolute;
-    width: 75px; /* Adjust the size as needed */
-    height: 60px; /* Adjust the size as needed */
-}
+        .overlay-image {
+          margin-top: 20px !important;
+          position: absolute;
+          width: 75px;
+          height: 60px;
+        }
 
-.top-left {
-    top: -60px;
-    left: 35px;
-    margin: 10px;
-	margin-top:20px !important; /* Adjust the margin as needed */
-}
+        .top-left {
+          top: -60px;
+          left: 35px;
+          margin: 10px;
+          margin-top: 20px !important;
+        }
 
-.bottom-right {
-    bottom: -77px;
-    right: 34px;
-    margin: 10px; /* Adjust the margin as needed */
-}
+        .bottom-right {
+          bottom: -77px;
+          right: 34px;
+          margin: 10px;
+        }
 
-.btn-custom7{
-	margin-top: 75px !important;
-	margin-left: 60px !important;
-	justify-content: center !important;
-	
-}
+        .btn-custom7 {
+          margin-top: 75px !important;
+          margin-left: 60px !important;
+          justify-content: center !important;
+        }
 
+        .section1 {
+          margin-left: 10px !important;
+          margin-right: 10px !important;
 
-    .section1 {
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-        
-        border-radius: 5px;  
-		background-color: #07072C;        /* Smaller border-radius for mobile */
-    }
-    
-	.sectionmobile{
-		height:720px !important;
-	}
-    
-	.sectionmobile img{
-		margin-top: -80px !important;
-	}
+          border-radius: 5px;
+          background-color: #07072c;
+        }
 
-	.sectionmobiletext{
-		margin-top:95px !important;
-	}
+        .sectionmobile {
+          height: 720px !important;
+        }
 
-	.sectionmobilebtn{
-		margin-top: 20px !important;
-		margin-left:0px !important
-	}
+        .sectionmobile img {
+          margin-top: -80px !important;
+        }
 
-	/* .footermobile{
-		height: 700px;
-	} */
- .mainsection{
-	margin-top:20px !important;
- }
+        .sectionmobiletext {
+          margin-top: 95px !important;
+        }
 
- .main{
-	margin-top: 10px !important;
- }
+        .sectionmobilebtn {
+          margin-top: 20px !important;
+          margin-left: 0px !important;
+        }
 
- .mainsectionheight{
-	height: 650px !important;
- }
+        .mainsection {
+          margin-top: 20px !important;
+        }
 
- .secondhead{
-	height: 300px !important;
-	color: #07072C !important;
-	margin-top: 200px !important;
-	margin-bottom: 50px !important;
- }
+        .mainsectionheight {
+          height: 650px !important;
+        }
 
-}
+        .secondhead {
+          height: 300px !important;
+          color: #07072c !important;
+          margin-top: 200px !important;
+          margin-bottom: 50px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      id="header"
+      data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 70, 'stickySetTop': '-70px', 'stickyChangeLogo': true}"
+      style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2)"
+    >
+      <div class="header-body border-0 box-shadow-none">
+        <div class="header-container container">
+          <div class="header-row py-2" style="height: 65px">
+            <div class="header-column">
+              <div class="header-row d-flex align-items-center">
+                <div class="header-logo mb-0" style="margin-top: 4px">
+                  <a href="home.html">
+                    <img alt="RM" width="180" height="50" src="img\WebImages\final logo.png" />
+                  </a>
+                </div>
+                <!-- <h1 class="ml-0 mb-0 gradient-bg-new2" style="font-weight:700;">ROUTE MAESTRO</h1> -->
+              </div>
+            </div>
+            <div class="header-column">
+              <div class="header-nav-bar z-index-0">
+                <div class="container">
+                  <div class="header-row">
+                    <div class="header-column">
+                      <div
+                        class="header-row align-items-center justify-content-end"
+                        style="margin-top: -2px; margin-left: 107px"
+                      >
+                        <div class="header-nav header-nav-links justify-content-start mb-3">
+                          <div
+                            class="header-nav-main header-nav-main-text-capitalize header-nav-main-effect-2 header-nav-main-sub-effect-1"
+                          >
+                            <nav class="collapse">
+                              <ul class="nav nav-pills" id="mainNav">
+                                <li>
+                                  <a class="nav-link" href="home.html"> Home </a>
+                                </li>
+                                <li class="dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#"> Services </a>
+                                  <ul class="dropdown-menu">
+                                    <li>
+                                      <a href="ai-trip-planner.html" class="dropdown-item"
+                                        >AI Trip Planner & Itinerary Management</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a href="integrated-booking-solution.html" class="dropdown-item"
+                                        >Integrated Booking Solution</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </li>
 
+                                <li>
+                                  <a class="nav-link" href="pricing.html">
+                                    Pricing
+                                    <!-- about us in actual -->
+                                  </a>
+                                </li>
+                              </ul>
+                            </nav>
+                          </div>
+                        </div>
+                        <a
+                          href="contact.html"
+                          class="position-relative top-2 btn btn-custom1 btn-outline btn-rounded text-2 font-weight-bold px-2 mb-3"
+                          id="openModalBtn1"
+                          >Contact Us</a
+                        >
+                        <button
+                          class="btn header-btn-collapse-nav"
+                          data-bs-toggle="collapse"
+                          data-bs-target=".header-nav-main nav"
+                        >
+                          <i class="fas fa-bars"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-		</style>
-	</head>
-	<body>
+    <div role="main" class="main">
+      <section
+        class="section position-relative border-0 m-0"
+        style="background-position: center; background-size: cover"
+      >
+        <div class="container position-relative pb-5 mb-5">
+          <!-- <img height="650" width="500" src="img\WebImages\Devices Image.png" class="img-fluid position-absolute top-10 right-0 z-index-1 d-none d-lg-block appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="100" alt="Route Maestro" style="margin-top: 18px; margin-right: 4px;" /> -->
+          <div class="row align-items-center pb-5 mb-4">
+            <!-- Left Column -->
+            <div class="col-lg-10" style="padding: 5px">
+              <h2
+                class="font-weight-bold text-color-light custom-big-text-1 ws-nowrap pt-5 pb-5-5 mb-0 appear-animation"
+                data-appear-animation="fadeInUpShorterPlus"
+                data-appear-animation-delay="600"
+              >
+                <span class="d-none d-lg-block">ROUTE MAESTRO</span>
+              </h2>
+              <h2
+                class="text-color-dark font-weight-bold text-12 line-height-2 appear-animation text-center"
+                data-appear-animation="fadeInUpShorterPlus"
+                data-appear-animation-delay="100"
+                style="margin-top: -80px !important"
+              ></h2>
+            </div>
 
-		<div class="body">
-			<header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 70, 'stickySetTop': '-70px', 'stickyChangeLogo': true}" style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
-				<div class="header-body border-0 box-shadow-none">
-					<div class="header-container container">
-						<div class="header-row py-2" style="height: 65px;">
-							<div class="header-column">
-								<div class="header-row d-flex align-items-center">
-									<div class="header-logo mb-0" style="margin-top: 4px;">
-										<a href="index.html">
-											<img alt="RM" width="180" height="50" src="img\WebImages\final logo.png">
-										</a>
-									</div>
-									<!-- <h1 class="ml-0 mb-0 gradient-bg-new2" style="font-weight:700;">ROUTE MAESTRO</h1> -->
-								</div>
-								
-							</div>
-							<div class="header-column"><div class="header-nav-bar z-index-0">
-								<div class="container">
-									<div class="header-row">
-										<div class="header-column">
-											<div class="header-row align-items-center justify-content-end" style="margin-top: -2px;margin-left: 107px;">
-												<div class="header-nav header-nav-links justify-content-start mb-3">
-													<div class="header-nav-main header-nav-main-text-capitalize header-nav-main-effect-2 header-nav-main-sub-effect-1">
-														<nav class="collapse">
-															<ul class="nav nav-pills" id="mainNav">
-																<li>
-																	<a class="nav-link active" href="Home.html">
-																		Home
-																	</a>
-																</li>
-																<li>
-																	<a class="nav-link" href="Pricing.html">
-																		Pricing
-																		<!-- about us in actual -->
-																	</a>
-																</li>
-																<!-- <li class="dropdown">
-																	<a class="nav-link dropdown-toggle" href="demo-insurance-insurances.html">
-																		Insurances
-																	</a>
-																	<ul class="dropdown-menu">
-																		<li><a href="demo-insurance-insurances-detail.html" class="dropdown-item">Auto Insurance</a></li>
-																		<li><a href="demo-insurance-insurances-detail.html" class="dropdown-item">Life Insurance</a></li>
-																		<li><a href="demo-insurance-insurances-detail.html" class="dropdown-item">Business Insurance</a></li>
-																		<li><a href="demo-insurance-insurances-detail.html" class="dropdown-item">Travel Insurance</a></li>
-																		<li><a href="demo-insurance-insurances-detail.html" class="dropdown-item">Home Insurance</a></li>
-																		<li><a href="demo-insurance-insurances-detail.html" class="dropdown-item">Others</a></li>
-																	</ul>
-																</li> -->
-																<!-- <li>
-																	<a class="nav-link" href="demo-insurance-agents.html">
-																		Agents
-																	</a>
-																</li>
-																<li>
-																	<a class="nav-link" href="demo-insurance-blog.html">
-																		Blog
-																	</a>
-																</li> -->
-																<li>
-																	<a class="nav-link" href="Contact.html">
-																		Contact Us
-																	</a>
-																</li>
-																
-															</ul>
-														</nav>
-													</div>
-												</div>
-												<a href="#" class="position-relative top-2 btn btn-custom1 btn-outline btn-rounded text-2 font-weight-bold text-uppercase px-2 mb-3">Request A Demo</a>
-												<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
-													<i class="fas fa-bars"></i>
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div></div>
-			
-						</div>
-					</div>					
-	
-				</div>
-			</header>
+            <!-- Right Column -->
 
-			<div role="main" class="main">
-                <div>
-				<section class="section position-relative border-0 m-0" style="background-position: center; background-size: cover;">
-					<div class="container position-relative pb-5 mb-5">
-		
-						<!-- <img height="650" width="500" src="img\WebImages\Devices Image.png" class="img-fluid position-absolute top-10 right-0 z-index-1 d-none d-lg-block appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="100" alt="Route Maestro" style="margin-top: 18px; margin-right: 4px;" /> -->
-						<div class="row align-items-center pb-5 mb-4">
-							<!-- Left Column -->
-							<div class="col-lg-10" style="padding: 5px;">
-								<h2 class="font-weight-bold text-color-light custom-big-text-1 ws-nowrap pt-5 pb-5-5 mb-0 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="600">
-									<span class="d-none d-lg-block">ROUTE MAESTRO</span>
-								</h2>
-								<h2 class="text-color-dark font-weight-bold text-12 line-height-2 appear-animation text-center" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="100" style="margin-top: -80px !important;"></h2>
-								
-							</div>
+            <!-- <div class="col-lg-2 d-flex justify-content-center"> -->
+            <!-- <img src="" alt="" class="img-fluid" height="50px" width="200px"> -->
+            <!-- </div> -->
 
-							
-							<!-- Right Column -->
+            <h1
+              class="text-color-dark font-weight-bold text-12 line-height-2 appear-animation text-center"
+              data-appear-animation="fadeInUpShorterPlus"
+              data-appear-animation-delay="100"
+              style="margin-top: -90px !important"
+            >
+              Request Price/Demo
+            </h1>
 
-
-
-							<!-- <div class="col-lg-2 d-flex justify-content-center"> -->
-								<!-- <img src="" alt="" class="img-fluid" height="50px" width="200px"> -->
-							<!-- </div> -->
-							
-							<h1 class="text-color-dark font-weight-bold text-12 line-height-2 appear-animation text-center" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="100" style="margin-top: -90px !important;">Request Price/Demo</h1>
-
-							<p class="text-color-dark text-4 font-weight-medium mb-4-5 appear-animation text-center" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="100" style="margin-top: -32px;">Transform your travel business with RouteMaestro.</p>
-								<p class="text-color-dark text-4 font-weight-medium mb-4-5 appear-animation text-center" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="100" style="margin-top: -10px;">The ultimate and only holiday platform you require for 
-									your travel business.</p>
-
-						</div>
-						<div class="container1">
-							<form style="color: white;">
-								
-								<div class="form-group">
-									<label for="firstName">Name*</label>
-									<div class="input-container">
-										<input type="text" id="firstName" name="firstName" required>
-										<span class="input-icon">
-											<img src="img\WebImages\First, Last Name.svg" alt="Name" class="img-fluid" style="width: 20px; height: 20px;">
-										</span>
-									</div>
-								</div>
-								<!-- <div class="form-group">
+            <p
+              class="text-color-dark text-4 font-weight-medium mb-4-5 appear-animation text-center"
+              data-appear-animation="fadeInUpShorterPlus"
+              data-appear-animation-delay="100"
+              style="margin-top: -32px"
+            >
+              Transform your travel business with RouteMaestro.
+            </p>
+            <p
+              class="text-color-dark text-4 font-weight-medium mb-4-5 appear-animation text-center"
+              data-appear-animation="fadeInUpShorterPlus"
+              data-appear-animation-delay="100"
+              style="margin-top: -10px"
+            >
+              The ultimate and only holiday platform you require for your travel business.
+            </p>
+          </div>
+          <div class="container1">
+            <form style="color: white">
+              <div class="form-group">
+                <label for="firstName">Name*</label>
+                <div class="input-container">
+                  <input type="text" id="firstName" name="firstName" required />
+                  <span class="input-icon">
+                    <img
+                      src="img\WebImages\First, Last Name.svg"
+                      alt="Name"
+                      class="img-fluid"
+                      style="width: 20px; height: 20px"
+                    />
+                  </span>
+                </div>
+              </div>
+              <!-- <div class="form-group">
 									<label for="lastName">Last Name*</label>
 									<div class="input-container">
 									<input type="text" id="lastName" name="lastName" required>
@@ -796,296 +791,325 @@ button {
 									</span>
 								</div>
 								</div> -->
-							
-								<div class="form-group">
-									<label for="email">Email address*</label>
-									<div class="input-container">
-									<input type="email" id="email" name="email" required>
-									<span class="input-icon">
-										<img src="img\WebImages\Email (3).svg" alt="Email" class="img-fluid" style="width: 20px; height: 20px;">
-									</span>
-								</div>
-								</div>
-								<div class="form-group">
-									<label for="company">Company Name*</label>
-									<div class="input-container">
-									<input type="text" id="company" name="company" required>
-									<span class="input-icon">
-										<img src="img/WebImages/Company Name (2).svg" alt="Comapany" class="img-fluid" style="width: 20px; height: 20px;">
-									</span>
-								</div>
-								</div>
-								<div class="form-group">
-									<label for="mobile">Mobile Number*</label>
-									<div class="input-container">
-									<input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}">
-									<span class="input-icon">
-										<img src="img\WebImages\Call.svg" alt="Call" class="img-fluid" style="width: 20px; height: 20px;">
-									</span>
-								</div>
-								</div>
-								<div class="form-group">
-									<label for="message">Message</label>
-									
-									<textarea id="message" name="message"></textarea>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="privacy" name="privacy" required style="width: 14%;">
-									<label for="privacy">By submitting this form, you consent to the processing of your data in accordance with our <a href="Privacy.html" style="color: #e2472b;">Privacy Policy</a>.</label>
-								</div>
-								<button type="submit" class="btn btn-custom7 btn-rounded font-weight-bold border-0 text-3 px-5 btn-py-3">Submit</button>
-							</form>
-						</div>
 
-						
-					</div>
-				</section>
+              <div class="form-group">
+                <label for="email">Email address*</label>
+                <div class="input-container">
+                  <input type="email" id="email" name="email" required />
+                  <span class="input-icon">
+                    <img
+                      src="img\WebImages\Email (3).svg"
+                      alt="Email"
+                      class="img-fluid"
+                      style="width: 20px; height: 20px"
+                    />
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="company">Company Name*</label>
+                <div class="input-container">
+                  <input type="text" id="company" name="company" required />
+                  <span class="input-icon">
+                    <img
+                      src="img/WebImages/Company Name (2).svg"
+                      alt="Comapany"
+                      class="img-fluid"
+                      style="width: 20px; height: 20px"
+                    />
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="mobile">Mobile Number*</label>
+                <div class="input-container">
+                  <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" />
+                  <span class="input-icon">
+                    <img src="img\WebImages\Call.svg" alt="Call" class="img-fluid" style="width: 20px; height: 20px" />
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
 
-			
-			</div>
-	
-				
+                <textarea id="message" name="message"></textarea>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="privacy" name="privacy" required style="width: 14%" />
+                <label for="privacy"
+                  >By submitting this form, you consent to the processing of your data in accordance with our
+                  <a href="Privacy.html" style="color: #e2472b">Privacy Policy</a>.</label
+                >
+              </div>
+              <button type="submit" class="btn btn-custom7 btn-rounded font-weight-bold border-0 text-3 px-5 btn-py-3">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
 
-			</div>
+      <!-- section-7-cta-section -->
+      <section
+        class="d-none d-md-block"
+        style="
+          background-color: #07072c;
+          height: 600px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            background: url('img/RM Home Page Icons/RouteMaestrobg.webp') no-repeat center center/cover;
+            height: 500px;
+          "
+        >
+          <div style="flex: 1; display: flex; justify-content: center; align-items: center">
+            <img
+              src="img/RM Home Page Icons/RouteMaestrofigurecta.png"
+              alt="Centered Image"
+              style="max-width: 80%; height: auto"
+            />
+          </div>
+          <div style="flex: 1.5; color: white; text-align: center; padding: 20px">
+            <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
+            <a
+              class="btnnew"
+              href="#"
+              style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
+              >Schedule A Demo</a
+            >
+          </div>
+        </div>
+      </section>
 
-			  <section class="section section-height-3 position-relative z-index-1 border-0 m-0 gradient-bg">
-				<div class="container" style="height: 300px;">
-				  <div class="row align-items-center" style="height: 100px;">
-					<div class="col-xl-6 text-center" style="margin-top:-31px !important;">
-					  <img height="40px" width="300px" src="img\WebImages\CTA Image (3).png" alt="Mobile Phone" class="img-fluid">
-					</div>
-					<div class="col-xl-5">
-					  <div class="d-flex flex-column align-items-center justify-content-center h-90" style="margin-top: -70px;">
-						<div class="text-color-light font-weight-bold text-7 mb-4 line-height-1 text-center">See RouteMaestro In Action</div>
-						<a href="Contact.html" class="btn btn-custom9 btn-rounded font-weight-bold border-0 text-3 px-5 btn-py-3" style="margin-top: 25px;">Get In Touch</a>
-					  </div>
-					</div>
-				  </div>
-				</div>
-			  </section>
-			  
+      <!-- section-7-mobile -->
+      <section
+        class="d-md-none d-block"
+        style="background-color: #07072c; height: 500px; align-items: center; justify-content: center; padding: 20px"
+      >
+        <div style="color: white; text-align: center; padding: 20px">
+          <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
+          <a
+            class=""
+            href="#"
+            style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
+            >Schedule A Demo</a
+          >
+          <img
+            src="img/RM Home Page Icons/RouteMaestrofigurecta.png"
+            alt="Centered Image"
+            style="max-width: 80%; height: auto"
+          />
+        </div>
+      </section>
 
-			  <div style="background: #07072C; height: 450px;">
+      <!-- section-8-footer -->
+      <div class="footermobile" style="background: #07072c; height: 450px">
+        <footer id="footer" class="position-relative bg-transparent border-top-0">
+          <div class="container pt-5-5 pb-3">
+            <div class="row gy-3 d-flex justify-content-start">
+              <!-- Column 1: Logo -->
+              <div class="col-lg-4 mt-5-5" style="margin-top: 25px !important">
+                <div style="display: flex; align-items: center; justify-content: center">
+                  <img
+                    alt="Route Maestro"
+                    width="250"
+                    height="45"
+                    style="margin-bottom: 10px"
+                    src="img/RM Home Page Icons/RouteMaestrologo.png"
+                  />
+                </div>
+              </div>
 
-				<div class="footermobile" style="background: #07072c; height: 450px">
-					<footer id="footer" class="position-relative bg-transparent border-top-0">
-					  <div class="container pt-5-5 pb-3">
-						<div class="row gy-3 d-flex justify-content-start">
-						  <!-- Column 1: Logo -->
-						  <div class="col-lg-4 mt-5-5" style="margin-top: 25px !important">
-							<div style="display: flex; align-items: center; justify-content: center">
-							  <img
-								alt="Route Maestro"
-								width="50"
-								height="50"
-								style="margin-bottom: 10px"
-								src="img\WebImages\footerlogonew.png"
-							  />
-							  <p style="margin-left: 7px; font-size: x-large; color: white">ROUTEMAESTRO</p>
-							</div>
-							<div style="align-items: center; justify-content: center; margin-top: 20px; margin-left: 75px">
-							  <a href="https://ascentialabs.com/" target="_blank">
-								<img
-								  class="Ascentia"
-								  alt="Ascentia Labs"
-								  width="240"
-								  height="40"
-								  style="margin-bottom: 10px"
-								  src="img/WebImages/Ascentia Logo (1).png"
-								/>
-							  </a>
-							</div>
-						  </div>
-			
-						  <!-- Column 2: Customer Service -->
-						  <div class="col-lg-4" style="margin-top: 30px">
-							<h3 class="font-weight-bold" style="color: #a733ff; margin-left: 25px">Pages</h3>
-							<ul class="list list-unstyled">
-							  <li style="margin-left: 30px">
-								<a
-								  href="Home.html"
-								  class="text-color-grey text-color-hover-primary"
-								  style="color: white !important; font-size: 16px"
-								  >Home</a
-								>
-							  </li>
-							  <li style="margin-left: 30px">
-								<a
-								  href="ai-trip-planner.html"
-								  class="text-color-grey text-color-hover-primary"
-								  style="color: white !important; font-size: 15px"
-								  >AI Trip Planner & Itinerary Management Platform</a
-								>
-							  </li>
-							  <li style="margin-left: 30px">
-								<a
-								  href="Pricing.html"
-								  class="text-color-grey text-color-hover-primary"
-								  style="color: white !important; font-size: 16px"
-								  >Pricing</a
-								>
-							  </li>
-							  <li style="margin-left: 30px">
-								<a
-								  href="Contact.html"
-								  class="text-color-grey text-color-hover-primary"
-								  style="color: white !important; font-size: 16px"
-								  >Contact Us</a
-								>
-							  </li>
-							  <!-- <li style="margin-left: 30px">
-							  <a href="Pricing.html" class="text-color-grey text-color-hover-primary"
-								style="color: white !important; font-size: 16px">Pricing</a>
-							</li> -->
-							</ul>
-						  </div>
-						  <!-- Column 3: Catch Us On Social Media -->
-						  <div class="col-lg-4" style="margin-top: 30px">
-							<h3 class="font-weight-bold mb-3" style="color: #a733ff">CATCH US ON SOCIAL MEDIA</h3>
-							<ul class="social-icons social-icons-clean social-icons-medium" style="color: white">
-							  <li class="social-icons-instagram">
-								<a href="http://www.instagram.com/" target="_blank" title="Instagram">
-								  <i class="fab fa-instagram"></i>
-								</a>
-							  </li>
-							  <li class="social-icons-twitter">
-								<a href="http://www.twitter.com/" target="_blank" title="Twitter">
-								  <i class="fab fa-twitter"></i>
-								</a>
-							  </li>
-							  <li class="social-icons-facebook">
-								<a href="http://www.facebook.com/" target="_blank" title="Facebook">
-								  <i class="fab fa-facebook-f"></i>
-								</a>
-							  </li>
-							</ul>
-						  </div>
-						</div>
-					  </div>
-					  <!-- </div> -->
-			
-					  <div class="footer-copyright bg-transparent">
-						<hr style="border: 1px solid #ffffff" />
-						<div class="container" style="height: auto !important">
-						  <div class="d-flex flex-column align-items-center">
-							<div class="d-flex justify-content-center mt-2 mb-2">
-							  <p class="text-center text-3 mb-0 text-white mx-3" style="font-size: large !important">
-								Privacy Policy
-							  </p>
-							  <p class="text-center text-3 mb-0 text-white mx-3" style="font-size: large !important">
-								Terms of Use
-							  </p>
-							  <p class="text-center text-3 mb-0 text-white mx-3" style="font-size: large !important">Site Map</p>
-							</div>
-							<div class="mt-2 mb-2">
-							  <p class="text-center text-3 mb-0 text-white" style="font-size: large !important">
-								© 2025 All Rights Reserved
-							  </p>
-							</div>
-						  </div>
-						</div>
-					  </div>
-					</footer>
-				  </div>
-			</div>
-		</div>
-	
+              <!-- Column 2: Customer Service -->
+              <div class="col-lg-4" style="margin-top: 30px">
+                <h3 class="font-weight-bold" style="color: #a733ff; margin-left: 25px">Pages</h3>
+                <ul class="list list-unstyled">
+                  <li style="margin-left: 30px">
+                    <a
+                      href="home.html"
+                      class="text-color-grey text-color-hover-primary"
+                      style="color: white !important; font-size: 16px"
+                      >Home</a
+                    >
+                  </li>
+                  <li style="margin-left: 30px">
+                    <a
+                      href="ai-trip-planner.html"
+                      class="text-color-grey text-color-hover-primary"
+                      style="color: white !important; font-size: 15px"
+                      >AI Trip Planner & Itinerary Management Platform</a
+                    >
+                  </li>
+                  <li style="margin-left: 30px">
+                    <a
+                      href="pricing.html"
+                      class="text-color-grey text-color-hover-primary"
+                      style="color: white !important; font-size: 16px"
+                      >Pricing</a
+                    >
+                  </li>
+                  <li style="margin-left: 30px">
+                    <a
+                      href="contact.html"
+                      class="text-color-grey text-color-hover-primary"
+                      style="color: white !important; font-size: 16px"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- Column 3: Catch Us On Social Media -->
+              <div class="col-lg-4" style="margin-top: 30px">
+                <h3 class="font-weight-bold mb-3" style="color: #a733ff">CATCH US ON SOCIAL MEDIA</h3>
+                <ul class="social-icons social-icons-clean social-icons-medium" style="color: white">
+                  <li class="social-icons-instagram">
+                    <a href="http://www.instagram.com/" target="_blank" title="Instagram">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="social-icons-twitter">
+                    <a href="http://www.twitter.com/" target="_blank" title="Twitter">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="social-icons-facebook">
+                    <a href="http://www.facebook.com/" target="_blank" title="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
 
-	
-  
+          <div class="footer-copyright bg-transparent">
+            <hr style="border: 1px solid #ffffff" />
+            <div class="container" style="height: auto !important">
+              <div class="d-flex flex-column align-items-center">
+                <div class="d-flex justify-content-center mt-2 mb-4">
+                  <p class="text-center text-3 mb-0 text-white mx-3" style="font-size: large !important">
+                    Privacy Policy
+                  </p>
+                  <p class="text-center text-3 mb-0 text-white mx-3" style="font-size: large !important">
+                    Terms of Use
+                  </p>
+                  <p class="text-center text-3 mb-0 text-white mx-3" style="font-size: large !important">Site Map</p>
+                </div>
+                <div class="mt-2 mb-2">
+                  <p class="text-center text-3 mb-0 text-white" style="font-size: large !important">
+                    © 2025 All Rights Reserved
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
 
-		<!-- Vendor -->
-		<script src="vendor/plugins/js/plugins.min.js"></script>
+    <!-- Vendor -->
+    <script src="vendor/plugins/js/plugins.min.js"></script>
 
-		<!-- Theme Base, Components and Settings -->
-		<script src="js/theme.js"></script>
+    <!-- Theme Base, Components and Settings -->
+    <script src="js/theme.js"></script>
 
-		<!-- Current Page Vendor and Views -->
-		<script src="js/views/view.contact.js"></script>
+    <!-- Current Page Vendor and Views -->
+    <script src="js/views/view.contact.js"></script>
 
-		<!-- Theme Custom -->
-		<script src="js/custom.js"></script>
+    <!-- Theme Custom -->
+    <script src="js/custom.js"></script>
 
-		<!-- Theme Initialization Files -->
-		<script src="js/theme.init.js"></script>
+    <!-- Theme Initialization Files -->
+    <script src="js/theme.init.js"></script>
 
-		<!-- EMAIL SENDING -->
-		<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- EMAIL SENDING -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-	<script>
-		// Get the modal
-		var modal = document.getElementById("demoModal");
-	
-		// Get the button that opens the modal
-		var btn = document.getElementById("openModalBtn");
-	
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close-btn")[0];
-	
-		// When the user clicks on the button, open the modal
-		btn.onclick = function() {
-		  modal.style.display = "block";
-		}
-	
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-		  modal.style.display = "none";
-		}
-	
-		// Function to close the modal
-		function closeModal() {
-		  modal.style.display = "none";
-		}
-	
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-		  if (event.target == modal) {
-			modal.style.display = "none";
-		  }
-		}
+    <script>
+      // Get the modal
+      var modal = document.getElementById("demoModal");
 
-		<script>
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
+      // Get the button that opens the modal
+      var btn = document.getElementById("openModalBtn");
 
-    // Get form data
-    const formData = {
-        firstName: document.getElementById("firstName").value,
-        email: document.getElementById("email").value,
-        company: document.getElementById("company").value,
-        mobile: document.getElementById("mobile").value,
-        message: document.getElementById("message").value
-    };
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close-btn")[0];
 
-    // Store form data in localStorage
-    localStorage.setItem("formData", JSON.stringify(formData));
+      // When the user clicks on the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
 
-    // Send the data via email (see below)
-    sendEmail(formData);
-});
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
 
+      // Function to close the modal
+      function closeModal() {
+        modal.style.display = "none";
+      }
 
-(function() {
-    emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID..SEND THE EMAIL
-})();
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick =
+        function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        } <
+        script >
+        document.querySelector("form").addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
 
-function sendEmail(formData) {
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-        first_name: formData.firstName,
-        email: formData.email,
-        company: formData.company,
-        mobile: formData.mobile,
-        message: formData.message
-    })
-    .then(function(response) {
-        console.log("SUCCESS!", response.status, response.text);
-    }, function(error) {
-        console.log("FAILED...", error);
-    });
-}
-</script>
+          // Get form data
+          const formData = {
+            firstName: document.getElementById("firstName").value,
+            email: document.getElementById("email").value,
+            company: document.getElementById("company").value,
+            mobile: document.getElementById("mobile").value,
+            message: document.getElementById("message").value,
+          };
 
-	  </script>
-	  
-	</body>
+          // Store form data in localStorage
+          localStorage.setItem("formData", JSON.stringify(formData));
+
+          // Send the data via email (see below)
+          sendEmail(formData);
+        });
+
+      (function () {
+        emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID..SEND THE EMAIL
+      })();
+
+      function sendEmail(formData) {
+        emailjs
+          .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+            first_name: formData.firstName,
+            email: formData.email,
+            company: formData.company,
+            mobile: formData.mobile,
+            message: formData.message,
+          })
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+            },
+            function (error) {
+              console.log("FAILED...", error);
+            }
+          );
+      }
+    </script>
+  </body>
 </html>

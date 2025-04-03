@@ -416,6 +416,9 @@
 
         #footer .font-weight-bold {
           font-size: 1.25rem;
+          margin-left: 0 !important ;
+          margin-bottom: 15px;
+          margin-top: 20px;
         }
 
         #footer .text-3 {
@@ -424,8 +427,6 @@
 
         /* Adjust logo size and text */
         #footer img {
-          width: 40px;
-          height: 40px;
         }
 
         #footer p {
@@ -749,9 +750,6 @@
           margin-bottom: 0 !important;
         }
 
-        .section {
-        }
-
         .list li {
           margin-left: 0px !important;
         }
@@ -1045,35 +1043,29 @@
 
         #ai-trip-planner-section .p-5 {
           padding: 20px;
-          /* Adjust padding for medium screens */
         }
       }
 
       @media (max-width: 768px) {
-        /* Adjust the font size for headings */
         #ai-trip-planner-section h2 {
           font-size: 36px !important;
         }
 
-        /* Adjust the font size for paragraphs */
         #ai-trip-planner-section p {
           font-size: 20px !important;
         }
 
-        /* Make image fully responsive */
         #ai-trip-planner-section img {
           max-width: 100% !important;
           height: auto !important;
-          /* Ensures aspect ratio is maintained */
+
           border-radius: 8px !important;
         }
 
-        /* Adjust padding for the main section */
         #ai-trip-planner-section {
           padding: 20px 10px !important;
         }
 
-        /* Ensure the row is centered */
         .row {
           justify-content: center !important;
         }
@@ -1083,68 +1075,58 @@
         }
       }
 
-      /* Default styles for the section */
       .section-ai-powered {
         background-image: url("img/tester images/columnsectionbackgorund.png");
         background-size: cover;
-        /* Ensures the image covers the entire section */
+
         background-position: center;
-        /* Centers the image */
+
         background-repeat: no-repeat;
-        /* Prevents the image from repeating */
+
         padding: 50px 20px;
         text-align: center;
         color: white;
       }
 
-      /* Media query for mobile devices */
       @media (max-width: 768px) {
         .section-ai-powered {
           height: 2485px !important;
         }
 
-        /* Stack columns vertically */
         .section-ai-powered > div {
           text-align: center !important;
           flex-direction: column !important;
-          /* Change flex direction to column */
+
           max-width: 100% !important;
-          /* Ensure full width on mobile */
         }
 
-        /* Ensure each column takes full width */
         .section-ai-powered > div > div {
           text-align: center !important;
           flex: 1 1 100% !important;
-          /* Make each column take full width */
+
           max-width: 100% !important;
-          /* Override the max-width */
         }
       }
 
-      /* Media Query for Mobile Screens */
       @media (max-width: 768px) {
         .route-maestro-section {
           height: auto !important;
-          /* Allow height to adjust based on content */
+
           padding: 20px !important;
-          /* Add padding for better spacing */
         }
 
         .route-maestro-section img {
           height: auto !important;
-          /* Adjust image height automatically */
+
           width: 100% !important;
-          /* Make the image responsive */
+
           max-width: 300px !important;
-          /* Maintain max width */
         }
 
         .route-maestro-section .text-color-light {
           font-size: 1.5rem !important;
-          /* Adjust font size for mobile */
+
           line-height: 1.2 !important;
-          /* Adjust line height for better readability */
         }
 
         .route-maestro-section .btn {
@@ -1165,27 +1147,19 @@
         }
       }
 
-      /* book a demo button */
       .book-demo-btn {
         position: fixed;
         bottom: 45px;
-        /* Distance from the bottom of the page */
         right: 20px;
-        /* Distance from the right side of the page */
         width: 50px;
-        /* Adjust size as per your image */
         height: 50px;
-        /* Adjust size as per your image */
-        background-image: url("img/WebImages/Route Maestro Website Updated Images/demo.png");
-        /* Path to your image */
+        background-image: url("img/RM Home Page Icons/demo 1.png");
         background-size: cover;
-        /* Ensures the image covers the entire button */
         background-position: center;
         border: none;
         border-radius: 50%;
         cursor: pointer;
         z-index: 1000;
-        /* Keeps the button on top of other elements */
       }
 
       .book-demo-btn:hover {
@@ -1231,6 +1205,96 @@
       @media (max-width: 768px) {
         .glass-card {
           max-width: 100%;
+        }
+
+        .main-section {
+          height: 800px !important;
+        }
+
+        .main-section-1 {
+          display: flex !important;
+          flex-direction: column !important;
+          margin-top: 25px !important;
+        }
+
+        .main-section-left {
+          width: 100% !important;
+        }
+
+        .main-section-right {
+          margin-top: 30px !important;
+          width: 100% !important;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .accordion {
+          width: 90% !important;
+        }
+
+        .faq {
+          padding: 12px !important;
+        }
+
+        .faq-header span {
+          font-size: 18px !important;
+        }
+
+        .arrow-new {
+          width: 28px !important;
+          height: 28px !important;
+          font-size: 12px !important;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .accordion {
+          width: 95% !important;
+        }
+
+        .faq-header span {
+          font-size: 17px !important;
+        }
+
+        .arrow-new {
+          width: 26px !important;
+          height: 26px !important;
+          font-size: 12px !important;
+          line-height: normal !important; /* Ensures text inside isn't misaligned */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .accordion {
+          width: 100% !important;
+        }
+
+        h2 {
+          font-size: 28px !important;
+        }
+
+        .faq {
+          padding: 10px !important;
+        }
+
+        .faq-header span {
+          font-size: 16px !important;
+          width: 80%;
+        }
+
+        .arrow-new {
+          width: 24px !important;
+          height: 24px !important;
+          font-size: 12px !important;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
     </style>
@@ -1315,7 +1379,7 @@
             <div class="header-column">
               <div class="header-row d-flex align-items-center">
                 <div class="header-logo mb-0" style="margin-top: 4px">
-                  <a href="Home.html">
+                  <a href="home.html">
                     <img alt="RM" width="180" height="50" src="img\WebImages\final logo.png" />
                   </a>
                 </div>
@@ -1338,7 +1402,7 @@
                             <nav class="collapse">
                               <ul class="nav nav-pills" id="mainNav">
                                 <li>
-                                  <a class="nav-link" href="Home.html"> Home </a>
+                                  <a class="nav-link" href="home.html"> Home </a>
                                 </li>
                                 <li class="dropdown">
                                   <a class="nav-link dropdown-toggle" href="#"> Services </a>
@@ -1357,7 +1421,7 @@
                                 </li>
 
                                 <li>
-                                  <a class="nav-link" href="Pricing.html">
+                                  <a class="nav-link" href="pricing.html">
                                     Pricing
                                     <!-- about us in actual -->
                                   </a>
@@ -1367,7 +1431,7 @@
                           </div>
                         </div>
                         <a
-                          href="Contact.html"
+                          href="contact.html"
                           class="position-relative top-2 btn btn-custom1 btn-outline btn-rounded text-2 font-weight-bold px-2 mb-3"
                           id="openModalBtn1"
                           >Contact Us</a
@@ -1391,10 +1455,13 @@
     </header>
 
     <div role="main" class="main">
+      <button class="book-demo-btn" id="openModalBtn2"></button>
+
       <!-- main section -->
       <section
+        class="main-section"
         style="
-          height: 480px;
+          height: 510px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1402,9 +1469,12 @@
           padding: 40px;
         "
       >
-        <div style="max-width: 1160px; width: 100%; display: flex; align-items: center; justify-content: space-between">
+        <div
+          class="main-section-1"
+          style="max-width: 1160px; width: 100%; display: flex; align-items: center; justify-content: space-between"
+        >
           <!-- Left Side Content -->
-          <div style="width: 50%; padding-right: 20px">
+          <div class="main-section-left" style="width: 50%; padding-right: 20px">
             <h1 style="font-size: 36px; color: #2f3268; margin-bottom: 20px; font-weight: bold">
               AI Powered Dynamic Packaging & Itinerary Management
             </h1>
@@ -1428,11 +1498,11 @@
           </div>
 
           <!-- Right Side Image -->
-          <div style="width: 50%">
+          <div class="main-section-right" style="width: 50%">
             <img
-              src="https://via.placeholder.com/500"
+              src="img/RM Home Page Icons/ai-travel-itinerary-landing.webp"
               alt="AI Powered Image"
-              style="width: 100%; border-radius: 10px"
+              style="width: 85%; border-radius: 10px; height: 90%"
             />
           </div>
         </div>
@@ -1452,219 +1522,273 @@
         <div class="row text-center">
           <div class="col-12">
             <h2
-              class="font-weight-bold mt-4 mb-4 appear-animation"
+              class="mt-4 mb-4 appear-animation"
               data-appear-animation="fadeInRightShorterPlus"
               data-appear-animation-delay="100"
               style="font-size: 36px; color: #2f3268"
             >
-              AI Powered Trip Planning & Itinerary <br />
-              Management System
+              AI Powered
+              <strong>
+                Trip Planning & Itinerary <br />
+                Management
+              </strong>
+              System
             </h2>
           </div>
         </div>
-        <div style="width: 900px; margin: auto; padding: 20px 0">
-          <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center">
+        <div style="width: 1150px; margin: auto; padding: 20px 0">
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center">
             <!-- Card 1 -->
             <div
               style="
-                width: 150px;
+                width: 210px;
+                height: 210px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
-                text-align: center;
+                text-align: left;
                 padding: 15px;
               "
             >
               <img
-                src="https://via.placeholder.com/150"
+                src="img/RM Home Page Icons/Smart Itinerary Planning.png"
                 alt="Image"
-                style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h3 style="margin: 10px 0; font-size: 18px">Card Title 1</h3>
-              <p style="font-size: 14px; color: #555">Card description text goes here.</p>
+              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
+                Smart Itinerary Planning
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                AI-driven itinerary creation based on preferences, budget, and real-time availability.
+              </p>
             </div>
 
             <!-- Repeat this block for each card -->
             <div
               style="
-                width: 150px;
+                width: 210px;
+                height: 210px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
-                text-align: center;
+                text-align: left;
                 padding: 15px;
               "
             >
               <img
-                src="https://via.placeholder.com/150"
+                src="img/RM Home Page Icons/Multi-Supplier Price Comparison.png"
                 alt="Image"
-                style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h3 style="margin: 10px 0; font-size: 18px">Card Title 2</h3>
-              <p style="font-size: 14px; color: #555">Card description text goes here.</p>
+              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
+                Multi-Supplier Price Comparison
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                Real-time price comparison for cost-effective package creation.
+              </p>
             </div>
 
             <div
               style="
-                width: 150px;
+                width: 210px;
+                height: 210px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
-                text-align: center;
+                text-align: left;
                 padding: 15px;
               "
             >
               <img
-                src="https://via.placeholder.com/150"
+                src="img/RM Home Page Icons/Dynamic Supplier Management.png"
                 alt="Image"
-                style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h3 style="margin: 10px 0; font-size: 18px">Card Title 3</h3>
-              <p style="font-size: 14px; color: #555">Card description text goes here.</p>
+              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
+                Dynamic Supplier ManagementDynamic Supplier Management
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                Seamless supplier integration, real-time inventory updates, and pricing control.
+              </p>
             </div>
 
             <div
               style="
-                width: 150px;
+                width: 210px;
+                height: 210px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
-                text-align: center;
+                text-align: left;
                 padding: 15px;
               "
             >
               <img
-                src="https://via.placeholder.com/150"
+                src="img/RM Home Page Icons/AI-Powered Route Generation for Budget Optimization.png"
                 alt="Image"
-                style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h3 style="margin: 10px 0; font-size: 18px">Card Title 4</h3>
-              <p style="font-size: 14px; color: #555">Card description text goes here.</p>
+              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
+                AI-Powered Route Generation for Budget Optimization
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                Smart route suggestions to reduce costs and maximize savings.
+              </p>
             </div>
 
             <div
               style="
-                width: 150px;
+                width: 210px;
+                height: 210px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
-                text-align: center;
+                text-align: left;
                 padding: 15px;
               "
             >
               <img
-                src="https://via.placeholder.com/150"
+                src="img/RM Home Page Icons/White-Label Solution.png"
                 alt="Image"
-                style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h3 style="margin: 10px 0; font-size: 18px">Card Title 5</h3>
-              <p style="font-size: 14px; color: #555">Card description text goes here.</p>
+              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
+                White-Label Solution
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                Fully customizable platform with your branding for a professional identity.
+              </p>
             </div>
 
             <!-- Second Row -->
             <div
               style="
-                width: 150px;
+                width: 210px;
+                height: 210px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
-                text-align: center;
+                text-align: left;
                 padding: 15px;
               "
             >
               <img
-                src="https://via.placeholder.com/150"
+                src="img/RM Home Page Icons/Real-Time Updates & Notifications.png"
                 alt="Image"
-                style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h3 style="margin: 10px 0; font-size: 18px">Card Title 6</h3>
-              <p style="font-size: 14px; color: #555">Card description text goes here.</p>
+              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
+                Real-Time Updates & Notifications
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                Instant alerts for bookings, schedule changes, and cancellations.
+              </p>
             </div>
 
             <div
               style="
-                width: 150px;
+                width: 210px;
+                height: 210px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
-                text-align: center;
+                text-align: left;
                 padding: 15px;
               "
             >
               <img
-                src="https://via.placeholder.com/150"
+                src="img/RM Home Page Icons/AI-Powered Cancellation Policy Handling.png"
                 alt="Image"
-                style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h3 style="margin: 10px 0; font-size: 18px">Card Title 7</h3>
-              <p style="font-size: 14px; color: #555">Card description text goes here.</p>
+              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
+                AI-Powered Cancellation Policy Handling
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                Automated analysis of policies, refund processing, and best cancellation options.
+              </p>
             </div>
 
             <div
               style="
-                width: 150px;
+                width: 210px;
+                height: 210px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
-                text-align: center;
+                text-align: left;
                 padding: 15px;
               "
             >
               <img
-                src="https://via.placeholder.com/150"
+                src="img/RM Home Page Icons/Integrated Multi-Payment.png"
                 alt="Image"
-                style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h3 style="margin: 10px 0; font-size: 18px">Card Title 8</h3>
-              <p style="font-size: 14px; color: #555">Card description text goes here.</p>
+              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
+                Integrated Multi-Payment
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                Secure, flexible payment options with multiple gateways and currencies.
+              </p>
             </div>
 
             <div
               style="
-                width: 150px;
+                width: 210px;
+                height: 210px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
-                text-align: center;
+                text-align: left;
                 padding: 15px;
               "
             >
               <img
-                src="https://via.placeholder.com/150"
+                src="img/RM Home Page Icons/Dynamic Commission & Profit Optimization.png"
                 alt="Image"
-                style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h3 style="margin: 10px 0; font-size: 18px">Card Title 9</h3>
-              <p style="font-size: 14px; color: #555">Card description text goes here.</p>
+              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
+                Dynamic Commission & Profit Optimization
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                Automated commission calculations with optimized markup strategies.
+              </p>
             </div>
 
             <div
               style="
-                width: 150px;
+                width: 210px;
+                height: 210px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
-                text-align: center;
+                text-align: left;
                 padding: 15px;
               "
             >
               <img
-                src="https://via.placeholder.com/150"
+                src="img/RM Home Page Icons/Proposal & Quotation Sharing.png"
                 alt="Image"
-                style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h3 style="margin: 10px 0; font-size: 18px">Card Title 10</h3>
-              <p style="font-size: 14px; color: #555">Card description text goes here.</p>
+              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
+                Proposal & Quotation Sharing
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                Instant generation and sharing of detailed proposals and quotations.
+              </p>
             </div>
           </div>
         </div>
@@ -1682,7 +1806,7 @@
           "
         ></div>
         <div style="max-width: 1200px; margin: 0 auto; padding: 20px">
-          <div class="pb-5">
+          <div class="pb-2">
             <div class="row text-center">
               <div class="col-12">
                 <h2
@@ -1691,16 +1815,14 @@
                   data-appear-animation-delay="100"
                   style="color: #2f3268; font-size: 36px"
                 >
-                  <strong
-                    >Boost Your Travel Business Revenue With <br class="d-none d-md-block" />
-                    Our AI Trip Planner & Booking Solution</strong
-                  >
+                  Boost Your Travel Business Revenue With <br class="d-none d-md-block" />
+                  Our <strong> AI Trip Planner & Booking Solution</strong>
                 </h2>
               </div>
             </div>
             <div class="pl-6 pr-6 pt-3 pb-3" style="margin-bottom: 0; display: flex; justify-content: center">
               <img
-                src="img\AITripPlanningImage\Final.png"
+                src="img/RM Home Page Icons/image-book.webp"
                 alt="Center Image"
                 style="max-width: 900px; height: 550px; border-radius: 8px"
               />
@@ -1710,7 +1832,7 @@
       </section>
 
       <!-- section-6-frequently-asked-questions -->
-      <section class="solution section-height-3 position-relative z-index-1 border-0 m-0 px-4 mb-5 mt-5">
+      <section class="solution section-height-3 position-relative z-index-1 border-0 m-0 px-4 mb-5 mt-3">
         <div
           style="
             height: 4px;
@@ -1721,9 +1843,7 @@
           "
         ></div>
 
-        <h2 class="mb-5-5 mt-2 text-center" style="font-size: 36px; font-weight: 600; color: #323268">
-          Frequently Asked Questions
-        </h2>
+        <h2 class="mb-5-5 mt-2 text-center" style="font-size: 36px; color: #323268">Frequently Asked Questions</h2>
 
         <div class="accordion" style="width: 850px; margin: auto">
           <div
@@ -1954,31 +2074,64 @@
 
       <!-- section-7-cta-section -->
       <section
-        class="route-maestro-section section section-height-3 position-relative z-index-1 border-0 m-0"
-        style="background-color: #07072c"
+        class="d-none d-md-block"
+        style="
+          background-color: #07072c;
+          height: 600px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+        "
       >
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
-              <img
-                height="40px"
-                width="300px"
-                src="img/WebImages/CTA Image (3).png"
-                alt="Mobile Phone"
-                class="img-fluid"
-              />
-            </div>
-            <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
-              <div class="sectionmobiletext text-color-light font-weight-bold text-7 mb-4 line-height-1 text-center">
-                See RouteMaestro In Action
-              </div>
-              <a
-                href="#"
-                class="sectionmobilebtn btn btn-custom11 btn-rounded font-weight-bold border-0 text-3 px-5 btn-py-3"
-                >Get In Touch</a
-              >
-            </div>
+        <div
+          style="
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            background: url('img/RM Home Page Icons/RouteMaestrobg.webp') no-repeat center center/cover;
+            height: 500px;
+          "
+        >
+          <div style="flex: 1; display: flex; justify-content: center; align-items: center">
+            <img
+              src="img/RM Home Page Icons/RouteMaestrofigurecta.png"
+              alt="Centered Image"
+              style="max-width: 80%; height: auto"
+            />
           </div>
+          <div style="flex: 1.5; color: white; text-align: center; padding: 20px">
+            <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
+            <a
+              class="btnnew"
+              href="#"
+              style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
+              >Schedule A Demo</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- section-7-mobile -->
+      <section
+        class="d-md-none d-block"
+        style="background-color: #07072c; height: 500px; align-items: center; justify-content: center; padding: 20px"
+      >
+        <div style="color: white; text-align: center; padding: 20px">
+          <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
+          <a
+            class=""
+            href="#"
+            style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
+            >Schedule A Demo</a
+          >
+          <img
+            src="img/RM Home Page Icons/RouteMaestrofigurecta.png"
+            alt="Centered Image"
+            style="max-width: 80%; height: auto"
+          />
         </div>
       </section>
 
@@ -1992,24 +2145,11 @@
                 <div style="display: flex; align-items: center; justify-content: center">
                   <img
                     alt="Route Maestro"
-                    width="50"
-                    height="50"
+                    width="250"
+                    height="45"
                     style="margin-bottom: 10px"
-                    src="img\WebImages\footerlogonew.png"
+                    src="img/RM Home Page Icons/RouteMaestrologo.png"
                   />
-                  <p style="margin-left: 7px; font-size: x-large; color: white">ROUTEMAESTRO</p>
-                </div>
-                <div style="align-items: center; justify-content: center; margin-top: 20px; margin-left: 75px">
-                  <a href="https://ascentialabs.com/" target="_blank">
-                    <img
-                      class="Ascentia"
-                      alt="Ascentia Labs"
-                      width="240"
-                      height="40"
-                      style="margin-bottom: 10px"
-                      src="img/WebImages/Ascentia Logo (1).png"
-                    />
-                  </a>
                 </div>
               </div>
 
@@ -2019,7 +2159,7 @@
                 <ul class="list list-unstyled">
                   <li style="margin-left: 30px">
                     <a
-                      href="Home.html"
+                      href="home.html"
                       class="text-color-grey text-color-hover-primary"
                       style="color: white !important; font-size: 16px"
                       >Home</a
@@ -2035,7 +2175,7 @@
                   </li>
                   <li style="margin-left: 30px">
                     <a
-                      href="Pricing.html"
+                      href="pricing.html"
                       class="text-color-grey text-color-hover-primary"
                       style="color: white !important; font-size: 16px"
                       >Pricing</a
@@ -2043,16 +2183,12 @@
                   </li>
                   <li style="margin-left: 30px">
                     <a
-                      href="Contact.html"
+                      href="contact.html"
                       class="text-color-grey text-color-hover-primary"
                       style="color: white !important; font-size: 16px"
                       >Contact Us</a
                     >
                   </li>
-                  <!-- <li style="margin-left: 30px">
-                  <a href="Pricing.html" class="text-color-grey text-color-hover-primary"
-                    style="color: white !important; font-size: 16px">Pricing</a>
-                </li> -->
                 </ul>
               </div>
               <!-- Column 3: Catch Us On Social Media -->
@@ -2084,7 +2220,7 @@
             <hr style="border: 1px solid #ffffff" />
             <div class="container" style="height: auto !important">
               <div class="d-flex flex-column align-items-center">
-                <div class="d-flex justify-content-center mt-2 mb-2">
+                <div class="d-flex justify-content-center mt-2 mb-4">
                   <p class="text-center text-3 mb-0 text-white mx-3" style="font-size: large !important">
                     Privacy Policy
                   </p>
@@ -2105,7 +2241,6 @@
       </div>
     </div>
 
-    <!-- modal -->
     <!-- Modal HTML -->
     <div id="demoModal" class="modal">
       <div class="modal-content">
@@ -2197,31 +2332,18 @@
     <script src="js/theme.init.js"></script>
 
     <script>
-      // Get the modal
       var modal = document.getElementById("demoModal");
-
-      // Get the button that opens the modal
       var btn = document.getElementById("openModalBtn");
-
-      // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close-btn")[0];
-
-      // When the user clicks on the button, open the modal
       btn.onclick = function () {
         modal.style.display = "block";
       };
-
-      // When the user clicks on <span> (x), close the modal
       span.onclick = function () {
         modal.style.display = "none";
       };
-
-      // Function to close the modal
       function closeModal() {
         modal.style.display = "none";
       }
-
-      // When the user clicks anywhere outside of the modal, close it
       window.onclick = function (event) {
         if (event.target == modal) {
           modal.style.display = "none";
@@ -2229,32 +2351,18 @@
       };
 
       // modal2
-
-      // Get the modal
       var modal = document.getElementById("demoModal1");
-
-      // Get the button that opens the modal
       var btn = document.getElementById("openModalBtn1");
-
-      // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close-btn")[1];
-
-      // When the user clicks on the button, open the modal
       btn.onclick = function () {
         modal.style.display = "block";
       };
-
-      // When the user clicks on <span> (x), close the modal
       span.onclick = function () {
         modal.style.display = "none";
       };
-
-      // Function to close the modal
       function closeModal() {
         modal.style.display = "none";
       }
-
-      // When the user clicks anywhere outside of the modal, close it
       window.onclick = function (event) {
         if (event.target == modal) {
           modal.style.display = "none";
@@ -2262,31 +2370,18 @@
       };
 
       //modal3
-      // Get the modal
       var modal = document.getElementById("demoModal1");
-
-      // Get the button that opens the modal
       var btn = document.getElementById("openModalBtn3");
-
-      // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close-btn")[1];
-
-      // When the user clicks on the button, open the modal
       btn.onclick = function () {
         modal.style.display = "block";
       };
-
-      // When the user clicks on <span> (x), close the modal
       span.onclick = function () {
         modal.style.display = "none";
       };
-
-      // Function to close the modal
       function closeModal() {
         modal.style.display = "none";
       }
-
-      // When the user clicks anywhere outside of the modal, close it
       window.onclick = function (event) {
         if (event.target == modal) {
           modal.style.display = "none";
