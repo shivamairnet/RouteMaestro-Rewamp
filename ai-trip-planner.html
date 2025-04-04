@@ -150,10 +150,10 @@
         /* padding: 0.5rem 1rem;  */
         border-radius: 0.5rem;
         font-weight: bold;
-        font-size: 1.3rem !important;
+        font-size: 19px !important;
         align-items: center;
-        width: 251px !important;
-        margin-left: 50px !important;
+        width: 180px !important;
+
         /* margin-right: 18px !important; */
         padding-right: 0.5rem !important;
         padding-left: 0.5rem !important;
@@ -638,7 +638,6 @@
 
       @media (max-width: 1299px) {
         .btnnew {
-          margin-top: -40px !important;
           margin-left: 30px !important;
           margin-right: 0px !important;
           justify-content: center !important;
@@ -648,7 +647,6 @@
 
       @media (min-width: 1300px) and (max-width: 1700px) {
         .btnnew {
-          margin-top: -102px !important;
           margin-left: 40px !important;
           justify-content: center !important;
           margin-bottom: 78px !important;
@@ -1298,6 +1296,16 @@
         }
       }
     </style>
+    <!-- Content Security Policy (CSP) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+       default-src 'self';
+       script-src 'self' https://assets.calendly.com 'unsafe-inline';
+       frame-src 'self' https://calendly.com https://*.calendly.com;
+       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+       font-src 'self' https://fonts.gstatic.com;"
+    />
   </head>
 
   <script type="application/ld+json">
@@ -1412,11 +1420,11 @@
                                         >AI Trip Planner & Itinerary Management</a
                                       >
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                       <a href="integrated-booking-solution.html" class="dropdown-item"
                                         >Integrated Booking Solution</a
                                       >
-                                    </li>
+                                    </li> -->
                                   </ul>
                                 </li>
 
@@ -1455,7 +1463,7 @@
     </header>
 
     <div role="main" class="main">
-      <button class="book-demo-btn" id="openModalBtn2"></button>
+      <button class="book-demo-btn openCalendly" data-link="https://calendly.com/arham-airnetmarketing1/30min"></button>
 
       <!-- main section -->
       <section
@@ -1474,35 +1482,64 @@
           style="max-width: 1160px; width: 100%; display: flex; align-items: center; justify-content: space-between"
         >
           <!-- Left Side Content -->
-          <div class="main-section-left" style="width: 50%; padding-right: 20px">
+          <div class="main-section-left" style="width: 40%; padding-right: 20px">
             <h1 style="font-size: 36px; color: #2f3268; margin-bottom: 20px; font-weight: bold">
               AI Powered Dynamic Packaging & Itinerary Management
             </h1>
             <p style="font-size: 18px; line-height: 1.8rem; color: #2f3268; margin-bottom: 20px">
-              RouteMaestro's AI-powered booking engine helps users quickly plan, organize, and book personalized travel
-              itineraries in just 2 minutes!
+              RouteMaestro enables quick map based travel planning, and facilitates booking
+              <strong> Personalized & Profitable </strong> travel itineraries within a few minutes!
             </p>
             <button
-              style="
-                padding: 10px 20px;
-                background-color: #ff4040;
-                color: white;
-                border: none;
-                font-size: 18px;
-                cursor: pointer;
-                border-radius: 5px;
-              "
+              data-link="https://calendly.com/arham-airnetmarketing1/30min"
+              class="openCalendly btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
+              style="width: 150px"
             >
               Schedule A Demo
             </button>
+            <div
+              id="calendlyModal"
+              style="
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 87%;
+                height: 70%;
+                background: white;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                z-index: 1000;
+                padding: 10px;
+              "
+            >
+              <iframe id="calendlyIframe" width="100%" height="100%" style="border: 0"></iframe>
+              <button
+                id="closeCalendly"
+                data-link="https://calendly.com/arham-airnetmarketing1/30min"
+                style="
+                  position: absolute;
+                  top: 5px;
+                  right: 10px;
+                  background: red;
+                  color: white;
+                  border: none;
+                  padding: 5px 10px;
+                  cursor: pointer;
+                "
+              >
+                X
+              </button>
+            </div>
           </div>
 
           <!-- Right Side Image -->
-          <div class="main-section-right" style="width: 50%">
+          <div class="main-section-right" style="width: 60%; text-align: center">
             <img
-              src="img/RM Home Page Icons/ai-travel-itinerary-landing.webp"
+              src="img/RM Home Page Icons/ai-trip-plan-landimage.webp"
               alt="AI Powered Image"
-              style="width: 85%; border-radius: 10px; height: 90%"
+              style="width: 95%; border-radius: 10px; height: 90%"
             />
           </div>
         </div>
@@ -1536,89 +1573,13 @@
             </h2>
           </div>
         </div>
-        <div style="width: 1150px; margin: auto; padding: 20px 0">
-          <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center">
+        <div style="width: 1000px; margin: auto; padding: 20px 0">
+          <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center">
             <!-- Card 1 -->
             <div
               style="
-                width: 210px;
-                height: 210px;
-                background: #fff;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-                overflow: hidden;
-                text-align: left;
-                padding: 15px;
-              "
-            >
-              <img
-                src="img/RM Home Page Icons/Smart Itinerary Planning.png"
-                alt="Image"
-                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
-              />
-              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
-                Smart Itinerary Planning
-              </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
-                AI-driven itinerary creation based on preferences, budget, and real-time availability.
-              </p>
-            </div>
-
-            <!-- Repeat this block for each card -->
-            <div
-              style="
-                width: 210px;
-                height: 210px;
-                background: #fff;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-                overflow: hidden;
-                text-align: left;
-                padding: 15px;
-              "
-            >
-              <img
-                src="img/RM Home Page Icons/Multi-Supplier Price Comparison.png"
-                alt="Image"
-                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
-              />
-              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
-                Multi-Supplier Price Comparison
-              </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
-                Real-time price comparison for cost-effective package creation.
-              </p>
-            </div>
-
-            <div
-              style="
-                width: 210px;
-                height: 210px;
-                background: #fff;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-                overflow: hidden;
-                text-align: left;
-                padding: 15px;
-              "
-            >
-              <img
-                src="img/RM Home Page Icons/Dynamic Supplier Management.png"
-                alt="Image"
-                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
-              />
-              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
-                Dynamic Supplier ManagementDynamic Supplier Management
-              </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
-                Seamless supplier integration, real-time inventory updates, and pricing control.
-              </p>
-            </div>
-
-            <div
-              style="
-                width: 210px;
-                height: 210px;
+                width: 230px;
+                height: 230px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
@@ -1632,18 +1593,28 @@
                 alt="Image"
                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
-                AI-Powered Route Generation for Budget Optimization
+              <h2
+                style="
+                  margin: 10px 0;
+                  font-size: 16px;
+                  font-weight: 600;
+                  line-height: normal;
+                  letter-spacing: normal;
+                  text-decoration: underline;
+                "
+              >
+                Route Generating Engine For Travel Budget Optimization & Profitability
               </h2>
               <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
-                Smart route suggestions to reduce costs and maximize savings.
+                Smart, map-based travel routes integrating global public transit data to minimize costs and maximize
+                savings.
               </p>
             </div>
 
             <div
               style="
-                width: 210px;
-                height: 210px;
+                width: 230px;
+                height: 230px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
@@ -1653,98 +1624,32 @@
               "
             >
               <img
-                src="img/RM Home Page Icons/White-Label Solution.png"
+                src="img/RM Home Page Icons/Smart Itinerary Planning.png"
                 alt="Image"
                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
-                White-Label Solution
+              <h2
+                style="
+                  margin: 10px 0;
+                  font-size: 16px;
+                  line-height: normal;
+                  font-weight: 600;
+                  letter-spacing: normal;
+                  text-decoration: underline;
+                "
+              >
+                Smart Itinerary Planning & Booking
               </h2>
               <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
-                Fully customizable platform with your branding for a professional identity.
-              </p>
-            </div>
-
-            <!-- Second Row -->
-            <div
-              style="
-                width: 210px;
-                height: 210px;
-                background: #fff;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-                overflow: hidden;
-                text-align: left;
-                padding: 15px;
-              "
-            >
-              <img
-                src="img/RM Home Page Icons/Real-Time Updates & Notifications.png"
-                alt="Image"
-                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
-              />
-              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
-                Real-Time Updates & Notifications
-              </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
-                Instant alerts for bookings, schedule changes, and cancellations.
+                AI-driven itinerary creation based on preferences, budget, and real-time availability of flights,
+                hotels, sightseeing, activities and transfers.
               </p>
             </div>
 
             <div
               style="
-                width: 210px;
-                height: 210px;
-                background: #fff;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-                overflow: hidden;
-                text-align: left;
-                padding: 15px;
-              "
-            >
-              <img
-                src="img/RM Home Page Icons/AI-Powered Cancellation Policy Handling.png"
-                alt="Image"
-                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
-              />
-              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
-                AI-Powered Cancellation Policy Handling
-              </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
-                Automated analysis of policies, refund processing, and best cancellation options.
-              </p>
-            </div>
-
-            <div
-              style="
-                width: 210px;
-                height: 210px;
-                background: #fff;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-                overflow: hidden;
-                text-align: left;
-                padding: 15px;
-              "
-            >
-              <img
-                src="img/RM Home Page Icons/Integrated Multi-Payment.png"
-                alt="Image"
-                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
-              />
-              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
-                Integrated Multi-Payment
-              </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
-                Secure, flexible payment options with multiple gateways and currencies.
-              </p>
-            </div>
-
-            <div
-              style="
-                width: 210px;
-                height: 210px;
+                width: 230px;
+                height: 230px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
@@ -1758,7 +1663,16 @@
                 alt="Image"
                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
+              <h2
+                style="
+                  margin: 10px 0;
+                  font-size: 16px;
+                  line-height: normal;
+                  font-weight: 600;
+                  letter-spacing: normal;
+                  text-decoration: underline;
+                "
+              >
                 Dynamic Commission & Profit Optimization
               </h2>
               <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
@@ -1768,8 +1682,77 @@
 
             <div
               style="
-                width: 210px;
-                height: 210px;
+                width: 230px;
+                height: 230px;
+                background: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                overflow: hidden;
+                text-align: left;
+                padding: 15px;
+              "
+            >
+              <img
+                src="img/RM Home Page Icons/AI-Powered Cancellation Policy Handling.png"
+                alt="Image"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
+              />
+              <h2
+                style="
+                  margin: 10px 0;
+                  font-size: 16px;
+                  line-height: normal;
+                  font-weight: 600;
+                  letter-spacing: normal;
+                  text-decoration: underline;
+                "
+              >
+                Cancellation Policy Handling
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                Automated analysis of policies, refund processing, and optimized cancellation strategies.
+              </p>
+            </div>
+
+            <div
+              style="
+                width: 230px;
+                height: 230px;
+                background: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                overflow: hidden;
+                text-align: left;
+                padding: 15px;
+              "
+            >
+              <img
+                src="img/RM Home Page Icons/Standalone Booking.png"
+                alt="Image"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
+              />
+              <h2
+                style="
+                  margin: 10px 0;
+                  font-size: 16px;
+                  line-height: normal;
+                  letter-spacing: normal;
+                  font-weight: 600;
+                  text-decoration: underline;
+                "
+              >
+                Standalone Bookings
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                Seamlessly book standalone travel services, including flights, hotels, sightseeing, and transfers &
+                more.
+              </p>
+            </div>
+
+            <div
+              style="
+                width: 230px;
+                height: 230px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
@@ -1783,11 +1766,88 @@
                 alt="Image"
                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
-              <h2 style="margin: 10px 0; font-size: 16px; line-height: normal; letter-spacing: normal">
+              <h2
+                style="
+                  margin: 10px 0;
+                  font-size: 16px;
+                  line-height: normal;
+                  font-weight: 600;
+                  letter-spacing: normal;
+                  text-decoration: underline;
+                "
+              >
                 Proposal & Quotation Sharing
               </h2>
               <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
                 Instant generation and sharing of detailed proposals and quotations.
+              </p>
+            </div>
+
+            <div
+              style="
+                width: 230px;
+                height: 230px;
+                background: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                overflow: hidden;
+                text-align: left;
+                padding: 15px;
+              "
+            >
+              <img
+                src="img/RM Home Page Icons/Integrated Multi-Payment.png"
+                alt="Image"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
+              />
+              <h2
+                style="
+                  margin: 10px 0;
+                  font-size: 16px;
+                  line-height: normal;
+                  font-weight: 600;
+                  letter-spacing: normal;
+                  text-decoration: underline;
+                "
+              >
+                Integrated Multi-Payment
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                Secure, flexible payment options with multiple gateways and currencies.
+              </p>
+            </div>
+
+            <div
+              style="
+                width: 230px;
+                height: 230px;
+                background: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                overflow: hidden;
+                text-align: left;
+                padding: 15px;
+              "
+            >
+              <img
+                src="img/RM Home Page Icons/Real-Time Updates & Notifications.png"
+                alt="Image"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
+              />
+              <h2
+                style="
+                  margin: 10px 0;
+                  font-size: 16px;
+                  line-height: normal;
+                  font-weight: 600;
+                  letter-spacing: normal;
+                  text-decoration: underline;
+                "
+              >
+                Real-Time Updates & Notifications
+              </h2>
+              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+                Instant alerts for bookings, schedule changes, and cancellations.
               </p>
             </div>
           </div>
@@ -1820,11 +1880,11 @@
                 </h2>
               </div>
             </div>
-            <div class="pl-6 pr-6 pt-3 pb-3" style="margin-bottom: 0; display: flex; justify-content: center">
+            <div class="pl-6 pt-4 pr-6" style="margin-bottom: 0; display: flex; justify-content: center">
               <img
-                src="img/RM Home Page Icons/image-book.webp"
+                src="img/RM Home Page Icons/device-book.webp"
                 alt="Center Image"
-                style="max-width: 900px; height: 550px; border-radius: 8px"
+                style="max-width: 900px; height: auto; border-radius: 8px"
               />
             </div>
           </div>
@@ -2093,6 +2153,8 @@
             justify-content: space-between;
             background: url('img/RM Home Page Icons/RouteMaestrobg.webp') no-repeat center center/cover;
             height: 500px;
+
+            margin: auto;
           "
         >
           <div style="flex: 1; display: flex; justify-content: center; align-items: center">
@@ -2104,12 +2166,13 @@
           </div>
           <div style="flex: 1.5; color: white; text-align: center; padding: 20px">
             <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
-            <a
-              class="btnnew"
-              href="#"
-              style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
-              >Schedule A Demo</a
+            <button
+              data-link="https://calendly.com/arham-airnetmarketing1/30min"
+              class="openCalendly btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
+              style="width: 150px"
             >
+              Schedule A Demo
+            </button>
           </div>
         </div>
       </section>
@@ -2121,12 +2184,13 @@
       >
         <div style="color: white; text-align: center; padding: 20px">
           <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
-          <a
-            class=""
-            href="#"
-            style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
-            >Schedule A Demo</a
+          <button
+            data-link="https://calendly.com/arham-airnetmarketing1/30min"
+            class="openCalendly btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
+            style="width: 150px"
           >
+            Schedule A Demo
+          </button>
           <img
             src="img/RM Home Page Icons/RouteMaestrofigurecta.png"
             alt="Centered Image"
@@ -2241,81 +2305,6 @@
       </div>
     </div>
 
-    <!-- Modal HTML -->
-    <div id="demoModal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" style="display: flexbox; align-content: flex-end">&times;</span>
-        <div>
-          <h2 class="modal-title">Request A Demo</h2>
-          <p class="text-center" style="margin: 1px">Transform your travel business with RouteMaestro.</p>
-          <p class="text-center" style="margin: 1px">
-            The ultimate and only holiday platform you require for your travel business.
-          </p>
-          <hr style="margin-top: 2px; margin-bottom: 2px" />
-          <p class="modal-title" style="margin: 4px; font-size: large; color: #07072c">Select A Day</p>
-
-          <!-- Calendly Embed -->
-          <div style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden">
-            <iframe
-              src="https://calendly.com/arham-airnet-tech/travel-crm-demo"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none"
-            >
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- modal2 -->
-    <div id="demoModal1" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" style="display: flexbox; align-content: flex-end">&times;</span>
-        <div>
-          <h2 class="modal-title">Request A Demo</h2>
-          <p class="text-center" style="margin: 1px">Transform your travel business with RouteMaestro.</p>
-          <p class="text-center" style="margin: 1px">
-            The ultimate and only holiday platform you require for your travel business.
-          </p>
-          <hr style="margin-top: 2px; margin-bottom: 2px" />
-          <p class="modal-title" style="margin: 4px; font-size: large; color: #07072c">Select A Day</p>
-
-          <!-- Calendly Embed -->
-          <div style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden">
-            <iframe
-              src="https://calendly.com/arham-airnet-tech/travel-crm-demo"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none"
-            >
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- modal3 -->
-    <div id="demoModal1" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" style="display: flexbox; align-content: flex-end">&times;</span>
-        <div>
-          <h2 class="modal-title">Request A Demo</h2>
-          <p class="text-center" style="margin: 1px">Transform your travel business with RouteMaestro.</p>
-          <p class="text-center" style="margin: 1px">
-            The ultimate and only holiday platform you require for your travel business.
-          </p>
-          <hr style="margin-top: 2px; margin-bottom: 2px" />
-          <p class="modal-title" style="margin: 4px; font-size: large; color: #07072c">Select A Day</p>
-
-          <!-- Calendly Embed -->
-          <div style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden">
-            <iframe
-              src="https://calendly.com/arham-airnet-tech/travel-crm-demo"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none"
-            >
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Vendor -->
     <script src="vendor/plugins/js/plugins.min.js"></script>
 
@@ -2332,61 +2321,25 @@
     <script src="js/theme.init.js"></script>
 
     <script>
-      var modal = document.getElementById("demoModal");
-      var btn = document.getElementById("openModalBtn");
-      var span = document.getElementsByClassName("close-btn")[0];
-      btn.onclick = function () {
-        modal.style.display = "block";
-      };
-      span.onclick = function () {
-        modal.style.display = "none";
-      };
-      function closeModal() {
-        modal.style.display = "none";
-      }
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
+      // Get all buttons with class "openCalendly"
+      document.querySelectorAll(".openCalendly").forEach((button) => {
+        button.addEventListener("click", function () {
+          let calendlyModal = document.getElementById("calendlyModal");
+          let calendlyIframe = document.getElementById("calendlyIframe");
 
-      // modal2
-      var modal = document.getElementById("demoModal1");
-      var btn = document.getElementById("openModalBtn1");
-      var span = document.getElementsByClassName("close-btn")[1];
-      btn.onclick = function () {
-        modal.style.display = "block";
-      };
-      span.onclick = function () {
-        modal.style.display = "none";
-      };
-      function closeModal() {
-        modal.style.display = "none";
-      }
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
+          // Get the Calendly link from the button's data-link attribute
+          let calendlyLink = this.getAttribute("data-link");
+          calendlyIframe.src = calendlyLink;
 
-      //modal3
-      var modal = document.getElementById("demoModal1");
-      var btn = document.getElementById("openModalBtn3");
-      var span = document.getElementsByClassName("close-btn")[1];
-      btn.onclick = function () {
-        modal.style.display = "block";
-      };
-      span.onclick = function () {
-        modal.style.display = "none";
-      };
-      function closeModal() {
-        modal.style.display = "none";
-      }
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
+          // Show the modal
+          calendlyModal.style.display = "block";
+        });
+      });
+
+      // Close the popup when "X" is clicked
+      document.getElementById("closeCalendly").addEventListener("click", function () {
+        document.getElementById("calendlyModal").style.display = "none";
+      });
     </script>
   </body>
 </html>

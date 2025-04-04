@@ -10,6 +10,17 @@
     <meta name="description" content="RouteMaestro" />
     <meta name="author" content="RouteMaestro" />
     <meta name="robots" content="index, follow" />
+    
+    <!-- Content Security Policy (CSP) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+       default-src 'self';
+       script-src 'self' https://assets.calendly.com 'unsafe-inline';
+       frame-src 'self' https://calendly.com https://*.calendly.com;
+       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+       font-src 'self' https://fonts.gstatic.com;"
+    />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img\WebImages\image (2).png" type="image/x-icon" />
@@ -1045,6 +1056,29 @@
         }
       }
 
+      @media(max-width:768px){
+        .freedom-section-1{
+        height: 1400px !important;
+      }
+      .freedom-section-div-para{
+        text-align: left !important;
+      }
+      .land-image{
+        width: 350px !important;
+      }
+      .land-image-div{
+        margin: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      .gradient-bg-new{
+        padding: 0 !important;
+      }
+      }
+
     </style>
   </head>
 
@@ -1092,11 +1126,11 @@
                                         >AI Trip Planner & Itinerary Management</a
                                       >
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                       <a href="integrated-booking-solution.html" class="dropdown-item"
                                         >Integrated Booking Solution</a
                                       >
-                                    </li>
+                                    </li> -->
                                   </ul>
                                 </li>
                                 <li>
@@ -1133,52 +1167,7 @@
     </header>
 
     <div role="main" class="main">
-      <button class="book-demo-btn" id="openModalBtn2"></button>
-
-      <!-- <section
-      style="
-        height: 480px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #f7f7f7;
-        padding: 40px;
-      "
-    >
-      <div style="max-width: 1160px; width: 100%; display: flex; align-items: center; justify-content: space-between">
-      
-        <div style="width: 35%; padding-right: 20px">
-          <h1 style="font-size: 36px; color: #2f3268; margin-bottom: 20px; font-weight: bold">
-            Digitize Your Travel Infrastructure
-          </h1>
-          <p style="font-size: 18px; line-height: 1.8rem; color: #2f3268; margin-bottom: 20px">
-            An AI Powered Dynamic Travel Packaging & Booking Platform
-          </p>
-          <button
-            style="
-              padding: 10px 20px;
-              background-color: #ff4040;
-              color: white;
-              border: none;
-              font-size: 18px;
-              cursor: pointer;
-              border-radius: 5px;
-            "
-          >
-            Schedule A Demo
-          </button>
-        </div>
-
-       
-        <div style="width: 65%">
-          <img
-            src="img/RM Home Page Icons/landing-page-image.webp"
-            alt="AI Powered Image"
-            style="width: 100%; border-radius: 10px"
-          />
-        </div>
-      </div>
-    </section> -->
+      <button class="book-demo-btn openCalendly" data-link="https://calendly.com/arham-airnetmarketing1/30min"></button>
 
       <!-- section-1-digitize-the-infrastructure -->
       <section
@@ -1194,23 +1183,62 @@
           height: 900px;
         "
       >
-        <div class="container" style="padding-right: 20px">
+        <div class="container">
           <h1
             class="text-white line-height-2 appear-animation text-center text-ignite mb-3"
             data-appear-animation="fadeInUpShorterPlus"
             data-appear-animation-delay="100"
             style="font-size: 36px; font-weight: 600;letter-spacing: normal;"
           >
-          Digitize Your Travel Infrastructure With RouteMaestro
+            Digitize Your Travel Infrastructure
           </h1>
           <p style="font-size: 18px; color: #fff; text-align: center" style="font-weight: 600;letter-spacing: normal;">
             An AI Powered Dynamic Travel Packaging & Booking Platform
           </p>
           <div style="text-align: center;display: flex;flex-direction: column;justify-content: center;align-items: center;">
-            <button class="btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2" style="width: 150px">
+            <button  data-link="https://calendly.com/arham-airnetmarketing1/30min" class="openCalendly btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2" style="width: 150px"
+            >
               Schedule A Demo
             </button>
-            <img src="img/RM Home Page Icons/landing-page-image.webp" alt="" height="600px" width="1050px" style="margin: auto;" />
+            <div
+            id="calendlyModal"
+            style="
+              display: none;
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 87%;
+              height: 70%;
+              background: white;
+              box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+              border-radius: 10px;
+              z-index: 1000;
+              padding: 10px;
+            "
+          >
+            <iframe id="calendlyIframe" width="100%" height="100%" style="border: 0"></iframe>
+            <button
+              id="closeCalendly"
+              data-link="https://calendly.com/arham-airnetmarketing1/30min"
+              style="
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                background: red;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+              "
+            >
+              X
+            </button>
+          </div>
+
+          </div>
+          <div class="land-image-div text-center">
+            <img class="land-image" src="img/RM Home Page Icons/landing-page-image.webp" alt="" height="600px" width="1050px" style="margin: auto;" />
 
           </div>
         </div>
@@ -1254,25 +1282,25 @@
               <div class="card">
                 <div class="card-icon">
                   <img
-                    src="img/RM Home Page Icons/Avg Profitability (2).png"
+                    src="img/RM Home Page Icons/Frame 1618871179.png"
                     alt="Profitability Icon"
                   />
                 </div>
               </div>
               <div class="card">
                 <div class="card-icon">
-                  <img src="img/RM Home Page Icons/Avg Expense.png" alt="Expense Icon" />
+                  <img src="img/RM Home Page Icons/Frame 1618871178.png" alt="Expense Icon" />
                 </div>
               </div>
               <div class="card">
                 <div class="card-icon">
-                  <img src="img/RM Home Page Icons/Avg Time Input.png" alt="Input Time Icon" />
+                  <img src="img/RM Home Page Icons/Frame 1618871177.png" alt="Input Time Icon" />
                 </div>
               </div>
               <div class="card">
                 <div class="card-icon">
                   <img
-                    src="img/RM Home Page Icons/Avg Client Conversion.png"
+                    src="img/RM Home Page Icons/Frame 1618871176.png"
                     alt="Client Conversion Icon"
                   />
                 </div>
@@ -1459,7 +1487,7 @@
       </section>
 
       <!-- section-4-solution-for-diff-sectors -->
-      <div style="max-width: 1000px; margin: 50px auto; gap: 20px">
+      <div class="solution-section" style="max-width: 1000px; margin: 50px auto; gap: 20px">
         <h2
           style="
             margin-top: 15px;
@@ -1757,15 +1785,15 @@
             });
           </script>
         </div>
-        <div class="text-center">
-          <button class="btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-5" style="width: 200px">
+        <div class="text-center" style="margin-top: 20px;">
+          <button  data-link="https://calendly.com/arham-airnetmarketing1/30min" class="openCalendly btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2" style="width: 150px">
             Schedule A Demo
           </button>
         </div>
       </div>
 
-       <!-- section-5-Solution-for-diff-sectors -->
-    <section class="solution section-height-3 position-relative z-index-1 border-0 m-0 px-4 py-4 mb-5 mt-5"
+       <!-- section-5-freedom-to-choose -->
+    <section class="freedom-section-1 solution section-height-3 position-relative z-index-1 border-0 m-0 px-4 py-4 mb-5 mt-5"
     style="height: 670px; background-color: #f3f3f3">
     <div style="
           height: 4px;
@@ -1810,7 +1838,7 @@
           <h2 style="margin: 0; font-size: 18px; color: #333;font-weight: 600;line-height: normal;">
             Flights
           </h2>
-          <p style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
+          <p class="freedom-section-div-para" style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
             Book and offer your customers access to a wide range of domestic and international airlines, ensuring they
             get the best fares and travel options.
           </p>
@@ -1836,7 +1864,7 @@
           <h2 style="margin: 0; font-size: 18px; color: #333;font-weight: 600;line-height: normal;">
             Hotels
           </h2>
-          <p style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
+          <p class="freedom-section-div-para" style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
             Connect with thousands of hotels, from budget stays to luxury resorts, offering choices that suit every
             traveler’s preference.
           </p>
@@ -1862,7 +1890,7 @@
           <h2 style="margin: 0; font-size: 18px; color: #333;font-weight: 600;line-height: normal;">
             Sightseeing & Activities
           </h2>
-          <p style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
+          <p class="freedom-section-div-para" style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
             Offer curated sightseeing, activities, and unique experiences to make your customers' travel journeys
             memorable and hassle-free.
           </p>
@@ -1886,7 +1914,7 @@
             " />
         <div>
           <h2 style="margin: 0; font-size: 18px; color: #333;font-weight: 600;line-height: normal;">Transfers</h2>
-          <p style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
+          <p class="freedom-section-div-para" style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
             Provide your customers with smooth and reliable transfers with diverse transportation options, ensuring
             seamless connectivity at every stage of their travel journey.
         </div>
@@ -1937,7 +1965,7 @@
               style="display: flex; justify-content: space-between; align-items: center; font-weight: bold"
             >
               <span style="color: #000; font-size: 19px; font-weight: normal"
-                >How does the itinerary generation process work?</span
+                >What is RouteMaestro?</span
               >
               <span
                 class="arrow-new"
@@ -1957,9 +1985,7 @@
               >
             </div>
             <div class="faq-content" style="display: none; padding-top: 10px;font-size: 16px;font-weight: 500;">
-              Simply enter your travelers travel preferences like preferred destinations, travel dates, budget, type and
-              interests, and our AI will instantly generates a tailored itinerary based on the traveler preferences in
-              under 1 minute.
+              RouteMaestro is an AI-powered platform that offers personalized travel planning, combining door-to-door multi-modal routes, travel inventories, and booking services.
             </div>
           </div>
           <div
@@ -1979,7 +2005,7 @@
               style="display: flex; justify-content: space-between; align-items: center; font-weight: bold"
             >
               <span style="color: #000; font-size: 19px; font-weight: normal"
-                >Can I customize the generated itinerary?</span
+                >How does RouteMaestro help travel businesses?</span
               >
               <span
                 class="arrow-new"
@@ -1999,7 +2025,7 @@
               >
             </div>
             <div class="faq-content" style="display: none; padding-top: 10px;font-size: 16px;font-weight: 500;">
-              You can contact us via email or our contact form.
+              It reduces operational costs by generating personalized itineraries in under 2 minutes, while maximizing profit margins with comprehensive travel solutions.
             </div>
           </div>
 
@@ -2020,7 +2046,7 @@
               style="display: flex; justify-content: space-between; align-items: center; font-weight: bold"
             >
               <span style="color: #000; font-size: 19px; font-weight: normal"
-                >Does the module support multi-destination itineraries?</span
+                >What types of inventory does RouteMaestro offer?</span
               >
               <span
                 class="arrow-new"
@@ -2039,8 +2065,8 @@
                 >&#9654;</span
               >
             </div>
-            <div class="faq-content" style="display: none; padding-top: 10px">
-              You can contact us via email or our contact form.
+            <div class="faq-content" style="display: none; padding-top: 10px;font-weight: 500;font-size: 16px;">
+              RouteMaestro has integrated with multiple global travel service suppliers who which offers various travel services, including flights, hotels, sightseeing's, transfers, and more.
             </div>
           </div>
           <div
@@ -2060,7 +2086,7 @@
               style="display: flex; justify-content: space-between; align-items: center; font-weight: bold"
             >
               <span style="color: #000; font-size: 19px; font-weight: normal"
-                >Can I book individual travel services directly through the platform?</span
+                >Who can use RouteMaestro?</span
               >
               <span
                 class="arrow-new"
@@ -2079,48 +2105,11 @@
                 >&#9654;</span
               >
             </div>
-            <div class="faq-content" style="display: none; padding-top: 10px">
-              You can contact us via email or our contact form.
+            <div class="faq-content" style="display: none; padding-top: 10px;font-weight: 500;font-size: 16px;">
+              Travel companies, agents, DMCs, tourism boards, and hotels can all benefit from RouteMaestro’s AI-driven solutions.
             </div>
           </div>
-          <div
-            class="faq"
-            style="
-              background: white;
-              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-              margin-bottom: 10px;
-              cursor: pointer;
-              padding: 15px;
-              border-radius: 5px;
-            "
-          >
-            <div
-              class="faq-header"
-              onclick="toggleFAQ(this)"
-              style="display: flex; justify-content: space-between; align-items: center; font-weight: bold"
-            >
-              <span style="color: #000; font-size: 19px; font-weight: normal">Is there a trial or demo available?</span>
-              <span
-                class="arrow-new"
-                style="
-                  transition: transform 0.3s ease;
-                  font-size: 14px;
-                  width: 30px;
-                  height: 30px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  border-radius: 50%;
-                  background: #323268;
-                  color: #fff;
-                "
-                >&#9654;</span
-              >
-            </div>
-            <div class="faq-content" style="display: none; padding-top: 10px">
-              You can contact us via email or our contact form.
-            </div>
-          </div>
+         
         </div>
 
         <script>
@@ -2140,7 +2129,7 @@
         </script>
       </section>
 
-      <!-- section-7-cta-section -->
+     
          <!-- section-7-cta-section -->
          <section
          class="d-none d-md-block"
@@ -2162,6 +2151,7 @@
              justify-content: space-between;
              background: url('img/RM Home Page Icons/RouteMaestrobg.webp') no-repeat center center/cover;
              height: 500px;
+             margin: auto;
            "
          >
            <div style="flex: 1; display: flex; justify-content: center; align-items: center">
@@ -2173,12 +2163,9 @@
            </div>
            <div style="flex: 1.5; color: white; text-align: center; padding: 20px">
              <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
-             <a
-               class="btnnew"
-               href="#"
-               style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
-               >Schedule A Demo</a
-             >
+             <button  data-link="https://calendly.com/arham-airnetmarketing1/30min" class="openCalendly btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2" style="width: 150px">
+              Schedule A Demo
+            </button>
            </div>
          </div>
        </section>
@@ -2190,11 +2177,11 @@
        >
          <div style="color: white; text-align: center; padding: 20px">
            <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
-           <a
-             class=""
-             href="#"
+           <button data-link="https://calendly.com/arham-airnetmarketing1/30min"
+             class="btnnew openCalendly"
+             data-link="https://calendly.com/arham-airnetmarketing1/30min"
              style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
-             >Schedule A Demo</a
+             >Schedule A Demo</button
            >
            <img
              src="img/RM Home Page Icons/RouteMaestrofigurecta.png"
@@ -2322,56 +2309,6 @@
       </footer>
     </div>
 
-    <!-- modal -->
-    <!-- Modal HTML -->
-    <div id="demoModal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" style="display: flexbox; align-content: flex-end">&times;</span>
-        <div>
-          <h2 class="modal-title">Request A Demo</h2>
-          <p class="text-center" style="margin: 1px">Transform your travel business with RouteMaestro.</p>
-          <p class="text-center" style="margin: 1px">
-            The ultimate and only holiday platform you require for your travel business.
-          </p>
-          <hr style="margin-top: 2px; margin-bottom: 2px" />
-          <p class="modal-title" style="margin: 4px; font-size: large; color: #07072c">Select A Day</p>
-
-          <!-- Calendly Embed -->
-          <div style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden">
-            <iframe
-              src="https://calendly.com/arham-airnet-tech/travel-crm-demo"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none"
-            >
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- modal2 -->
-    <div id="demoModal1" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" style="display: flexbox; align-content: flex-end">&times;</span>
-        <div>
-          <h2 class="modal-title">Request A Demo</h2>
-          <p class="text-center" style="margin: 1px">Transform your travel business with RouteMaestro.</p>
-          <p class="text-center" style="margin: 1px">
-            The ultimate and only holiday platform you require for your travel business.
-          </p>
-          <hr style="margin-top: 2px; margin-bottom: 2px" />
-          <p class="modal-title" style="margin: 4px; font-size: large; color: #07072c">Select A Day</p>
-
-          <!-- Calendly Embed -->
-          <div style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden">
-            <iframe
-              src="https://calendly.com/arham-airnet-tech/travel-crm-demo"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none"
-            >
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Vendor -->
     <script src="vendor/plugins/js/plugins.min.js"></script>
@@ -2388,50 +2325,28 @@
     <!-- Theme Initialization Files -->
     <script src="js/theme.init.js"></script>
 
-    <script>
-      var modal = document.getElementById("demoModal");
-      var btn = document.getElementById("openModalBtn");
 
-      var span = document.getElementsByClassName("close-btn")[0];
-
-      btn.onclick = function () {
-        modal.style.display = "block";
-      };
-
-      span.onclick = function () {
-        modal.style.display = "none";
-      };
-
-      function closeModal() {
-        modal.style.display = "none";
-      }
-
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
-
-      var modal = document.getElementById("demoModal1");
-      var btn = document.getElementById("openModalBtn1");
-      var span = document.getElementsByClassName("close-btn")[1];
-      btn.onclick = function () {
-        modal.style.display = "block";
-      };
-
-      span.onclick = function () {
-        modal.style.display = "none";
-      };
-
-      function closeModal() {
-        modal.style.display = "none";
-      }
-
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
-    </script>
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <script>
+          // Get all buttons with class "openCalendly"
+          document.querySelectorAll(".openCalendly").forEach((button) => {
+            button.addEventListener("click", function () {
+              let calendlyModal = document.getElementById("calendlyModal");
+              let calendlyIframe = document.getElementById("calendlyIframe");
+    
+              // Get the Calendly link from the button's data-link attribute
+              let calendlyLink = this.getAttribute("data-link");
+              calendlyIframe.src = calendlyLink;
+    
+              // Show the modal
+              calendlyModal.style.display = "block";
+            });
+          });
+    
+          // Close the popup when "X" is clicked
+          document.getElementById("closeCalendly").addEventListener("click", function () {
+            document.getElementById("calendlyModal").style.display = "none";
+          });
+        </script>
   </body>
 </html>
