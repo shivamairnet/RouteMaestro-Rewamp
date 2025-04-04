@@ -1056,6 +1056,29 @@
         }
       }
 
+      @media(max-width:768px){
+        .freedom-section-1{
+        height: 1400px !important;
+      }
+      .freedom-section-div-para{
+        text-align: left !important;
+      }
+      .land-image{
+        width: 350px !important;
+      }
+      .land-image-div{
+        margin: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      .gradient-bg-new{
+        padding: 0 !important;
+      }
+      }
+
     </style>
   </head>
 
@@ -1160,7 +1183,7 @@
           height: 900px;
         "
       >
-        <div class="container" style="padding-right: 20px">
+        <div class="container">
           <h1
             class="text-white line-height-2 appear-animation text-center text-ignite mb-3"
             data-appear-animation="fadeInUpShorterPlus"
@@ -1212,7 +1235,10 @@
               X
             </button>
           </div>
-            <img src="img/RM Home Page Icons/landing-page-image.webp" alt="" height="600px" width="1050px" style="margin: auto;" />
+
+          </div>
+          <div class="land-image-div text-center">
+            <img class="land-image" src="img/RM Home Page Icons/landing-page-image.webp" alt="" height="600px" width="1050px" style="margin: auto;" />
 
           </div>
         </div>
@@ -1461,7 +1487,7 @@
       </section>
 
       <!-- section-4-solution-for-diff-sectors -->
-      <div style="max-width: 1000px; margin: 50px auto; gap: 20px">
+      <div class="solution-section" style="max-width: 1000px; margin: 50px auto; gap: 20px">
         <h2
           style="
             margin-top: 15px;
@@ -1766,8 +1792,8 @@
         </div>
       </div>
 
-       <!-- section-5-Solution-for-diff-sectors -->
-    <section class="solution section-height-3 position-relative z-index-1 border-0 m-0 px-4 py-4 mb-5 mt-5"
+       <!-- section-5-freedom-to-choose -->
+    <section class="freedom-section-1 solution section-height-3 position-relative z-index-1 border-0 m-0 px-4 py-4 mb-5 mt-5"
     style="height: 670px; background-color: #f3f3f3">
     <div style="
           height: 4px;
@@ -1812,7 +1838,7 @@
           <h2 style="margin: 0; font-size: 18px; color: #333;font-weight: 600;line-height: normal;">
             Flights
           </h2>
-          <p style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
+          <p class="freedom-section-div-para" style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
             Book and offer your customers access to a wide range of domestic and international airlines, ensuring they
             get the best fares and travel options.
           </p>
@@ -1838,7 +1864,7 @@
           <h2 style="margin: 0; font-size: 18px; color: #333;font-weight: 600;line-height: normal;">
             Hotels
           </h2>
-          <p style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
+          <p class="freedom-section-div-para" style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
             Connect with thousands of hotels, from budget stays to luxury resorts, offering choices that suit every
             traveler’s preference.
           </p>
@@ -1864,7 +1890,7 @@
           <h2 style="margin: 0; font-size: 18px; color: #333;font-weight: 600;line-height: normal;">
             Sightseeing & Activities
           </h2>
-          <p style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
+          <p class="freedom-section-div-para" style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
             Offer curated sightseeing, activities, and unique experiences to make your customers' travel journeys
             memorable and hassle-free.
           </p>
@@ -1888,7 +1914,7 @@
             " />
         <div>
           <h2 style="margin: 0; font-size: 18px; color: #333;font-weight: 600;line-height: normal;">Transfers</h2>
-          <p style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
+          <p class="freedom-section-div-para" style="margin: 5px 0 0; font-size: 16px;font-weight: 500; color: #666">
             Provide your customers with smooth and reliable transfers with diverse transportation options, ensuring
             seamless connectivity at every stage of their travel journey.
         </div>
@@ -2151,11 +2177,11 @@
        >
          <div style="color: white; text-align: center; padding: 20px">
            <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
-           <a  data-link="https://calendly.com/arham-airnetmarketing1/30min"
-             class="openCalendly"
-             href="#"
+           <button data-link="https://calendly.com/arham-airnetmarketing1/30min"
+             class="btnnew openCalendly"
+             data-link="https://calendly.com/arham-airnetmarketing1/30min"
              style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
-             >Schedule A Demo</a
+             >Schedule A Demo</button
            >
            <img
              src="img/RM Home Page Icons/RouteMaestrofigurecta.png"
