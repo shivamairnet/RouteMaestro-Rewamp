@@ -471,6 +471,69 @@
         }
       }
 
+      @media (min-width: 768px) and (max-width: 1024px) {
+        /* Adjust layout for tablet screens */
+        .footermobile {
+          padding: 20px 10px;
+        }
+
+        #footer .container {
+          padding: 20px 15px;
+        }
+
+        .footermobile .col-lg-4 {
+          width: 100%;
+          margin-top: 20px !important;
+          text-align: center;
+        }
+
+        .footermobile img {
+          max-width: 80%;
+          height: auto;
+        }
+
+        .footermobile ul.list {
+          padding-left: 0;
+        }
+
+        .footermobile ul li {
+          margin-left: 0 !important;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        .footermobile h3 {
+          text-align: center;
+          margin-left: 0 !important;
+        }
+
+        .social-icons {
+          justify-content: center;
+          display: flex;
+          padding: 0;
+          margin-left: 0 !important;
+        }
+
+        .footer-copyright {
+          text-align: center;
+        }
+
+        .footer-copyright .d-flex {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .footer-copyright p {
+          font-size: 16px !important;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .ai-cards-section {
+          width: 750px !important;
+        }
+      }
+
       @media (max-width: 767px) {
         .section {
           padding: 20px !important;
@@ -1201,9 +1264,11 @@
         .glass-card {
           max-width: 100%;
         }
+      }
 
+      @media (max-width: 1024px) {
         .main-section {
-          height: 700px !important;
+          height: auto !important;
           padding: 15px !important;
         }
 
@@ -1303,13 +1368,13 @@
 
       @media (max-width: 768px) {
         /* Stack cards vertically and center them */
-        div[style*="display: flex"] {
+        .display-flex {
           flex-direction: column !important;
           align-items: center !important;
         }
 
         /* Make individual cards responsive and center-aligned */
-        div[style*="width: 230px"] {
+        .width-230px {
           width: 90% !important;
           margin: 0 auto !important;
         }
@@ -1602,9 +1667,10 @@
           </div>
         </div>
         <div class="ai-cards-section" style="width: 1000px; margin: auto; padding: 20px 0">
-          <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center">
+          <div class="display-flex" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center">
             <!-- Card 1 -->
             <div
+              class="width-230px"
               style="
                 width: 230px;
                 height: 230px;
@@ -1648,6 +1714,7 @@
             </div>
 
             <div
+              class="width-230px"
               style="
                 width: 230px;
                 height: 230px;
@@ -1690,6 +1757,7 @@
             </div>
 
             <div
+              class="width-230px"
               style="
                 width: 230px;
                 height: 230px;
@@ -1731,6 +1799,7 @@
             </div>
 
             <div
+              class="width-230px"
               style="
                 width: 230px;
                 height: 230px;
@@ -1772,6 +1841,7 @@
             </div>
 
             <div
+              class="width-230px"
               style="
                 width: 230px;
                 height: 230px;
@@ -1814,6 +1884,7 @@
             </div>
 
             <div
+              class="width-230px"
               style="
                 width: 230px;
                 height: 230px;
@@ -1855,6 +1926,7 @@
             </div>
 
             <div
+              class="width-230px"
               style="
                 width: 230px;
                 height: 230px;
@@ -1896,6 +1968,7 @@
             </div>
 
             <div
+              class="width-230px"
               style="
                 width: 230px;
                 height: 230px;
@@ -1973,7 +2046,7 @@
               <img
                 src="img/RM Home Page Icons/device-book.webp"
                 alt="Center Image"
-                style="max-width: 900px; height: auto; border-radius: 8px"
+                style="max-width: 800px; height: auto; border-radius: 8px"
               />
             </div>
           </div>
@@ -2289,7 +2362,7 @@
       </section>
 
       <!-- section-8-footer -->
-      <div class="footermobile" style="background: #07072c; height: 450px">
+      <div class="footermobile" style="background: #07072c; height: auto">
         <footer id="footer" class="position-relative bg-transparent border-top-0">
           <div class="container pt-5-5 pb-3">
             <div class="row gy-3 d-flex justify-content-start">
