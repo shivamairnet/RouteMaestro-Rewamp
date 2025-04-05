@@ -607,10 +607,6 @@
           margin-top: 700px !important;
         }
 
-        .solution {
-          margin-top: -85px !important;
-        }
-
         .Ascentia {
           width: 145px !important;
           margin-left: -75px !important;
@@ -683,8 +679,9 @@
         }
 
         .btnnew {
-          margin-top: 38px !important;
-          margin-left: 50px !important;
+          margin-top: 10px !important;
+          margin-left: 0px !important;
+          margin-right: 0px !important;
           justify-content: center !important;
           margin-bottom: 20px !important;
         }
@@ -1206,7 +1203,8 @@
         }
 
         .main-section {
-          height: 800px !important;
+          height: 700px !important;
+          padding: 15px !important;
         }
 
         .main-section-1 {
@@ -1217,11 +1215,18 @@
 
         .main-section-left {
           width: 100% !important;
+          padding-right: 0 !important;
         }
 
         .main-section-right {
           margin-top: 30px !important;
           width: 100% !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .main-section-image {
+          width: 100% !important;
+          height: auto !important;
         }
       }
 
@@ -1293,6 +1298,28 @@
           display: flex;
           justify-content: center;
           align-items: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        /* Stack cards vertically and center them */
+        div[style*="display: flex"] {
+          flex-direction: column !important;
+          align-items: center !important;
+        }
+
+        /* Make individual cards responsive and center-aligned */
+        div[style*="width: 230px"] {
+          width: 90% !important;
+          margin: 0 auto !important;
+        }
+
+        .ai-cards-section {
+          width: 100% !important;
+        }
+
+        .ai-cards-section-para {
+          font-size: 18px !important;
         }
       }
     </style>
@@ -1413,7 +1440,7 @@
                                   <a class="nav-link" href="Home.html"> Home </a>
                                 </li>
                                 <li class="dropdown">
-                                  <a class="nav-link dropdown-toggle" href="#"> Services </a>
+                                  <a class="nav-link dropdown-toggle" href="#"> Features </a>
                                   <ul class="dropdown-menu">
                                     <li>
                                       <a href="Ai-trip-planner.html" class="dropdown-item"
@@ -1482,7 +1509,7 @@
           style="max-width: 1160px; width: 100%; display: flex; align-items: center; justify-content: space-between"
         >
           <!-- Left Side Content -->
-          <div class="main-section-left" style="width: 40%; padding-right: 20px">
+          <div class="main-section-left" style="width: 45%; padding-right: 20px">
             <h1 style="font-size: 36px; color: #2f3268; margin-bottom: 20px; font-weight: bold">
               AI Powered Dynamic Packaging & Itinerary Management
             </h1>
@@ -1535,18 +1562,19 @@
           </div>
 
           <!-- Right Side Image -->
-          <div class="main-section-right" style="width: 60%; text-align: center">
+          <div class="main-section-right" style="width: 55%; text-align: center">
             <img
-              src="img/RM Home Page Icons/ai-trip-plan-landimage.webp"
+              class="main-section-image"
+              src="img/RM Home Page Icons/Hero Section Image.webp"
               alt="AI Powered Image"
-              style="width: 95%; border-radius: 10px; height: 90%"
+              style="width: 635px; border-radius: 10px; height: 480px"
             />
           </div>
         </div>
       </section>
 
       <!-- ai-trip-planning -->
-      <section>
+      <section style="margin-top: 35px">
         <div
           style="
             height: 4px;
@@ -1565,7 +1593,7 @@
               style="font-size: 36px; color: #2f3268"
             >
               AI Powered
-              <strong>
+              <strong style="font-weight: 600">
                 Trip Planning & Itinerary <br />
                 Management
               </strong>
@@ -1573,7 +1601,7 @@
             </h2>
           </div>
         </div>
-        <div style="width: 1000px; margin: auto; padding: 20px 0">
+        <div class="ai-cards-section" style="width: 1000px; margin: auto; padding: 20px 0">
           <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center">
             <!-- Card 1 -->
             <div
@@ -1586,14 +1614,19 @@
                 overflow: hidden;
                 text-align: left;
                 padding: 15px;
+                transition: all 0.3s ease;
               "
+              onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+              onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)'"
             >
               <img
                 src="img/RM Home Page Icons/AI-Powered Route Generation for Budget Optimization.png"
                 alt="Image"
                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
+              <div></div>
               <h2
+                class="ai-cards-section-para"
                 style="
                   margin: 10px 0;
                   font-size: 16px;
@@ -1605,7 +1638,10 @@
               >
                 Route Generating Engine For Travel Budget Optimization & Profitability
               </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+              <p
+                class="ai-cards-section-para"
+                style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal"
+              >
                 Smart, map-based travel routes integrating global public transit data to minimize costs and maximize
                 savings.
               </p>
@@ -1621,7 +1657,10 @@
                 overflow: hidden;
                 text-align: left;
                 padding: 15px;
+                transition: all 0.3s ease;
               "
+              onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+              onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)'"
             >
               <img
                 src="img/RM Home Page Icons/Smart Itinerary Planning.png"
@@ -1629,6 +1668,7 @@
                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
               <h2
+                class="ai-cards-section-para"
                 style="
                   margin: 10px 0;
                   font-size: 16px;
@@ -1640,7 +1680,10 @@
               >
                 Smart Itinerary Planning & Booking
               </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+              <p
+                class="ai-cards-section-para"
+                style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal; margin-top: 25px"
+              >
                 AI-driven itinerary creation based on preferences, budget, and real-time availability of flights,
                 hotels, sightseeing, activities and transfers.
               </p>
@@ -1656,7 +1699,10 @@
                 overflow: hidden;
                 text-align: left;
                 padding: 15px;
+                transition: all 0.3s ease;
               "
+              onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+              onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)'"
             >
               <img
                 src="img/RM Home Page Icons/Dynamic Commission & Profit Optimization.png"
@@ -1664,6 +1710,7 @@
                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
               <h2
+                class="ai-cards-section-para"
                 style="
                   margin: 10px 0;
                   font-size: 16px;
@@ -1675,7 +1722,10 @@
               >
                 Dynamic Commission & Profit Optimization
               </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+              <p
+                class="ai-cards-section-para"
+                style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal; margin-top: 25px"
+              >
                 Automated commission calculations with optimized markup strategies.
               </p>
             </div>
@@ -1690,7 +1740,10 @@
                 overflow: hidden;
                 text-align: left;
                 padding: 15px;
+                transition: all 0.3s ease;
               "
+              onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+              onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)'"
             >
               <img
                 src="img/RM Home Page Icons/AI-Powered Cancellation Policy Handling.png"
@@ -1698,6 +1751,7 @@
                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
               <h2
+                class="ai-cards-section-para"
                 style="
                   margin: 10px 0;
                   font-size: 16px;
@@ -1709,7 +1763,10 @@
               >
                 Cancellation Policy Handling
               </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+              <p
+                class="ai-cards-section-para"
+                style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal; margin-top: 40px"
+              >
                 Automated analysis of policies, refund processing, and optimized cancellation strategies.
               </p>
             </div>
@@ -1724,7 +1781,10 @@
                 overflow: hidden;
                 text-align: left;
                 padding: 15px;
+                transition: all 0.3s ease;
               "
+              onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+              onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)'"
             >
               <img
                 src="img/RM Home Page Icons/Standalone Booking.png"
@@ -1732,6 +1792,7 @@
                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
               <h2
+                class="ai-cards-section-para"
                 style="
                   margin: 10px 0;
                   font-size: 16px;
@@ -1743,7 +1804,10 @@
               >
                 Standalone Bookings
               </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+              <p
+                class="ai-cards-section-para"
+                style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal; margin-top: 30px"
+              >
                 Seamlessly book standalone travel services, including flights, hotels, sightseeing, and transfers &
                 more.
               </p>
@@ -1759,7 +1823,10 @@
                 overflow: hidden;
                 text-align: left;
                 padding: 15px;
+                transition: all 0.3s ease;
               "
+              onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+              onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)'"
             >
               <img
                 src="img/RM Home Page Icons/Proposal & Quotation Sharing.png"
@@ -1767,6 +1834,7 @@
                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
               <h2
+                class="ai-cards-section-para"
                 style="
                   margin: 10px 0;
                   font-size: 16px;
@@ -1778,7 +1846,10 @@
               >
                 Proposal & Quotation Sharing
               </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+              <p
+                class="ai-cards-section-para"
+                style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal; margin-top: 30px"
+              >
                 Instant generation and sharing of detailed proposals and quotations.
               </p>
             </div>
@@ -1793,7 +1864,10 @@
                 overflow: hidden;
                 text-align: left;
                 padding: 15px;
+                transition: all 0.3s ease;
               "
+              onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+              onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)'"
             >
               <img
                 src="img/RM Home Page Icons/Integrated Multi-Payment.png"
@@ -1801,6 +1875,7 @@
                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
               <h2
+                class="ai-cards-section-para"
                 style="
                   margin: 10px 0;
                   font-size: 16px;
@@ -1812,7 +1887,10 @@
               >
                 Integrated Multi-Payment
               </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+              <p
+                class="ai-cards-section-para"
+                style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal; margin-top: 30px"
+              >
                 Secure, flexible payment options with multiple gateways and currencies.
               </p>
             </div>
@@ -1827,7 +1905,10 @@
                 overflow: hidden;
                 text-align: left;
                 padding: 15px;
+                transition: all 0.3s ease;
               "
+              onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+              onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.1)'"
             >
               <img
                 src="img/RM Home Page Icons/Real-Time Updates & Notifications.png"
@@ -1835,6 +1916,7 @@
                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px"
               />
               <h2
+                class="ai-cards-section-para"
                 style="
                   margin: 10px 0;
                   font-size: 16px;
@@ -1846,7 +1928,10 @@
               >
                 Real-Time Updates & Notifications
               </h2>
-              <p style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal">
+              <p
+                class="ai-cards-section-para"
+                style="font-size: 14px; color: #555; line-height: normal; letter-spacing: normal"
+              >
                 Instant alerts for bookings, schedule changes, and cancellations.
               </p>
             </div>
@@ -1855,7 +1940,11 @@
       </section>
 
       <!-- boost section with image -->
-      <section class="section bg-transparent position-relative border-0 m-0 p-0" id="ai-trip-planner-section">
+      <section
+        style="margin-top: 35px"
+        class="section bg-transparent position-relative border-0 m-0 p-0"
+        id="ai-trip-planner-section"
+      >
         <div
           style="
             height: 4px;

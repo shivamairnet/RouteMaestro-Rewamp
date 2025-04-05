@@ -47,19 +47,16 @@
     <!-- Head Libs -->
     <script src="vendor/modernizr/modernizr.min.js"></script>
 
-      <!-- Calendly Widget Script -->
-      <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
       <!-- Content Security Policy (CSP) -->
-      <meta
-        http-equiv="Content-Security-Policy"
-        content="
-          default-src 'self';
-          script-src 'self' https://assets.calendly.com 'unsafe-inline';
-          frame-src 'self' https://calendly.com https://*.calendly.com;
-          style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-          font-src 'self' https://fonts.gstatic.com;"
-      />
+    <meta
+    http-equiv="Content-Security-Policy"
+    content="
+     default-src 'self';
+     script-src 'self' https://assets.calendly.com 'unsafe-inline';
+     frame-src 'self' https://calendly.com https://*.calendly.com;
+     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+     font-src 'self' https://fonts.gstatic.com;"
+  />
 
     <style>
       .btn-custom {
@@ -685,7 +682,7 @@
         }
 
         .btnnew {
-          margin-top: 38px !important;
+         
           justify-content: center !important;
           margin-bottom: 20px !important;
         }
@@ -1099,7 +1096,7 @@
                                   <a class="nav-link active" href="home.html"> Home </a>
                                 </li>
                                 <li class="dropdown">
-                                  <a class="nav-link dropdown-toggle" href="#"> Services </a>
+                                  <a class="nav-link dropdown-toggle" href="#"> Features </a>
                                   <ul class="dropdown-menu">
                                     <li>
                                       <a href="Ai-trip-planner.html" class="dropdown-item"
@@ -1152,7 +1149,7 @@
        <!-- section-1-pricing -->
        <div
        class="flex flex-column"
-       style="background-color: #323268; font-size: 36px; color: #fff; text-align: center; padding: 25px"
+       style="background-color: #323268; font-size: 36px; color: #fff; text-align: center; padding: 25px;line-height: normal;"
      >
        Plans designed for Travel Businesses of all sizes
      </div>
@@ -1325,51 +1322,24 @@
  
        <!-- section-7-mobile -->
        <section
-         class="d-md-none d-block"
-         style="background-color: #07072c; height: 500px; align-items: center; justify-content: center; padding: 20px"
-       >
-         <div style="color: white; text-align: center; padding: 20px">
-           <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
-           <a
-           class="openCalendly"
-             href="#"
-             style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
-             >Schedule A Demo</a>
-             <div id="calendlyModal" style="
-            display: none; 
-            position: fixed; 
-            top: 50%; 
-            left: 50%; 
-            transform: translate(-50%, -50%);
-            width: 87%; 
-            height: 70%;
-            background: white;
-            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            z-index: 1000;
-            padding: 10px;">
-            <iframe id="calendlyIframe" width="100%" height="100%" style="border:0;"></iframe>
-            <button id="closeCalendly" data-link="https://calendly.com/arham-airnetmarketing1/30min" style="
-                position: absolute; 
-                top: 5px; 
-                right: 10px; 
-                background: red; 
-                color: white; 
-                border: none; 
-                padding: 5px 10px; 
-                cursor: pointer;">
-                X
-            </button>
-        </div>
+       class="d-md-none d-block"
+       style="background-color: #07072c; height: 500px; align-items: center; justify-content: center; padding: 20px"
+     >
+       <div style="color: white; text-align: center; padding: 20px">
+         <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
+         <button data-link="https://calendly.com/arham-airnetmarketing1/30min"
+           class="btnnew openCalendly"
            
-           <img
-             src="img/RM Home Page Icons/RouteMaestrofigurecta.png"
-             alt="Centered Image"
-             style="max-width: 80%; height: auto"
-           />
-         </div>
-    
-       </section>
+           style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
+           >Schedule A Demo</button
+         >
+         <img
+           src="img/RM Home Page Icons/RouteMaestrofigurecta.png"
+           alt="Centered Image"
+           style="max-width: 80%; height: auto"
+         />
+       </div>
+     </section>
     </div>
 
     <!-- section-8-footer -->
@@ -1507,27 +1477,29 @@
 
     <!-- Theme Initialization Files -->
     <script src="js/theme.init.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
 
     <script>
       // Get all buttons with class "openCalendly"
-      document.querySelectorAll(".openCalendly").forEach(button => {
-            button.addEventListener("click", function () {
-                let calendlyModal = document.getElementById("calendlyModal");
-                let calendlyIframe = document.getElementById("calendlyIframe");
+      document.querySelectorAll(".openCalendly").forEach((button) => {
+        button.addEventListener("click", function () {
+          let calendlyModal = document.getElementById("calendlyModal");
+          let calendlyIframe = document.getElementById("calendlyIframe");
 
-                // Get the Calendly link from the button's data-link attribute
-                let calendlyLink = this.getAttribute("data-link");
-                calendlyIframe.src = calendlyLink;
-                
-                // Show the modal
-                calendlyModal.style.display = "block";
-            });
-        });
+          // Get the Calendly link from the button's data-link attribute
+          let calendlyLink = this.getAttribute("data-link");
+          calendlyIframe.src = calendlyLink;
 
-        // Close the popup when "X" is clicked
-        document.getElementById("closeCalendly").addEventListener("click", function () {
-            document.getElementById("calendlyModal").style.display = "none";
+          // Show the modal
+          calendlyModal.style.display = "block";
         });
+      });
+
+      // Close the popup when "X" is clicked
+      document.getElementById("closeCalendly").addEventListener("click", function () {
+        document.getElementById("calendlyModal").style.display = "none";
+      });
     </script>
     
   </body>
