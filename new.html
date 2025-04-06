@@ -1,83 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calendly Integration</title>
-
-    <!-- Calendly Widget Script -->
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-    <!-- Content Security Policy (CSP) -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
-    default-src 'self';
-    script-src 'self' https://assets.calendly.com 'unsafe-inline';
-    frame-src 'self' https://calendly.com https://*.calendly.com;
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-    font-src 'self' https://fonts.gstatic.com;"
-    />
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet" />
-  </head>
-  <body style="font-family: 'Carlito', sans-serif; text-align: center; margin: 50px">
-    <h1>Schedule a Meeting</h1>
-
-    <!-- Button to open Calendly in Popup -->
-    <button
-      id="openCalendly"
+<section
+  style="
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+    background-color: #f0f0f0;
+  "
+>
+  <div style="position: relative; display: flex; align-items: center">
+    <!-- Left Stack -->
+    <div
       style="
-        padding: 10px 20px;
-        font-size: 16px;
-        margin: 10px;
-        cursor: pointer;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
+        position: absolute;
+        left: -180px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 2;
       "
     >
-      Open Calendly Popup
-    </button>
-
-    <!-- Button to show embedded Calendly -->
-    <button
-      id="showCalendly"
-      style="
-        padding: 10px 20px;
-        font-size: 16px;
-        margin: 10px;
-        cursor: pointer;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-      "
-    >
-      Show Embedded Calendly
-    </button>
-
-    <!-- Container for embedded Calendly (Hidden initially) -->
-    <div id="calendlyContainer" style="display: none; margin-top: 20px">
-      <iframe id="calendlyIframe" width="100%" height="600px" style="border: 0"></iframe>
+      <img
+        src="img/Hero Section Image/image 60 (3).png"
+        alt="Left 1"
+        style="width: 120px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)"
+      />
+      <img
+        src="img/Hero Section Image/image 63.png"
+        alt="Left 2"
+        style="width: 120px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)"
+      />
     </div>
 
-    <script>
-      // Open Calendly in a Popup
-      document.getElementById("openCalendly").addEventListener("click", function () {
-        Calendly.initPopupWidget({ url: "https://calendly.com/arham-airnetmarketing1/30min" });
-      });
+    <!-- Center Image -->
+    <img
+      src="img/RM Home Page Icons/Home Page Hero Section.webp"
+      alt="Center"
+      style="
+        width: 300px;
+        border-radius: 12px;
 
-      // Show Calendly as Embedded Iframe
-      document.getElementById("showCalendly").addEventListener("click", function () {
-        let calendlyContainer = document.getElementById("calendlyContainer");
-        let calendlyIframe = document.getElementById("calendlyIframe");
+        z-index: 3;
+        position: relative;
+      "
+    />
 
-        calendlyIframe.src = "https://calendly.com/arham-airnetmarketing1/30min";
-        calendlyContainer.style.display = "block";
-      });
-    </script>
-  </body>
-</html>
+    <!-- Right Stack -->
+    <div
+      style="
+        position: absolute;
+        right: -180px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 2;
+      "
+    >
+      <img
+        src="img/Hero Section Image/Frame 1618871189.png"
+        alt="Right 1"
+        style="width: 120px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)"
+      />
+      <img
+        src="img/Hero Section Image/image 60 (3).png"
+        alt="Right 2"
+        style="width: 120px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)"
+      />
+    </div>
+  </div>
+</section>
+
+<section
+  style="
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 120px 0;
+    background-color: #f8f8f8;
+  "
+>
+  <div style="position: relative; display: flex; align-items: center">
+    <!-- Left Image 1 -->
+    <img
+      src="img/Hero Section Image/Frame 1618871189.png"
+      alt="Left 1"
+      style="
+        position: absolute;
+        left: -98px;
+        top: 20px;
+        width: 110px;
+        border-radius: 10px;
+        z-index: 100;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      "
+    />
+
+    <!-- Left Image 2 -->
+    <img
+      src="img/Hero Section Image/image 63.png"
+      alt="Left 2"
+      style="
+        position: absolute;
+        left: -121px;
+        bottom: -45px;
+        width: 130px;
+        border-radius: 10px;
+        z-index: 100;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      "
+    />
+
+    <!-- Center Image -->
+    <img
+      src="img/Hero Section Image/landing-page-image.webp"
+      alt="Center"
+      style="position: relative; z-index: 3; width: 480px; border-radius: 14px; height: 300px"
+    />
+
+    <!-- Right Image 1 -->
+    <img
+      src="img/Hero Section Image/image 60 (3).png"
+      alt="Right 1"
+      style="
+        position: absolute;
+        right: -91px;
+        top: 18px;
+        width: 125px;
+        border-radius: 10px;
+        z-index: 100;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      "
+    />
+
+    <!-- Right Image 2 -->
+    <img
+      src="img/Hero Section Image/image 60 (3).png"
+      alt="Right 2"
+      style="
+        position: absolute;
+        right: -64px;
+        bottom: 41px;
+        width: 110px;
+        border-radius: 10px;
+        z-index: 100;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      "
+    />
+  </div>
+</section>
