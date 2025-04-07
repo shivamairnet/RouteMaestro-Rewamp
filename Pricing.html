@@ -1194,12 +1194,38 @@
                             </nav>
                           </div>
                         </div>
-                        <a
-                          href="Contact.html"
-                          class="position-relative top-4 btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-2 mb-5"
-                          style="width: 120px !important; font-size: 18px !important"
-                          >Contact Us</a
-                        >
+                        <button data-link="https://calendly.com/arham-airnetmarketing1/30min"
+                        class="openCalendly position-relative top-4 btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-2 mb-5"
+                        style="width: 150px !important; font-size: 18px !important"
+                      >
+                        Schedule A demo
+                      </button>
+                      <div id="calendlyModal" style="
+                      display: none; 
+                      position: fixed; 
+                      top: 50%; 
+                      left: 50%; 
+                      transform: translate(-50%, -50%);
+                      width: 87%; 
+                      height: 70%;
+                      background: white;
+                      box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+                      border-radius: 10px;
+                      z-index: 1000;
+                      padding: 10px;">
+                      <iframe id="calendlyIframe" width="100%" height="100%" style="border:0;"></iframe>
+                      <button id="closeCalendly" data-link="https://calendly.com/arham-airnetmarketing1/30min" style="
+                          position: absolute; 
+                          top: 5px; 
+                          right: 10px; 
+                          background: red; 
+                          color: white; 
+                          border: none; 
+                          padding: 5px 10px; 
+                          cursor: pointer;">
+                          X
+                      </button>
+                  </div>
                         <button
                           class="btn header-btn-collapse-nav"
                           data-bs-toggle="collapse"
