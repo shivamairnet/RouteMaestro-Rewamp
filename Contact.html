@@ -11,6 +11,17 @@
     <meta name="author" content="RouteMaestro" />
     <meta name="robots" content="index, follow" />
 
+    <!-- Content Security Policy (CSP) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+  default-src 'self';
+  script-src 'self' https://assets.calendly.com 'unsafe-inline';
+  frame-src 'self' https://calendly.com https://*.calendly.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;"
+    />
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="img\WebImages\image (2).png" type="image/x-icon" />
     <link rel="apple-touch-icon" href="img\WebImages\image (2).png" />
@@ -798,6 +809,23 @@
         box-shadow: 0 12px 18px rgba(0, 0, 0, 0.3);
       }
 
+      @media (max-width: 1299px) {
+        .btnnew {
+          /* margin-left: 30px !important; */
+          margin-right: 0px !important;
+          justify-content: center !important;
+          margin-bottom: 20px !important;
+        }
+      }
+
+      @media (min-width: 1300px) and (max-width: 1700px) {
+        .btnnew {
+          /* margin-left: 40px !important; */
+          justify-content: center !important;
+          /* margin-bottom: 78px !important; */
+        }
+      }
+
       @media (max-width: 480px) {
         .dashboard-wrapper {
           flex-direction: column;
@@ -958,7 +986,7 @@
         right: 20px;
         width: 50px;
         height: 50px;
-        background-image: url("img/RM Home Page Icons/demo 1.png");
+        background-image: url("img/contact-us/whatsapp (4).png");
         background-size: cover;
         background-position: center;
         border: none;
@@ -1148,7 +1176,8 @@
                         </div>
                         <a
                           href="Contact.html"
-                          class="position-relative top-2 btn btn-custom1 btn-outline btn-rounded text-2 font-weight-bold px-2 mb-3"
+                          class="position-relative top-4 btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-2 mb-5"
+                          style="width: 120px !important; font-size: 18px !important"
                           >Contact Us</a
                         >
                         <button
@@ -1170,7 +1199,7 @@
     </header>
 
     <div role="main" class="main">
-      <button class="book-demo-btn openCalendly" data-link="https://calendly.com/arham-airnetmarketing1/30min"></button>
+      <a href="Contact.html" class="book-demo-btn"></a>
 
       <!-- section-1-digitize-the-infrastructure -->
       <section
@@ -1182,30 +1211,185 @@
           justify-content: space-between;
           align-items: center;
           margin: auto;
-          padding: 50px;
+          padding: 15px;
+          background-color: #323268;
         "
       >
-        <div class="container" style="padding-right: 20px">
-          <h1
-            class="text-white line-height-2 appear-animation text-center text-ignite mb-3"
-            data-appear-animation="fadeInUpShorterPlus"
-            data-appear-animation-delay="100"
-            style="font-size: 36px; font-weight: 600; letter-spacing: normal; color: #323268 !important"
-          >
-            Contact Us
-          </h1>
-          <p
+        <h1
+          class="text-white line-height-2 appear-animation text-center text-ignite mb-3"
+          data-appear-animation="fadeInUpShorterPlus"
+          data-appear-animation-delay="100"
+          style="font-size: 34px; font-weight: 600; letter-spacing: normal; color: #fff !important"
+        >
+          Schedule A Demo
+        </h1>
+        <!-- <p
             style="font-size: 18px; color: #323268; text-align: center"
             style="font-weight: 600; letter-spacing: normal"
           >
             Transform your travel business with RouteMaestro.
             <br />
             The ultimate and only holiday platform you require for your travel business.
-          </p>
+          </p> -->
+      </section>
+
+      <section
+        class="container"
+        style="display: flex; flex-wrap: wrap; min-height: 500px; margin-top: 35px; margin-bottom: 35px"
+      >
+        <div
+          style="
+            flex: 1;
+            background: url('img/contact-us/Frame 1618871190 (1).png') no-repeat center center/cover;
+            min-height: 400px;
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 10px;
+          "
+        >
+          <div style="padding: 20px 30px; border-radius: 10px">
+            <h2 style="font-size: 36px; margin: 0; color: #fff; line-height: normal">See RouteMaestro in Actions</h2>
+            <p style="font-size: 24px; margin-top: 10px; color: #fff; padding: 30px; line-height: normal">
+              Complete the form to schedule a demo and our team will in touch with you.
+            </p>
+          </div>
+        </div>
+
+        <div style="flex: 1; padding: 60px 40px; background-color: #fff; border-radius: 10px">
+          <!-- <h2 style="margin-bottom: 20px; font-size: 32px; font-family: Arial, sans-serif">Contact Us</h2> -->
+          <form action="#" style="display: flex; flex-direction: column; font-family: Arial, sans-serif">
+            <!-- <label style="margin-bottom: 5px; font-size: 14px">First Name</label> -->
+            <input
+              type="text"
+              placeholder="First Name"
+              required
+              style="
+                margin-bottom: 20px;
+                padding: 10px 0;
+                font-size: 16px;
+                border: none;
+                border-bottom: 2px solid #ccc;
+                outline: none;
+                background: transparent;
+              "
+            />
+
+            <!-- <label style="margin-bottom: 5px; font-size: 14px">Last Name</label> -->
+            <input
+              type="text"
+              placeholder="Last Name"
+              required
+              style="
+                margin-bottom: 20px;
+                padding: 10px 0;
+                font-size: 16px;
+                border: none;
+                border-bottom: 2px solid #ccc;
+                outline: none;
+                background: transparent;
+              "
+            />
+
+            <!-- <label style="margin-bottom: 5px; font-size: 14px">Phone Number</label> -->
+            <input
+              type="text"
+              placeholder="Phone Number"
+              required
+              style="
+                margin-bottom: 20px;
+                padding: 10px 0;
+                font-size: 16px;
+                border: none;
+                border-bottom: 2px solid #ccc;
+                outline: none;
+                background: transparent;
+              "
+            />
+
+            <!-- <label style="margin-bottom: 5px; font-size: 14px">Email</label> -->
+            <input
+              type="email"
+              placeholder="Your Email"
+              required
+              style="
+                margin-bottom: 20px;
+                padding: 10px 0;
+                font-size: 16px;
+                border: none;
+                border-bottom: 2px solid #ccc;
+                outline: none;
+                background: transparent;
+              "
+            />
+
+            <label
+              style="
+                display: inline-flex;
+                align-items: flex-start;
+                font-size: 16px;
+                margin-bottom: 20px;
+                line-height: 1.5;
+                flex-wrap: wrap;
+              "
+            >
+              <input type="checkbox" required style="margin: 5px 10px 0 0" />
+              <span>
+                By submitting this form, you consent to the processing of your data in accordance with our
+                <a href="#" style="color: #007bff; text-decoration: underline"> Privacy Policy</a>.
+              </span>
+            </label>
+
+            <button
+              data-link="https://calendly.com/arham-airnetmarketing1/30min"
+              class="openCalendly btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
+              style="width: 150px; margin-top: 20px"
+            >
+              Schedule A Demo
+            </button>
+            <div
+              id="calendlyModal"
+              style="
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 87%;
+                height: 70%;
+                background: white;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                z-index: 1000;
+                padding: 10px;
+              "
+            >
+              <iframe id="calendlyIframe" width="100%" height="100%" style="border: 0"></iframe>
+              <button
+                id="closeCalendly"
+                data-link="https://calendly.com/arham-airnetmarketing1/30min"
+                style="
+                  position: absolute;
+                  top: 5px;
+                  right: 10px;
+                  background: red;
+                  color: white;
+                  border: none;
+                  padding: 5px 10px;
+                  cursor: pointer;
+                "
+              >
+                X
+              </button>
+            </div>
+          </form>
         </div>
       </section>
 
-      <section class="d-md-block d-none" style="margin-bottom: 25px">
+      <!-- <section class="d-md-block d-none" style="margin-bottom: 25px">
         <div style="width: 75%; background-color: #323268; padding: 45px; border-radius: 10px; margin: auto">
           <form>
             <div style="display: flex; gap: 20px; margin-bottom: 15px">
@@ -1355,9 +1539,9 @@
             </div>
           </form>
         </div>
-      </section>
+      </section> -->
 
-      <section class="d-block d-md-none" style="margin-bottom: 25px; display: none">
+      <!-- <section class="d-block d-md-none" style="margin-bottom: 25px; display: none">
         <div style="width: 90%; background-color: #323268; padding: 30px; border-radius: 10px; margin: auto">
           <form>
             <div style="margin-bottom: 15px">
@@ -1469,7 +1653,7 @@
             </div>
           </form>
         </div>
-      </section>
+      </section> -->
     </div>
 
     <!-- section-7-cta-section -->
@@ -1487,12 +1671,13 @@
       <div
         style="
           display: flex;
-
+          max-width: 1200px;
           width: 100%;
           align-items: center;
           justify-content: space-between;
           background: url('img/RM Home Page Icons/RouteMaestrobg.webp') no-repeat center center/cover;
           height: 500px;
+
           margin: auto;
         "
       >
@@ -1512,41 +1697,6 @@
           >
             Schedule A Demo
           </button>
-          <div
-            id="calendlyModal"
-            style="
-              display: none;
-              position: fixed;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: 87%;
-              height: 70%;
-              background: white;
-              box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-              border-radius: 10px;
-              z-index: 1000;
-              padding: 10px;
-            "
-          >
-            <iframe id="calendlyIframe" width="100%" height="100%" style="border: 0"></iframe>
-            <button
-              id="closeCalendly"
-              data-link="https://calendly.com/arham-airnetmarketing1/30min"
-              style="
-                position: absolute;
-                top: 5px;
-                right: 10px;
-                background: red;
-                color: white;
-                border: none;
-                padding: 5px 10px;
-                cursor: pointer;
-              "
-            >
-              X
-            </button>
-          </div>
         </div>
       </div>
     </section>
@@ -1560,47 +1710,11 @@
         <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
         <button
           data-link="https://calendly.com/arham-airnetmarketing1/30min"
-          class="btnnew openCalendly"
-          data-link="https://calendly.com/arham-airnetmarketing1/30min"
-          style="background: #fe6652; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s"
+          class="openCalendly btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
+          style="width: 150px"
         >
           Schedule A Demo
         </button>
-        <div
-          id="calendlyModal"
-          style="
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 87%;
-            height: 70%;
-            background: white;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            z-index: 1000;
-            padding: 10px;
-          "
-        >
-          <iframe id="calendlyIframe" width="100%" height="100%" style="border: 0"></iframe>
-          <button
-            id="closeCalendly"
-            data-link="https://calendly.com/arham-airnetmarketing1/30min"
-            style="
-              position: absolute;
-              top: 5px;
-              right: 10px;
-              background: red;
-              color: white;
-              border: none;
-              padding: 5px 10px;
-              cursor: pointer;
-            "
-          >
-            X
-          </button>
-        </div>
         <img
           src="img/RM Home Page Icons/RouteMaestrofigurecta.png"
           alt="Centered Image"
@@ -1747,6 +1861,7 @@
     <script src="js/theme.init.js"></script>
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script>
       // Get all buttons with class "openCalendly"
       document.querySelectorAll(".openCalendly").forEach((button) => {

@@ -697,7 +697,7 @@
 
       @media (max-width: 1299px) {
         .btnnew {
-          margin-left: 30px !important;
+          /* margin-left: 30px !important; */
           margin-right: 0px !important;
           justify-content: center !important;
           margin-bottom: 20px !important;
@@ -706,9 +706,9 @@
 
       @media (min-width: 1300px) and (max-width: 1700px) {
         .btnnew {
-          margin-left: 40px !important;
-          justify-content: center !important;
-          margin-bottom: 78px !important;
+          /* margin-left: 40px !important; */
+          /* justify-content: center !important; */
+          /* margin-bottom: 78px !important; */
         }
       }
 
@@ -1211,7 +1211,7 @@
         right: 20px;
         width: 50px;
         height: 50px;
-        background-image: url("img/RM Home Page Icons/demo 1.png");
+        background-image: url("img/contact-us/whatsapp (4).png");
         background-size: cover;
         background-position: center;
         border: none;
@@ -1263,6 +1263,47 @@
       @media (max-width: 768px) {
         .glass-card {
           max-width: 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .main-section-1 {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .main-section-left,
+        .main-section-right {
+          width: 100% !important;
+          padding: 0 !important;
+        }
+
+        .main-section-image {
+          width: 100% !important;
+          height: auto !important;
+          margin: 20px 0;
+          border-radius: 10px;
+        }
+
+        .heading {
+          order: 0;
+          font-size: 28px !important;
+        }
+
+        .subheading {
+          order: 1;
+          font-size: 16px !important;
+          margin-bottom: 20px;
+        }
+
+        .main-section-right {
+          order: 2;
+        }
+
+        .demo-button {
+          order: 3;
+          margin-top: 20px;
         }
       }
 
@@ -1532,8 +1573,8 @@
                         </div>
                         <a
                           href="Contact.html"
-                          class="position-relative top-2 btn btn-custom1 btn-outline btn-rounded text-2 font-weight-bold px-2 mb-3"
-                          id="openModalBtn1"
+                          class="position-relative top-4 btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-2 mb-5"
+                          style="width: 120px !important; font-size: 18px !important"
                           >Contact Us</a
                         >
                         <button
@@ -1555,7 +1596,7 @@
     </header>
 
     <div role="main" class="main">
-      <button class="book-demo-btn openCalendly" data-link="https://calendly.com/arham-airnetmarketing1/30min"></button>
+      <a href="Contact.html" class="book-demo-btn"></a>
 
       <!-- main section -->
       <section
@@ -1575,16 +1616,16 @@
         >
           <!-- Left Side Content -->
           <div class="main-section-left" style="width: 45%; padding-right: 20px">
-            <h1 style="font-size: 36px; color: #2f3268; margin-bottom: 20px; font-weight: bold">
+            <h1 class="heading" style="font-size: 36px; color: #2f3268; margin-bottom: 20px; font-weight: bold">
               AI Powered Dynamic Packaging & Itinerary Management
             </h1>
-            <p style="font-size: 18px; line-height: 1.8rem; color: #2f3268; margin-bottom: 20px">
+            <p class="subheading" style="font-size: 18px; line-height: 1.8rem; color: #2f3268; margin-bottom: 20px">
               RouteMaestro enables quick map based travel planning, and facilitates booking
               <strong> Personalized & Profitable </strong> travel itineraries within a few minutes!
             </p>
             <button
               data-link="https://calendly.com/arham-airnetmarketing1/30min"
-              class="openCalendly btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
+              class="demo-button openCalendly btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
               style="width: 150px"
             >
               Schedule A Demo
@@ -1630,7 +1671,7 @@
           <div class="main-section-right" style="width: 55%; text-align: center">
             <img
               class="main-section-image"
-              src="img/RM Home Page Icons/Hero Section Image.webp"
+              src="img/AITripPlanningImage/trip-ai-trio-plan.webp"
               alt="AI Powered Image"
               style="width: 635px; border-radius: 10px; height: 480px"
             />
@@ -2044,12 +2085,21 @@
             </div>
             <div class="pl-6 pt-4 pr-6" style="margin-bottom: 0; display: flex; justify-content: center">
               <img
-                src="img/RM Home Page Icons/device-book.webp"
+                src="img/RM Home Page Icons/device-image.webp"
                 alt="Center Image"
                 style="max-width: 800px; height: auto; border-radius: 8px"
               />
             </div>
           </div>
+        </div>
+        <div class="text-center">
+          <button
+            data-link="https://calendly.com/arham-airnetmarketing1/30min"
+            class="demo-button openCalendly btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-2 mb-5"
+            style="width: 150px"
+          >
+            Schedule A Demo
+          </button>
         </div>
       </section>
 
