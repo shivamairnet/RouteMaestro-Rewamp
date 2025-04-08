@@ -1223,14 +1223,6 @@
         >
           Schedule A Demo
         </h1>
-        <!-- <p
-            style="font-size: 18px; color: #323268; text-align: center"
-            style="font-weight: 600; letter-spacing: normal"
-          >
-            Transform your travel business with RouteMaestro.
-            <br />
-            The ultimate and only holiday platform you require for your travel business.
-          </p> -->
       </section>
 
       <section
@@ -1344,6 +1336,7 @@
             </label>
 
             <button
+              type="submit"
               data-link="https://calendly.com/arham-airnetmarketing1/30min"
               class="openCalendly btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
               style="width: 150px; margin-top: 20px"
@@ -1861,26 +1854,52 @@
     <script src="js/theme.init.js"></script>
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script>
-      // Get all buttons with class "openCalendly"
+    <!-- <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> -->
+    <!-- <script>
+
       document.querySelectorAll(".openCalendly").forEach((button) => {
         button.addEventListener("click", function () {
           let calendlyModal = document.getElementById("calendlyModal");
           let calendlyIframe = document.getElementById("calendlyIframe");
 
-          // Get the Calendly link from the button's data-link attribute
           let calendlyLink = this.getAttribute("data-link");
           calendlyIframe.src = calendlyLink;
 
-          // Show the modal
           calendlyModal.style.display = "block";
         });
       });
 
-      // Close the popup when "X" is clicked
+      
       document.getElementById("closeCalendly").addEventListener("click", function () {
         document.getElementById("calendlyModal").style.display = "none";
+      });
+    </script> -->
+    <script>
+      const form = document.querySelector("form");
+      const calendlyModal = document.getElementById("calendlyModal");
+      const calendlyIframe = document.getElementById("calendlyIframe");
+      const closeBtn = document.getElementById("closeCalendly");
+      const demoButton = document.querySelector(".openCalendly");
+
+      // Intercept form submit
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent actual form submission
+
+        // Trigger validation
+        if (form.checkValidity()) {
+          const calendlyLink = demoButton.getAttribute("data-link");
+          calendlyIframe.src = calendlyLink;
+          calendlyModal.style.display = "block";
+        } else {
+          form.reportValidity(); // Show built-in validation messages
+        }
+      });
+
+      // Close modal button
+      closeBtn.addEventListener("click", function () {
+        calendlyModal.style.display = "none";
+        calendlyIframe.src = ""; // Clear iframe on close
+        console.log("Close button clicked");
       });
     </script>
   </body>

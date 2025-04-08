@@ -3461,7 +3461,7 @@ html.sticky-header-enabled.sticky-header-active #header .header-logo-sticky-chan
 	#header .header-nav-main {
 		position: absolute;
 		background: transparent;
-		width: 100vw;
+		width: 88vw;
 		
 		top: 90%;
 		left: 0;
