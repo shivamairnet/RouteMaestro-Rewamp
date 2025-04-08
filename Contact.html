@@ -1362,8 +1362,8 @@
             >
               <iframe id="calendlyIframe" width="100%" height="100%" style="border: 0"></iframe>
               <button
+                type="button"
                 id="closeCalendly"
-                data-link="https://calendly.com/arham-airnetmarketing1/30min"
                 style="
                   position: absolute;
                   top: 5px;
@@ -1875,31 +1875,32 @@
       });
     </script> -->
     <script>
-      const form = document.querySelector("form");
-      const calendlyModal = document.getElementById("calendlyModal");
-      const calendlyIframe = document.getElementById("calendlyIframe");
-      const closeBtn = document.getElementById("closeCalendly");
-      const demoButton = document.querySelector(".openCalendly");
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const calendlyModal = document.getElementById("calendlyModal");
+        const calendlyIframe = document.getElementById("calendlyIframe");
+        const closeBtn = document.getElementById("closeCalendly");
+        const demoButton = document.querySelector(".openCalendly");
 
-      // Intercept form submit
-      form.addEventListener("submit", function (e) {
-        e.preventDefault(); // Prevent actual form submission
+        // Intercept form submit
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent actual form submission
 
-        // Trigger validation
-        if (form.checkValidity()) {
-          const calendlyLink = demoButton.getAttribute("data-link");
-          calendlyIframe.src = calendlyLink;
-          calendlyModal.style.display = "block";
-        } else {
-          form.reportValidity(); // Show built-in validation messages
-        }
-      });
+          if (form.checkValidity()) {
+            const calendlyLink = demoButton.getAttribute("data-link");
+            calendlyIframe.src = calendlyLink;
+            calendlyModal.style.display = "block";
+          } else {
+            form.reportValidity();
+          }
+        });
 
-      // Close modal button
-      closeBtn.addEventListener("click", function () {
-        calendlyModal.style.display = "none";
-        calendlyIframe.src = ""; // Clear iframe on close
-        console.log("Close button clicked");
+        // Close modal button
+        closeBtn.addEventListener("click", function () {
+          calendlyModal.style.display = "none";
+          calendlyIframe.src = ""; // Clear iframe on close
+          console.log("Close button clicked");
+        });
       });
     </script>
   </body>
