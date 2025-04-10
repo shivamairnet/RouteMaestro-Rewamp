@@ -1255,6 +1255,46 @@
   gap:2px !important;
   }
 }
+
+
+.laptop-container {
+    position: relative;
+    width: 800px;
+  }
+  
+  .laptop-img {
+    width: 100%;
+    display: block;
+  }
+  
+  .screen-overlay {
+    position: absolute;
+    top: 12%;     /* adjust as per screen placement in laptop */
+    /* left: 10.5%; */
+    width: 100%;
+    height: 76%;
+    overflow: hidden;
+    /* border-radius: 10px; */
+  }
+  
+  .screen-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  
+
+  @media(max-width:768px) {
+    .custom-mobil-class{
+      width: 100% !important;
+      margin-bottom: 0px !important;
+    }
+}
   </style>
 </head>
 
@@ -1293,7 +1333,7 @@
                                 <a class="nav-link dropdown-toggle" href="#"> Features </a>
                                 <ul class="dropdown-menu">
                                   <li>
-                                    <a href="ai-trip-planner.html" class="dropdown-item">AI Powered Dynamic Packaging </a>
+                                    <a href="ai-powered-dynamic-packaging.html" class="dropdown-item">AI Powered Dynamic Packaging </a>
                                   </li>
                                   <!-- <li>
                                       <a href="integrated-booking-solution.html" class="dropdown-item"
@@ -1344,9 +1384,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #f7f7f7;
-      padding: 60px 40px;
-    "
+      background-image: url(img/homebackgroundimages/main.png);
+        background-size: cover;
+      padding: 1px 40px;"
   >
     <div
       class="main-section-1"
@@ -1365,13 +1405,13 @@
         style="width: 40%; padding-right: 30px; min-width: 320px"
       >
         <h1
-          class="heading"
-          style="font-size: 36px; color: #2f3268; margin-bottom: 20px; font-weight: bold"
+          class="heading text-white
+          style="font-size: 36px;  margin-bottom: 20px; font-weight: bold"
         >
           Digitize Your Travel Infrastructure With RouteMaestro
         </h1>
         <p
-          class="subheading"
+          class="subheading text-white"
           style="font-size: 18px; line-height: 1.8rem; color: #2f3268; margin-bottom: 20px"
         >
           An AI Powered Dynamic Travel Packaging & Booking Platform
@@ -1421,46 +1461,39 @@
       </div>
   
       <!-- Right Side Image -->
-      <div
-        class="main-section-right"
-        style="
-          width: 60%;
-          text-align: center;
-          min-width: 350px;
-          display: flex;
-          justify-content: center;
-        "
-      >
-        <div
-          style="
-            max-width: 1000px;
-            width: 100%;
-            margin: auto;
-            text-align: center;
-            border-radius: 20px;
-          "
-        >
+     
           <div
-            id="videoContainer"
             style="
-              overflow: hidden;
-              border-radius: 12px;
-              display: inline-block;
-              width: 100%;
-              height: auto;
+                width: 60%;
+              display:flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0;
+              height: 100vh;
+            
             "
+            class="custom-mobil-class"
           >
-            <video
+
+          <div class="laptop-container">
+            <img src="./img/laptopimages/laptop.png" alt="Laptop" class="laptop-img">
+            <div class="screen-overlay">
+                <img id="slideshow" src="./img/laptopimages/slide1.webp"  alt="slideshow Image">
+            </div>
+          </div>
+          
+
+            <!-- <video
               id="myVideo"
               src="Hero Section Laptop Video.webm"
               controls
               muted
               playsinline
               style="width: 100%; height: auto; max-height: 600px; transition: transform 0.3s ease"
-            ></video>
+            ></video> -->
           </div>
-        </div>
-      </div>
+       
+    
   
       <!-- Mobile Schedule Button -->
       <div class="text-center d-block d-lg-none" style="width: 100%; margin-top: 20px">
@@ -2575,6 +2608,30 @@
     const scale = zoomSlider.value;
     video.style.transform = `scale(${scale})`;
   });
+</script>
+
+<script>
+    const images = [
+    'img/laptopimages/slide1.webp',
+    'img/laptopimages/slide2.webp',
+    'img/laptopimages/slide3.webp',
+    'img/laptopimages/slide4.webp',
+    'img/laptopimages/slide5.webp',
+  ];
+  
+  let current = 0;
+  const slideshow = document.getElementById('slideshow');
+  
+  setInterval(() => {
+    slideshow.style.opacity = 0;
+  
+    setTimeout(() => {
+      current = (current + 1) % images.length;
+      slideshow.src = images[current];
+      slideshow.style.opacity = 1;
+    }, 1000);
+  }, 3000);
+  
 </script>
 </body>
 
