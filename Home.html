@@ -1259,7 +1259,7 @@
 
 .laptop-container {
     position: relative;
-    width: 800px;
+    width: 900px;
   }
   
   .laptop-img {
@@ -1269,24 +1269,28 @@
   
   .screen-overlay {
     position: absolute;
-    top: 12%;     /* adjust as per screen placement in laptop */
-    /* left: 10.5%; */
-    width: 100%;
-    height: 76%;
+    top: 10.5%;
+    left: 12.7%;
+    width: 75.2%;
+    height: 79%;
     overflow: hidden;
     /* border-radius: 10px; */
   }
   
-  .screen-overlay img {
+  .slideshow-track {
+    display: flex;
+    height: 100%;
+    width: 100%; /* assuming 3 images */
+    transition: transform 1s ease-in-out;
+  }
+  
+  .slideshow-track img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    transition: opacity 1s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
+    object-fit: cover;
+    flex-shrink: 0;
   }
-
+  
   
   @media(max-width: 500px) {
     .custom-mobil-class{
@@ -1424,7 +1428,7 @@
           class="subheading text-white myheadingClass"
           style="font-size: 18px; line-height: 1.8rem; color: #2f3268; margin-bottom: 20px"
         >
-          An AI Powered Dynamic Travel Packaging & Booking Platform
+          An AI Powered Dynamic Travel Packaging & A Natural Workflow Booking Platform For Your Travel Business!
         </p>
         <a
           href="schedule-demo.html"
@@ -1479,7 +1483,7 @@
               justify-content: center;
               align-items: center;
               margin: 0;
-              height: 100vh;
+              height: 80vh;
             
             "
             class="custom-mobil-class"
@@ -1487,8 +1491,13 @@
 
           <div class="laptop-container">
             <img src="./img/laptopimages/laptop.png" alt="Laptop" class="laptop-img">
+        
             <div class="screen-overlay">
-                <img id="slideshow" src="./img/laptopimages/slide1.webp"  alt="slideshow Image">
+              <div class="slideshow-track" id="slideshow-track">
+                <img src="./img/laptopimages/Slide 1.webp" alt="Slide 1">
+                <img src="./img/laptopimages/Slide 2.webp" alt="Slide 2">
+                <img src="./img/laptopimages/Slide 3.webp" alt="Slide 3">
+              </div>
             </div>
           </div>
           
@@ -2621,27 +2630,15 @@
 </script>
 
 <script>
-    const images = [
-    'img/laptopimages/slide1.webp',
-    'img/laptopimages/slide2.webp',
-    'img/laptopimages/slide3.webp',
-    'img/laptopimages/slide4.webp',
-    'img/laptopimages/slide5.webp',
-  ];
-  
-  let current = 0;
-  const slideshow = document.getElementById('slideshow');
-  
-  setInterval(() => {
-    slideshow.style.opacity = 0;
-  
-    setTimeout(() => {
-      current = (current + 1) % images.length;
-      slideshow.src = images[current];
-      slideshow.style.opacity = 1;
-    }, 1000);
-  }, 3000);
-  
+   let current = 0;
+const track = document.getElementById('slideshow-track');
+const slidesCount = track.children.length;
+
+setInterval(() => {
+  current = (current + 1) % slidesCount;
+  track.style.transform = `translateX(-${current * 100}%)`;
+}, 3000);
+
 </script>
 </body>
 
