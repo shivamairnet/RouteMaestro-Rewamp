@@ -1419,7 +1419,7 @@
         style="width: 40%; padding-right: 30px; min-width: 320px"
       >
         <h1
-          class="heading text-white myheadingClass
+          class="heading text-white myheadingClass"
           style="font-size: 36px;  margin-bottom: 20px; font-weight: bold"
         >
           Digitize Your Travel Infrastructure With RouteMaestro
@@ -1430,6 +1430,7 @@
         >
           An AI Powered Dynamic Travel Packaging & A Natural Workflow Booking Platform For Your Travel Business!
         </p>
+        <div class="d-flex" style="gap:5px">
         <a
           href="schedule-demo.html"
           class="d-none d-lg-block demo-button btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
@@ -1437,6 +1438,14 @@
         >
           Schedule A Demo
         </a>
+        <a
+          href="Pricing.html"
+          class="d-none d-lg-block demo-button btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
+          style="width: 150px"
+        >
+          Start Free Trial
+        </a>
+    </div>
         <div
           id="calendlyModal"
           style="
@@ -1497,6 +1506,8 @@
                 <img src="./img/laptopimages/Slide 1.webp" alt="Slide 1">
                 <img src="./img/laptopimages/Slide 2.webp" alt="Slide 2">
                 <img src="./img/laptopimages/Package (1).png" alt="Slide 3">
+                <img src="./img/laptopimages/Slide 1.webp" alt="Clone of Slide 1"> <!-- cloned first slide -->
+
               </div>
             </div>
           </div>
@@ -1522,6 +1533,13 @@
           style="width: 150px"
         >
           Schedule A Demo
+        </a>
+        <a
+          href="Pricing.html"
+          class="demo-button btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
+          style="width: 150px"
+        >
+          Start Free Trial
         </a>
       </div>
     </div>
@@ -2630,14 +2648,27 @@
 </script>
 
 <script>
-   let current = 0;
+let current = 0;
 const track = document.getElementById('slideshow-track');
 const slidesCount = track.children.length;
 
-setInterval(() => {
-  current = (current + 1) % slidesCount;
+function slide() {
+  current++;
+  track.style.transition = 'transform 1s ease-in-out';
   track.style.transform = `translateX(-${current * 100}%)`;
-}, 3000);
+
+  // When it reaches the cloned slide
+  if (current === slidesCount - 1) {
+    setTimeout(() => {
+      // Instantly jump to real first slide without animation
+      track.style.transition = 'none';
+      track.style.transform = 'translateX(0)';
+      current = 0;
+    }, 1000); // wait for slide animation to complete
+  }
+}
+
+setInterval(slide, 3000);
 
 </script>
 </body>
