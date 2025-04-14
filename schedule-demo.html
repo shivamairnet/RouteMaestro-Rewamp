@@ -1099,6 +1099,83 @@
           align-items: center;
         }
       }
+
+      .demo-hero-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.demo-hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.demo-hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f1f47;
+  margin-bottom: 16px;
+}
+
+.demo-hero-subtext {
+  font-size: 1.125rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.demo-hero-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.demo-hero-button {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.demo-hero-button span {
+  margin-left: 6px;
+}
+
+.demo-hero-button:hover {
+  background-color: #e6393f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .demo-hero-title {
+    font-size: 2rem;
+  }
+
+  .demo-hero-subtext {
+    font-size: 1rem;
+  }
+
+  .demo-hero-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .demo-hero-title {
+    font-size: 1.6rem;
+  }
+
+  .demo-hero-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
     </style>
     <!-- Content Security Policy (CSP) -->
     <meta
@@ -1176,7 +1253,7 @@
                         <a
                           href="schedule-demo.html"
                           class="d-none d-md-block position-relative top-4 btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-2 mb-4"
-                          style="width: 150px !important; font-size: 18px !important"
+                          style="width: 150px !important; font-size: 18px !important;margin-left: 25px;"
                         >
                           Schedule A demo
                         </a>
@@ -1202,7 +1279,7 @@
       <a href="schedule-demo.html" class="book-demo-btn"></a>
 
       <!-- section-1-digitize-the-infrastructure -->
-      <section
+      <!-- <section
         class=""
         style="
           display: flex;
@@ -1223,11 +1300,19 @@
         >
           Schedule A Demo
         </h1>
+      </section> -->
+
+      <section class="demo-hero-section" style="background-image: url(./img/scheduleimages/Frame\ 1618871206\ \(1\).png) ; background-size: cover;  background-position: center; background-repeat: no-repeat; min-height: 70vh;">
+        <div class="demo-hero-container">
+          <h1 class="demo-hero-title" style="font-size: 36px !important;">Schedule a Demo</h1>
+          <p class="demo-hero-subtext">Make your Travel business better with RouteMaestro.</p>
+        
+        </div>
       </section>
 
       <section
         class="container"
-        style="display: flex; flex-wrap: wrap; min-height: 500px; margin-top: 35px; margin-bottom: 35px"
+        style="position: relative;bottom: 200px; display: flex; flex-wrap: wrap; min-height: 500px; margin-top: 35px; margin-bottom: 35px ; border: 1px solid #e5e7eb; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" 
       >
         <div
           style="
@@ -1304,6 +1389,7 @@
             />
 
             <!-- <label style="margin-bottom: 5px; font-size: 14px">Email</label> -->
+             
             <input
               type="email"
               placeholder="Your Email"
@@ -1329,11 +1415,14 @@
                 flex-wrap: wrap;
               "
             >
-              <input type="checkbox" required style="margin: 5px 10px 0 0" />
-              <span>
-                By submitting this form, you consent to the processing of your data in accordance with our
-                <a href="#" style="color: #007bff; text-decoration: underline"> Privacy Policy</a>.
-              </span>
+            <div>
+
+                <input type="checkbox" required style="margin: 5px 10px 0 0" />
+                <span>
+                  By submitting this form, you consent to the processing of your data in accordance with our
+                  <a href="#" style="color: #007bff; text-decoration: underline"> Privacy Policy</a>.
+                </span>
+            </div>
             </label>
 
             <button

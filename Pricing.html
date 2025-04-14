@@ -1269,10 +1269,101 @@
         background-color: grey;
     }
 
+    .border-class-custom-border{
+        border-left: #e5e7eb 1px solid;
+        border-right: #e5e7eb 1px solid;
+        font-size: 18px;
+
+    }
+
+
+    .custom-font-size{
+        font-size: 18px;
+
+    }
+
+
+    .demo-hero-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.demo-hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.demo-hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f1f47;
+  margin-bottom: 16px;
+}
+
+.demo-hero-subtext {
+  font-size: 1.125rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.demo-hero-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.demo-hero-button {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.demo-hero-button span {
+  margin-left: 6px;
+}
+
+.demo-hero-button:hover {
+  background-color: #e6393f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .demo-hero-title {
+    font-size: 2rem;
+  }
+
+  .demo-hero-subtext {
+    font-size: 1rem;
+  }
+
+  .demo-hero-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .demo-hero-title {
+    font-size: 1.6rem;
+  }
+
+  .demo-hero-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
     </style>
   </head>
 
-  <body style=" background-color: #f5f5f5;">
+  <body style=" background-color: white;">
     <header
       id="header"
       data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 70, 'stickySetTop': '-70px', 'stickyChangeLogo': true}"
@@ -1333,9 +1424,10 @@
                             </nav>
                           </div>
                         </div>
-                        <a href="schedule-demo.html"
+                        <a
+                        href="schedule-demo.html"
                         class="d-none d-md-block position-relative top-4 btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-2 mb-4"
-                        style="width: 150px !important; font-size: 18px !important"
+                        style="width: 150px !important; font-size: 18px !important;margin-left: 25px;"
                       >
                         Schedule A demo
                       </a>
@@ -1383,20 +1475,15 @@
       </div>
     </header>
 
-    <div role="main" class="main">
-      <a href="schedule-demo.html" class="book-demo-btn"></a>
-
-       <!-- section-1-pricing -->
-       <div
-       class="flex flex-column"
-       style="background-color: #323268; font-size: 36px; color: #fff; text-align: center; padding: 25px;line-height: normal;"
-     >
-       Plans Designed For Travel Businesses Of All Sizes
-     </div>
-   </div>
-
+    <section class="demo-hero-section" style="background-image: url(./img/scheduleimages/Frame\ 1618871206\ \(1\).png) ; background-size: cover;  background-position: center; background-repeat: no-repeat; min-height: 70vh;">
+        <div class="demo-hero-container">
+          <h1 class="demo-hero-title" style="font-size: 36px !important;">Plans Designed For Travel Businesses Of All Sizes</h1>
+          <p class="demo-hero-subtext">Choose the perfect plan for your business needs</p>
+        
+        </div>
+      </section>
    <!-- section-2-pricing-table -->
-   <section style="margin-top: 35px; margin-bottom: 35px">
+   <section style="margin-top: 35px; margin-bottom: 35px;position: relative; bottom: 180px;">
     <div class="d-md-block d-none" style="overflow-x: auto">
         
         <div class="table-container">
@@ -1411,9 +1498,9 @@
         
                     <tr>
                         <td></td>
-                        <td style="padding: 16px; background-color: white;"><strong>Free</strong><br />(Including 1 User)</td>
+                        <td style="padding: 16px; background-color: white; border-left: 1px solid #e5e7eb;"><strong>Free</strong><br />(Including 1 User)</td>
                         <td style="padding: 16px; background-color: white;"><strong>₹ 35,000 / Year</strong><br />(Up to 10 Users)</td>
-                        <td style="padding: 30px; vertical-align: top; background-color: white;">
+                        <td style="padding: 30px; vertical-align: top; background-color: white;border-right: 1px solid #e5e7eb;">
                             <div style="display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: center;">
                           
                               <!-- Text content -->
@@ -1433,21 +1520,21 @@
         
                     <tr>
                         <td></td>
-                        <td style="padding: 16px; background-color: white;">Postpaid 2% Platform Fee Per Booking</td>
+                        <td style="padding: 16px; background-color: white; border-left: 1px solid #e5e7eb;">Postpaid 2% Platform Fee Per Booking</td>
                         <td style="padding: 16px; background-color: white;">Postpaid 2% Platform Fee</td>
-                        <td style="background-color: white;"></td>
+                        <td style="background-color: white; border-right: 1px solid #e5e7eb;"></td>
                     </tr>
         
                     <tr>
                     <td></td>
-                    <td style="padding: 16px; background-color: white">Up to 50 Package Bookings / Month</td>
+                    <td style="padding: 16px; background-color: white;border-left: 1px solid #e5e7eb;">Up to 50 Package Bookings / Month</td>
                     <td style="padding: 16px; background-color: white">Unlimited</td>
-                    <td style="background-color: white;"></td>
+                    <td style="background-color: white; border-right: 1px solid #e5e7eb;"></td>
                     </tr>
         
                     <tr>
                         <td></td>
-                        <td style="background-color: white;">
+                        <td style="background-color: white;border-left: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
         
                             <button
                             style="background-color: #e2472b; color: white; padding: 10px 20px; margin-bottom: 20px; border: none; border-radius: 6px; cursor: pointer; transition: opacity 0.3s ease;"
@@ -1457,7 +1544,7 @@
                             Schedule A Demo
                           </button>
                 </td>
-                        <td style="background-color: white;">
+                        <td style="background-color: white;  border-bottom: 1px solid #e5e7eb;">
             
                             <button
                             style="
@@ -1474,7 +1561,7 @@
                         Schedule A Demo
                     </button>
                 </td>
-                <td style="background-color: white;">
+                <td style="background-color: white; border-bottom: 1px solid #e5e7eb; border-right: 1px solid #e5e7eb;">
                     <button
                     style="
                       background-color: #e2472b;
@@ -1501,7 +1588,7 @@
                     </tr>
         
                 <tr style="background-color: #323268;">
-                    <th style="color: white; border-top-left-radius: 10px; background-color: #323268;">
+                    <th class="custom-font-size" style="color: white; border-top-left-radius: 10px; background-color: #323268;">
                         Features
                     </th>
                     <th style="background-color: #323268; color: white;"></th>
@@ -1509,8 +1596,8 @@
                     <th style="background-color: #323268; color: white; border-top-right-radius: 10px;"></th>
                 </tr>
                 
-                <tr style="background-color: #dedddd; color: black;">
-                  <th>Suppliers</th>
+                <tr style="background-color: #F3F4F6; color: black;">
+                  <th class="custom-font-size">Suppliers</th>
                   <th class="plan-header" ></th>
                   <th class="plan-header"></th>
                   <th class="plan-header"></th>
@@ -1518,329 +1605,329 @@
               </thead>
               <tbody>
                 <!-- Overview Section -->
-                <tr class="section-header-row" style="background-color: white;">
-                  <td >Global Flight API</td>
-                  <td style="padding: 10px; text-align: center; padding: 10px">✅</td>
-                  <td style="padding: 10px; text-align: center; padding: 10px">✅</td>
-                  <td style="padding: 10px; text-align: center; padding: 10px">✅</td>
+                <tr class="section-header-row " style="background-color: white;">
+                  <td class="border-class-custom-border">Global Flight API</td>
+                  <td style="padding: 10px; text-align: center; padding: 10px" class="border-class-custom-border">✅</td>
+                  <td style="padding: 10px; text-align: center; padding: 10px;" class="border-class-custom-border">✅</td>
+                  <td style="padding: 10px; text-align: center; " class="border-class-custom-border">✅</td>
         
                 </tr>
                 <tr style="background-color: white;">
-                    <td >Global Hotel API</td>
-                    <td style="padding: 10px; text-align: center; padding: 10px">✅</td>
-                    <td style="padding: 10px; text-align: center; padding: 10px">✅</td>
-                    <td style="padding: 10px; text-align: center; padding: 10px">✅</td>
+                    <td class="border-class-custom-border">Global Hotel API</td>
+                    <td style="padding: 10px; text-align: center; padding: 10px;" class="border-class-custom-border">✅</td>
+                    <td style="padding: 10px; text-align: center; padding: 10px;" class="border-class-custom-border">✅</td>
+                    <td style="padding: 10px; text-align: center; padding: 10px;" class="border-class-custom-border">✅</td>
                 </tr>
                 <tr style="background-color: white;">
-                    <td>Global Sightseeing API</td>
-                    <td style="padding: 10px; text-align: center; padding: 10px">✅</td>
-                    <td style="padding: 10px; text-align: center; padding: 10px">✅</td>
-                    <td style="padding: 10px; text-align: center; padding: 10px">✅</td>
+                    <td class="border-class-custom-border">Global Sightseeing API</td>
+                    <td style="padding: 10px; text-align: center; padding: 10px;" class="border-class-custom-border">✅</td>
+                    <td style="padding: 10px; text-align: center; padding: 10px;" class="border-class-custom-border">✅</td>
+                    <td style="padding: 10px; text-align: center; padding: 10px;" class="border-class-custom-border">✅</td>
                 </tr>
                 <tr style="background-color: white;">
-                    <td >Add Custom APIs</td>
-                    <td style="padding: 10px; text-align: center; padding: 10px">Your API Key<br />(Additional Charge)</td>
-                    <td style="padding: 10px; text-align: center; padding: 10px">Your API Key<br />(Additional Charge)</td>
-                    <td style="padding: 10px; text-align: center; padding: 10px">Custom APIs ✅</td>
+                    <td class="border-class-custom-border">Add Custom APIs</td>
+                    <td style="padding: 10px; text-align: center; padding: 10px;" class="border-class-custom-border">Your API Key<br />(Additional Charge)</td>
+                    <td style="padding: 10px; text-align: center; padding: 10px;" class="border-class-custom-border">Your API Key<br />(Additional Charge)</td>
+                    <td style="padding: 10px; text-align: center; padding: 10px;" class="border-class-custom-border">Custom APIs ✅</td>
                 </tr>
         
                 <tr style="background-color: white;">
-                    <td >Offline Contracting & Management Of Suppliers</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">Customized As Per Requirements ✅</td>
+                    <td class="border-class-custom-border">Offline Contracting & Management Of Suppliers</td>
+                    <td style="padding: 10px; text-align: center;" class="border-class-custom-border">❌</td>
+                    <td style="padding: 10px; text-align: center;" class="border-class-custom-border">❌</td>
+                    <td style="padding: 10px; text-align: center;" class="border-class-custom-border">Customized As Per Requirements ✅</td>
                   </tr>
                
                 <tr class="section-header-row" >
-                  <td class="section-header" style="background-color: #dedddd; color: black;">Engine Flows</td>
-                  <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                  <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                  <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
+                  <td class="section-header custom-font-size" style="background-color: #F3F4F6; color: black;">Engine Flows</td>
+                  <td class="custom-class-forheader-row " style="background-color: #F3F4F6; color: black;"></td>
+                  <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                  <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
                   
                 </tr>
                 <tr style="background-color: white;">
-                    <td >Flight Booking Engine</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center" rowspan="4">Customized As Per Requirements ✅</td>
+                    <td class="border-class-custom-border">Flight Booking Engine</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center" rowspan="4">Customized As Per Requirements ✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td >Hotel Booking Engine</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Hotel Booking Engine</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td >Sightseeing Booking Engine</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Sightseeing Booking Engine</td>
+                    <td  class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td>Package Booking Engine</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Package Booking Engine</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
         
                 <!-- Features Section -->
                 <tr class="section-header-row">
-                  <td class="section-header" style="background-color: #dedddd; color: black;">Payment</td>
-                  <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                  <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                  <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
+                  <td class="section-header custom-font-size" style="background-color: #F3F4F6; color: black;">Payment</td>
+                  <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                  <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                  <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
                 </tr>
                 <tr style="background-color: white;">
-                    <td>Payment Gateway Integration</td>
-                    <td style="padding: 10px; text-align: center">Default Payment Gateway ✅</td>
-                    <td style="padding: 10px; text-align: center">Default Payment Gateway ✅</td>
+                    <td class="border-class-custom-border">Payment Gateway Integration</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">Default Payment Gateway ✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">Default Payment Gateway ✅</td>
                     <td style="padding: 10px; text-align: center">Custom Payment Gateway Of Your Choice</td>
                 </tr>
                 
         
                 
                 <tr class="section-header-row">
-                  <td class="section-header" style="background-color: #dedddd; color: black;">Dashboard & Back Office</td>
-                  <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                  <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                  <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
+                  <td class="section-header custom-font-size" style="background-color: #F3F4F6; color: black;">Dashboard & Back Office</td>
+                  <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                  <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                  <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
                 </tr>
                 <tr style="background-color: white;">
-                    <td >General Dashboard KPIs</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center" rowspan="7">Customized As Per Requirements ✅</td>
+                    <td class="border-class-custom-border">General Dashboard KPIs</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center" rowspan="7">Customized As Per Requirements ✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td >B2C / B2C User Management</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" >B2C / B2C User Management</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                     <!-- <td style="padding: 10px; text-align: center" rowspan="6">Customized As Per Requirements ✅</td> -->
                   </tr>
                   <tr style="background-color: white;">
-                    <td >Enquiry Management</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td  class="border-class-custom-border">Enquiry Management</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
         
                   <tr style="background-color: white;">
-                    <td >Staff Management</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Staff Management</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td >Task Management</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Task Management</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td>Booking Ledger</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Booking Ledger</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td>Sales Ledger</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Sales Ledger</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td >Add & Manage Other Services</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center"></td>
+                    <td class="border-class-custom-border">Add & Manage Other Services</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center"></td>
                   </tr>
         
-        
-        
-                  <tr class="section-header-row">
-                    <td class="section-header" style="background-color: #dedddd; color: black;">Custom Text With Vouchers</td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                  </tr>
-        
-        
-                  <tr style="background-color: white;">
-                    <td >Traveler Mobile App</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">Customized As Per Requirements ✅</td>
-                  </tr>
         
         
                   <tr class="section-header-row">
-                    <td class="section-header" style="background-color: #dedddd; color: black;">Communication With User</td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
+                    <td class="section-header custom-font-size" style="background-color: #F3F4F6; color: black;">Custom Text With Vouchers</td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
                   </tr>
         
-                  <tr style="background-color: white;">
-                    <td>Email, WhatsApp Quotation Sharing</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center" rowspan="5">Customized As Per Requirements ✅</td>
-                  </tr>
         
                   <tr style="background-color: white;">
-                    <td >Flight Dynamic Quotations (PDF, e-Link)</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                  </tr>
-        
-                  <tr style="background-color: white;">
-                    <td>Hotel Dynamic Quotations (PDF, e-Link)</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                  </tr>
-                  <tr style="background-color: white;">
-                    <td >Sightseeing Dynamic Quotations (PDF, e-Link)</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                  </tr>
-                  <tr style="background-color: white;">
-                    <td>Packages Dynamic Quotations (PDF, e-Link)</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Traveler Mobile App</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">Customized As Per Requirements ✅</td>
                   </tr>
         
         
                   <tr class="section-header-row">
-                    <td class="section-header" style="background-color: #dedddd; color: black;">Whitelabel Management</td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
+                    <td class="section-header custom-font-size" style="background-color: #F3F4F6; color: black;">Communication With User</td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
                   </tr>
         
                   <tr style="background-color: white;">
-                    <td >1 Whitelabel B2B or B2C Website</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Email, WhatsApp Quotation Sharing</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center" rowspan="5">Customized As Per Requirements ✅</td>
+                  </tr>
+        
+                  <tr style="background-color: white;">
+                    <td class="border-class-custom-border" >Flight Dynamic Quotations (PDF, e-Link)</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                  </tr>
+        
+                  <tr style="background-color: white;">
+                    <td class="border-class-custom-border">Hotel Dynamic Quotations (PDF, e-Link)</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td  class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td >1 Whitelabel B2B or B2C Back Office</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" >Sightseeing Dynamic Quotations (PDF, e-Link)</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td >Booking Queue</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                  </tr>
-                  <tr style="background-color: white;">
-                    <td >Transaction Queue</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center" rowspan="4">Customized As Per Requirements ✅</td>
-                  </tr>
-                  <tr style="background-color: white;">
-                    <td >Whitelabel Voucher Generation</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                  </tr>
-                  <tr style="background-color: white;">
-                    <td>Discount Code Management</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                  </tr>
-                  <tr style="background-color: white;">
-                    <td>B2C or B2B User Area</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border">Packages Dynamic Quotations (PDF, e-Link)</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
         
         
                   <tr class="section-header-row">
-                    <td class="section-header" style="background-color: #dedddd; color: black;">Financial Module</td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
+                    <td  class="section-header custom-font-size" style="background-color: #F3F4F6; color: black;">Whitelabel Management</td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
                   </tr>
         
                   <tr style="background-color: white;">
-                    <td >Micro Level Creation & Management Of Mark Up, Cancellation</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">1 Whitelabel B2B or B2C Website</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td>Invoice Ledger</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">1 Whitelabel B2B or B2C Back Office</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td>Custom Text With Invoice</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Booking Queue</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                  </tr>
+                  <tr style="background-color: white;">
+                    <td class="border-class-custom-border">Transaction Queue</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center" rowspan="4">Customized As Per Requirements ✅</td>
+                  </tr>
+                  <tr style="background-color: white;">
+                    <td class="border-class-custom-border" >Whitelabel Voucher Generation</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                  </tr>
+                  <tr style="background-color: white;">
+                    <td class="border-class-custom-border">Discount Code Management</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                  </tr>
+                  <tr style="background-color: white;">
+                    <td class="border-class-custom-border">B2C or B2B User Area</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                  </tr>
+        
+        
+                  <tr class="section-header-row">
+                    <td class="section-header custom-font-size" style="background-color: #F3F4F6; color: black;">Financial Module</td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                  </tr>
+        
+                  <tr style="background-color: white;">
+                    <td class="border-class-custom-border">Micro Level Creation & Management Of Mark Up, Cancellation</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                  </tr>
+                  <tr style="background-color: white;">
+                    <td class="border-class-custom-border">Invoice Ledger</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                  </tr>
+                  <tr style="background-color: white;">
+                    <td class="border-class-custom-border">Custom Text With Invoice</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
         
                   <tr class="section-header-row">
-                    <td class="section-header" style="background-color: #dedddd; color: black;">Customer Support</td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
+                    <td class="section-header custom-font-size" style="background-color: #F3F4F6; color: black;">Customer Support</td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
                   </tr>
         
                   <tr style="background-color: white;">
-                    <td >Ticket Management</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Ticket Management</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td >AI Chatbot Support</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" >AI Chatbot Support</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td >Account Manager Support</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Account Manager Support</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
         
         
         
                   <tr class="section-header-row" >
-                    <td class="section-header" style="background-color: #dedddd; color: black;">Technological Support</td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
-                    <td class="custom-class-forheader-row" style="background-color: #dedddd; color: black;"></td>
+                    <td class="section-header custom-font-size" style="background-color: #F3F4F6; color: black;">Technological Support</td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
+                    <td class="custom-class-forheader-row" style="background-color: #F3F4F6; color: black;"></td>
                   </tr>
         
         
                   <tr style="background-color: white;">
-                    <td >Secure Server</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Secure Server</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td >Unlimited Cloud Capacity For Each Client</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">Unlimited Cloud Capacity For Each Client</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td >24 Hours Maintenance</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">24 Hours Maintenance</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td >System Status Updates</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border">System Status Updates</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center">✅</td>
                   </tr>
                   <tr style="background-color: white;">
-                    <td >New Version Updates</td>
-                    <td style="padding: 10px; text-align: center">❌</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
-                    <td style="padding: 10px; text-align: center">✅</td>
+                    <td class="border-class-custom-border" style="border-bottom: #e5e7eb 1px solid;">New Version Updates</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center;border-bottom: #e5e7eb 1px solid;">❌</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center;border-bottom: #e5e7eb 1px solid;">✅</td>
+                    <td class="border-class-custom-border" style="padding: 10px; text-align: center;border-bottom: #e5e7eb 1px solid;">✅</td>
                   </tr>
         
         
