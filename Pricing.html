@@ -58,6 +58,8 @@
      font-src 'self' https://fonts.gstatic.com;"
   />
 
+  <link rel="stylesheet" href="./css/Cardsstyle.css">
+
     <style>
       .btn-custom {
         background: #fe6652;
@@ -1270,11 +1272,20 @@
     }
 
     .border-class-custom-border{
-        border-left: #e5e7eb 1px solid;
-        border-right: #e5e7eb 1px solid;
-        font-size: 18px;
+        /* border-left: #e5e7eb 1px solid;
+        border-right: #e5e7eb 1px solid; */
+        border: #e5e7eb 1px solid;
+        font-size: 17px;
+        color: black;
 
     }
+    .mobile-border-class-custom-border {
+    border-top: 1px solid #e5e7eb;
+    border-left: 1px solid #e5e7eb;
+    border-right: 1px solid #e5e7eb;
+    font-size: 13px;
+    color: black;
+}
 
 
     .custom-font-size{
@@ -1284,15 +1295,15 @@
 
 
     .demo-hero-section {
-  padding: 80px 20px;
+  padding: 80px 10px;
   text-align: center;
   background-color: #fff;
 }
 
 .demo-hero-container {
-  max-width: 900px;
+  max-width: 2000px;
   margin: 0 auto;
-  padding: 0 15px;
+  /* padding: 0 15px; */
 }
 
 .demo-hero-title {
@@ -1359,6 +1370,54 @@
     font-size: 0.95rem;
   }
 }
+
+
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1250px;
+  /* margin: 0 auto; */
+  height: 412px;
+  /* overflow: hidden; */
+  /* border-radius: 12px; */
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* border-radius: 12px; */
+}
+
+.hero-button {
+  position: absolute;
+  padding: 6px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #ff4040;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  height: 40px;
+  top: 250px;
+}
+
+.hero-button:hover {
+  background-color: #f97316;
+}
+
+
+.new-border-class{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+}
+
 
     </style>
   </head>
@@ -1475,117 +1534,77 @@
       </div>
     </header>
 
-    <section class="demo-hero-section" style="background-image: url(./img/scheduleimages/Frame\ 1618871206\ \(1\).png) ; background-size: cover;  background-position: center; background-repeat: no-repeat; min-height: 70vh;">
+    <section class="demo-hero-section" >
         <div class="demo-hero-container">
           <h1 class="demo-hero-title" style="font-size: 36px !important;">Plans Designed For Travel Businesses Of All Sizes</h1>
           <p class="demo-hero-subtext">Choose the perfect plan for your business needs</p>
-        
+          
+          <div class="hero-image-wrapper">
+            <img src="./img/Hero Section Image/CTA.webp" alt="Hero Image" />
+            <span style="position: absolute; top: 150px; font-size: 24px; font-weight: 600;line-height:1.2;color:  #000;">Not sure which plan fits your travel business? <br> Let us help you.</span>
+            <button class="hero-button">Contact Sales Representative</button>
+          </div>
+          
+          
         </div>
       </section>
    <!-- section-2-pricing-table -->
-   <section style="margin-top: 35px; margin-bottom: 35px;position: relative; bottom: 180px;">
-    <div class="d-md-block d-none" style="overflow-x: auto">
+   <section style="margin-top: 35px; margin-bottom: 35px;">
+    <div class="d-md-block d-none" >
         
+        <div class="pricing-section mb-5">
+            <!-- Trust Plan -->
+            <div class="pricing-card">
+              <h3 class="plan-name">RouteMaestro Trust</h3>
+              <div class="plan-price">Free</div>
+              <p class="plan-subtitle">Includes 1 User</p>
+              <div class="highlight-box">Proposed 2% Platform Fee For Booking</div>
+              <ul class="features">
+                  <li>Global Flight API</li>
+                    <li>Global Hotel API</li>
+                    <li>General Dashboard KPIs</li>
+                <li>Up to 50 Package Bookings / Month</li>
+              </ul>
+              <button class="primary-button">Schedule a Demo</button>
+            </div>
+          
+            <!-- Pro Plan (Popular) -->
+            <div class="pricing-card ">
+              <!-- <div class="badge">Most Popular</div> -->
+              <h3 class="plan-name">RouteMaestro Pro</h3>
+              <div class="plan-price">$ 35,000 / Year</div>
+              <p class="plan-subtitle">Billed for 12 Months</p>
+              <div class="highlight-box">Proposed 2% Platform Fee</div>
+              <ul class="features">
+                  <li>Staff Management</li>
+                  <li>Task Management</li>
+                  <li>Traveler Mobile App</li>
+                  <li>Unlimited Bookings</li>
+              </ul>
+              <button class="primary-button">Schedule a Demo</button>
+            </div>
+          
+            <!-- Enterprise Plan -->
+            <div class="pricing-card">
+              <h3 class="plan-name">RouteMaestro Enterprise</h3>
+              <div style="height: 100%;  justify-content: center; display: flex; flex-direction: column;">
+                  <div class="plan-price">Contact Us</div>
+                  <p class="plan-subtitle">Custom Requirements?</p>
+                  <div class="highlight-box">Need More Advanced Features ?</div>
+                </div>
+              <button class="primary-button">Contact Us</button>
+            </div>
+          </div>
+
+          <h2 style="text-align: center; font-size: 32px; font-weight: 700; color: #1f2937; margin-bottom: 20px;">
+            Features Comparison
+          </h2>
+          
+
         <div class="table-container">
             <table style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">
               <thead>
-                    <tr >
-                        <th></th>
-                        <th style="background-color: #323268; color: white; padding: 20px; border-top-left-radius: 10px;">RouteMaestro Trust</th>
-                        <th style="background-color: #323268; color: white; padding: 20px">RouteMaestro Pro</th>
-                        <th style="background-color: #323268; color: white; padding: 20px; border-top-right-radius: 10px;">RouteMaestro Enterprise</th>
-                    </tr>
-        
-                    <tr>
-                        <td></td>
-                        <td style="padding: 16px; background-color: white; border-left: 1px solid #e5e7eb;"><strong>Free</strong><br />(Including 1 User)</td>
-                        <td style="padding: 16px; background-color: white;"><strong>₹ 35,000 / Year</strong><br />(Up to 10 Users)</td>
-                        <td style="padding: 30px; vertical-align: top; background-color: white;border-right: 1px solid #e5e7eb;">
-                            <div style="display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: center;">
-                          
-                              <!-- Text content -->
-                              <div style="text-align: center;">
-                                <div style="font-weight: bold; margin-bottom: 8px">Contact Us</div>
-                                <div style="font-size: 14px; color: #444; margin-bottom: 12px">
-                                  Custom Requirements?<br />
-                                  Need more advanced Features?
-                                </div>
-                              </div>
-                          
-                              <!-- Button pushed to bottom -->
-                            
-                            </div>
-                          </td>
-                    </tr>
-        
-                    <tr>
-                        <td></td>
-                        <td style="padding: 16px; background-color: white; border-left: 1px solid #e5e7eb;">Postpaid 2% Platform Fee Per Booking</td>
-                        <td style="padding: 16px; background-color: white;">Postpaid 2% Platform Fee</td>
-                        <td style="background-color: white; border-right: 1px solid #e5e7eb;"></td>
-                    </tr>
-        
-                    <tr>
-                    <td></td>
-                    <td style="padding: 16px; background-color: white;border-left: 1px solid #e5e7eb;">Up to 50 Package Bookings / Month</td>
-                    <td style="padding: 16px; background-color: white">Unlimited</td>
-                    <td style="background-color: white; border-right: 1px solid #e5e7eb;"></td>
-                    </tr>
-        
-                    <tr>
-                        <td></td>
-                        <td style="background-color: white;border-left: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
-        
-                            <button
-                            style="background-color: #e2472b; color: white; padding: 10px 20px; margin-bottom: 20px; border: none; border-radius: 6px; cursor: pointer; transition: opacity 0.3s ease;"
-                            onmouseover="this.style.opacity='0.85'"
-                            onmouseout="this.style.opacity='1'"
-                          >
-                            Schedule A Demo
-                          </button>
-                </td>
-                        <td style="background-color: white;  border-bottom: 1px solid #e5e7eb;">
-            
-                            <button
-                            style="
-                            background-color: #e2472b;
-                            color: white;
-                            padding: 10px 20px;
-                            margin-bottom: 20px;
-                            border: none;
-                            border-radius: 6px;
-                            cursor: pointer;
-                            "
-                         onmouseover="this.style.opacity='0.85'"
-                         onmouseout="this.style.opacity='1'">
-                        Schedule A Demo
-                    </button>
-                </td>
-                <td style="background-color: white; border-bottom: 1px solid #e5e7eb; border-right: 1px solid #e5e7eb;">
-                    <button
-                    style="
-                      background-color: #e2472b;
-                      color: white;
-                      padding: 10px 20px;
-                      border: none;
-                      border-radius: 6px;
-                      margin-bottom: 20px;
-                      cursor: pointer;
-                      margin-top: auto;
-                    "
-                   onmouseover="this.style.opacity='0.85'"
-                   onmouseout="this.style.opacity='1'">
-                    Contact Us
-                  </button>
-                </td>
-                    </tr>
-                        
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
+                    
         
                 <tr style="background-color: #323268;">
                     <th class="custom-font-size" style="color: white; border-top-left-radius: 10px; background-color: #323268;">
@@ -1998,6 +2017,22 @@
         <div id="mobile-tabs" style="display: none">
           <!-- Trust -->
           <div style="display: block">
+
+            <div class="pricing-card">
+                <h3 class="plan-name">RouteMaestro Trust</h3>
+                <div class="plan-price">Free</div>
+                <p class="plan-subtitle">Includes 1 User</p>
+                <div class="highlight-box">Proposed 2% Platform Fee For Booking</div>
+                <ul class="features">
+                    <li>Global Flight API</li>
+                      <li>Global Hotel API</li>
+                      <li>General Dashboard KPIs</li>
+                  <li>Up to 50 Package Bookings / Month</li>
+                </ul>
+                <button class="primary-button">Schedule a Demo</button>
+              </div>
+
+
             <table
               style="
                 width: 100%;
@@ -2008,53 +2043,31 @@
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
               "
             >
-            <tr>
-                <th></th>
-                <th style="padding: 16px; text-align: center;">
-                    <strong>Free</strong><br />(Including 1 User)
-                    <br>
-                    Postpaid 2% Platform Fee Per Booking
-                    <br>Up to 50 Package Bookings / Month
-                    <br>
-                    <button
-                    style="
-                    background-color: #ff5f57;
-                    color: white;
-                    padding: 10px 20px;
-                    margin-top: 15px;
-                    margin-bottom: 20px;
-                    border: none;
-                    border-radius: 6px;
-                    cursor: pointer;
-                    "
-                >
-                Schedule A Demo
-            </button> 
-                </th>
-            </tr>
+           
 
            
-              <tr>
-                <th style="background: none; text-align: left; padding: 12px; font-size: 16px">Feature</th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Suppliers</th>
+              <tr class="d-flex align-items-center justify-content-between new-border-class" style="background: #323268;  ">
+                <th style="color: white; text-align: left; padding: 12px; font-size: 16px">Feature</th>
+                
+               
             </tr>
-              <tr class="d-flex align-items-center justify-content-between">
-                <td style="padding: 10px; white-space: nowrap;">Global Flight API</td>
+            <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px;" class="new-border-class">Suppliers</th>
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">                <td style="padding: 10px; white-space: nowrap; ">Global Flight API</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Global Hotel API</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Global Sightseeing API</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Add Custom APIs</td>
                 <td style="padding: 12px">Your API Key<br />(Additional Charge)</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Offline Contracting & <br> Management Of Suppliers</td>
                 <td style="padding: 12px">❌</td>
               </tr>
@@ -2062,22 +2075,22 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Engine Flows</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Engine Flows</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Flight Booking Engine</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Hotel Booking Engine</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Sightseeing Booking Engine</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Package Booking Engine</td>
                 <td style="padding: 12px">✅</td>
               </tr>
@@ -2085,10 +2098,10 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Payment</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Payment</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between " >
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Payment Gateway <br> Integration</td>
                 <td style="padding: 12px; word-wrap: break-word;">(Default Payment Gateway)✅</td>
               </tr>
@@ -2096,42 +2109,42 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Dashboard & Back Office</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px;" class="new-border-class">Dashboard & Back Office</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">General Dashboard KPIs</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;"> B2C / B2C User Management</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Enquiry Management</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Staff Management</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Task Management</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Booking Ledger</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Sales Ledger</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Add & Manage Other Services</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Custom Text With Vouchers</td>
                 <td style="padding: 12px">❌</td>
               </tr>
@@ -2140,31 +2153,31 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Communication With User</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px;" class="new-border-class">Communication With User</th>
               </tr>
 
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Traveler Mobile App</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Email, WhatsApp Quotation Sharing</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Flight Dynamic Quotations (PDF, e-Link)</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Hotel Dynamic Quotations (PDF, e-Link)</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Sightseeing Dynamic Quotations (PDF, e-Link)</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Packages Dynamic Quotations (PDF, e-Link)</td>
                 <td style="padding: 12px">✅</td>
               </tr>
@@ -2172,34 +2185,34 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Whitelabel Management</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Whitelabel Management</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">1 Whitelabel B2B or B2C Website</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">1 Whitelabel B2B or B2C Back Office</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Booking Queue</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Transaction Queue</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Whitelabel Voucher Generation</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Discount Code Management</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">B2C or B2B User Area</td>
                 <td style="padding: 12px">❌</td>
               </tr>
@@ -2208,18 +2221,18 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Financial Module</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px;" class="new-border-class">Financial Module</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Micro Level Creation  & <br> Management Of Mark Up, Cancellation</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Invoice Ledger</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Custom Text With Invoice</td>
                 <td style="padding: 12px">❌</td>
               </tr>
@@ -2227,18 +2240,18 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Customer Support</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Customer Support</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Ticket Management</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">AI Chatbot Support</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Account Manager Support</td>
                 <td style="padding: 12px">❌</td>
               </tr>
@@ -2247,27 +2260,27 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Technological Support</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Technological Support</th>
               </tr>
 
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Secure Server</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Unlimited Cloud Capacity For Each Client</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">24 Hours Maintenance</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">System Status Updates</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">New Version Updates</td>
                 <td style="padding: 12px">❌</td>
               </tr>
@@ -2278,7 +2291,24 @@
 
           <!-- Pro -->
           <div style="display: none">
-            <table
+
+            <div class="pricing-card ">
+                <!-- <div class="badge">Most Popular</div> -->
+                <h3 class="plan-name">RouteMaestro Pro</h3>
+                <div class="plan-price">$ 35,000 / Year</div>
+                <p class="plan-subtitle">Billed for 12 Months</p>
+                <div class="highlight-box">Proposed 2% Platform Fee</div>
+                <ul class="features">
+                    <li>Staff Management</li>
+                    <li>Task Management</li>
+                    <li>Traveler Mobile App</li>
+                    <li>Unlimited Bookings</li>
+                </ul>
+                <button class="primary-button">Schedule a Demo</button>
+              </div>
+
+
+              <table
               style="
                 width: 100%;
                 border-collapse: collapse;
@@ -2288,52 +2318,31 @@
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
               "
             >
+           
 
-            <tr>
-                <th></th>
-                <th style="padding: 16px; text-align: center;">
-                    <strong>₹ 35,000 / Year</strong><br />(Up to 10 Users)
-                    <br>
-                    Postpaid 2% Platform Fee
-                    <br>Unlimited
-                    <br>
-                    <button
-                    style="
-                    background-color: #ff5f57;
-                    color: white;
-                    padding: 10px 20px;
-                    margin-top: 10px;
-                    margin-bottom: 20px;
-                    border: none;
-                    border-radius: 6px;
-                    cursor: pointer;
-                    "
-                >
-                Schedule A Demo
-            </button>
-                </th>
+           
+              <tr class="d-flex align-items-center justify-content-between new-border-class" style="background: #323268;  ">
+                <th style="color: white; text-align: left; padding: 12px; font-size: 16px">Feature</th>
+                
+               
             </tr>
-              <tr>
-                <th style="background: #f5f5f5; text-align: left; padding: 12px; font-size: 16px">Feature</th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Suppliers</th>
-            </tr>
-              <tr class="d-flex align-items-center justify-content-between">
-                <td style="padding: 10px; white-space: nowrap;">Global Flight API</td>
+            <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px;" class="new-border-class">Suppliers</th>
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">                <td style="padding: 10px; white-space: nowrap; ">Global Flight API</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Global Hotel API</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Global Sightseeing API</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Add Custom APIs</td>
                 <td style="padding: 12px">Your API Key<br />(Additional Charge)</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Offline Contracting & <br> Management Of Suppliers</td>
                 <td style="padding: 12px">❌</td>
               </tr>
@@ -2341,22 +2350,22 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Engine Flows</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Engine Flows</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Flight Booking Engine</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Hotel Booking Engine</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Sightseeing Booking Engine</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Package Booking Engine</td>
                 <td style="padding: 12px">✅</td>
               </tr>
@@ -2364,10 +2373,10 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Payment</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Payment</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between " >
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Payment Gateway <br> Integration</td>
                 <td style="padding: 12px; word-wrap: break-word;">(Default Payment Gateway)✅</td>
               </tr>
@@ -2375,42 +2384,42 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Dashboard & Back Office</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px;" class="new-border-class">Dashboard & Back Office</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">General Dashboard KPIs</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;"> B2C / B2C User Management</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Enquiry Management</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Staff Management</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Task Management</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Booking Ledger</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Sales Ledger</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Add & Manage Other Services</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Custom Text With Vouchers</td>
                 <td style="padding: 12px">✅</td>
               </tr>
@@ -2419,31 +2428,31 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Communication With User</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px;" class="new-border-class">Communication With User</th>
               </tr>
 
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Traveler Mobile App</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Email, WhatsApp Quotation Sharing</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Flight Dynamic Quotations (PDF, e-Link)</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Hotel Dynamic Quotations (PDF, e-Link)</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Sightseeing Dynamic Quotations (PDF, e-Link)</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Packages Dynamic Quotations (PDF, e-Link)</td>
                 <td style="padding: 12px">✅</td>
               </tr>
@@ -2451,34 +2460,34 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Whitelabel Management</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Whitelabel Management</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">1 Whitelabel B2B or B2C Website</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">1 Whitelabel B2B or B2C Back Office</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Booking Queue</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Transaction Queue</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Whitelabel Voucher Generation</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Discount Code Management</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">B2C or B2B User Area</td>
                 <td style="padding: 12px">❌</td>
               </tr>
@@ -2487,18 +2496,18 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Financial Module</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px;" class="new-border-class">Financial Module</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
-                <td style="padding: 10px; white-space: nowrap;">Micro Level Creation & <br> Management Of Mark Up, Cancellation</td>
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
+                <td style="padding: 10px; white-space: nowrap;">Micro Level Creation  & <br> Management Of Mark Up, Cancellation</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Invoice Ledger</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Custom Text With Invoice</td>
                 <td style="padding: 12px">✅</td>
               </tr>
@@ -2506,18 +2515,18 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Customer Support</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Customer Support</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Ticket Management</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">AI Chatbot Support</td>
                 <td style="padding: 12px">❌</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Account Manager Support</td>
                 <td style="padding: 12px">❌</td>
               </tr>
@@ -2526,36 +2535,48 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Technological Support</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Technological Support</th>
               </tr>
 
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Secure Server</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Unlimited Cloud Capacity For Each Client</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">24 Hours Maintenance</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">System Status Updates</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">New Version Updates</td>
                 <td style="padding: 12px">✅</td>
               </tr>
+
 
             </table>
           </div>
 
           <!-- Enterprise -->
           <div style="display: none">
+
+            <div class="pricing-card">
+                <h3 class="plan-name">RouteMaestro Enterprise</h3>
+                <div style="height: 100%;  justify-content: center; display: flex; flex-direction: column;">
+                    <div class="plan-price">Contact Us</div>
+                    <p class="plan-subtitle">Custom Requirements?</p>
+                    <div class="highlight-box">Need More Advanced Features ?</div>
+                  </div>
+                <button class="primary-button">Contact Us</button>
+              </div>
+
             <table
               style="
                 width: 100%;
@@ -2566,228 +2587,196 @@
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
               "
             >
+           
 
-            <tr>
-                <th></th>
-                <th style="padding: 16px; text-align: center;">
-                    <div style="display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: center;">
-                  
-                        <!-- Text content -->
-                        <div style="text-align: center;">
-                          <div style="font-weight: bold; margin-bottom: 8px">Contact Us</div>
-                          <div style="font-size: 14px; color: #444; margin-bottom: 12px">
-                            Custom Requirements?<br />
-                            Need more advanced Features?
-                          </div>
-                        </div>
-                    
-                        <!-- Button pushed to bottom -->
-                      
-                      </div>
-                   
-                      <button
-                      style="
-                        background-color: #ff5f57;
-                        color: white;
-                        padding: 10px 20px;
-                        border: none;
-                        border-radius: 6px;
-                        margin-top: 10px;
-                        margin-bottom: 20px;
-                        cursor: pointer;
-                        margin-top: auto;
-                      "
-                    >
-                      Contact Us
-                    </button>
-                </th>
+           
+              <tr class="d-flex align-items-center justify-content-between new-border-class" style="background: #323268;  ">
+                <th style="color: white; text-align: left; padding: 12px; font-size: 16px">Feature</th>
+                
+               
             </tr>
-              <tr>
-                <th style="background: #f5f5f5; text-align: left; padding: 12px; font-size: 16px">Feature</th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Suppliers</th>
-            </tr>
-              <tr class="d-flex align-items-center justify-content-between">
-                <td style="padding: 10px; white-space: nowrap;">Global Flight API</td>
-                <td style="padding: 12px" ></td>
+            <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px;" class="new-border-class">Suppliers</th>
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">                <td style="padding: 10px; white-space: nowrap; ">Global Flight API</td>
+                <td style="padding: 12px">Custom Api✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Global Hotel API</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Custom Api✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Global Sightseeing API</td>
-                <td style="padding: 12px">Custom APIs✅</td>
+                <td style="padding: 12px">Custom Api✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Add Custom APIs</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Custom Api✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Offline Contracting & <br> Management Of Suppliers</td>
-                <td style="padding: 12px">Customized As <br> Per Requirements</td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
 
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Engine Flows</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Engine Flows</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Flight Booking Engine</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Hotel Booking Engine</td>
-                <td style="padding: 12px">Customized As <br> Per Requirements ✅</td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Sightseeing Booking Engine</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Package Booking Engine</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
 
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Payment</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Payment</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between " >
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Payment Gateway <br> Integration</td>
-                <td style="padding: 12px; word-wrap: break-word;">Custom Payment <br> Gateway Of Your Choice</td>
+                <td style="padding: 12px; word-wrap: break-word;">Customized As Per Requirements✅</td>
               </tr>
 
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Dashboard & Back Office</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px;" class="new-border-class">Dashboard & Back Office</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">General Dashboard KPIs</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;"> B2C / B2C User Management</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Enquiry Management</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Staff Management</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Task Management</td>
                 <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Booking Ledger</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Sales Ledger</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
-                <td style="padding: 10px; white-space: nowrap;">Add & Manage Other Services</td>
-                <td style="padding: 12px"></td>
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
+                <td style="padding: 10px; white-space: nowrap;">Add & Manage <br> Other Services</td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Custom Text With Vouchers</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
 
 
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Communication With User</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px;" class="new-border-class">Communication With User</th>
               </tr>
 
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Traveler Mobile App</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
-                <td style="padding: 10px; white-space: nowrap;">Email, WhatsApp Quotation Sharing</td>
-                <td style="padding: 12px"></td>
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
+                <td style="padding: 10px; white-space: nowrap;">Email, WhatsApp <br> Quotation Sharing</td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
-                <td style="padding: 10px; white-space: nowrap;">Flight Dynamic Quotations (PDF, e-Link)</td>
-                <td style="padding: 12px"></td>
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
+                <td style="padding: 10px; white-space: nowrap;">Flight Dynamic <br> Quotations (PDF, e-Link)</td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Hotel Dynamic <br> Quotations (PDF, e-Link)</td>
-                <td style="padding: 12px">Customized As <br> Per Requirements✅</td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
-                <td style="padding: 10px; white-space: nowrap;">Sightseeing Dynamic Quotations (PDF, e-Link)</td>
-                <td style="padding: 12px"></td>
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
+                <td style="padding: 10px; white-space: nowrap;">Sightseeing Dynamic <br> Quotations (PDF, e-Link)</td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
-                <td style="padding: 10px; white-space: nowrap;">Packages Dynamic Quotations (PDF, e-Link)</td>
-                <td style="padding: 12px"></td>
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
+                <td style="padding: 10px; white-space: nowrap;">Packages Dynamic <br> Quotations (PDF, e-Link)</td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
 
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Whitelabel Management</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Whitelabel Management</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
-                <td style="padding: 10px; white-space: nowrap;">1 Whitelabel B2B or B2C Website</td>
-                <td style="padding: 12px"></td>
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
+                <td style="padding: 10px; white-space: nowrap;">1 Whitelabel B2B <br> or B2C Website</td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
-                <td style="padding: 10px; white-space: nowrap;">1 Whitelabel B2B or B2C Back Office</td>
-                <td style="padding: 12px"></td>
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
+                <td style="padding: 10px; white-space: nowrap;">1 Whitelabel B2B <br> or B2C Back Office</td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Booking Queue</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Transaction Queue</td>
                 <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
-                <td style="padding: 10px; white-space: nowrap;">Whitelabel Voucher Generation</td>
-                <td style="padding: 12px"></td>
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
+                <td style="padding: 10px; white-space: nowrap;">Whitelabel Voucher <br> Generation</td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Discount Code Management</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">B2C or B2B User Area</td>
-                <td style="padding: 12px"></td>
+                <td style="padding: 12px">Customized As Per Requirements✅</td>
               </tr>
 
 
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Financial Module</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px;" class="new-border-class">Financial Module</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
-                <td style="padding: 10px; white-space: nowrap;">Micro Level Creation & <br> Management Of Mark Up, Cancellation</td>
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
+                <td style="padding: 10px; white-space: nowrap;">Micro Level Creation  & <br> Management Of Mark Up, Cancellation</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Invoice Ledger</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Custom Text With Invoice</td>
                 <td style="padding: 12px">✅</td>
               </tr>
@@ -2795,18 +2784,18 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Customer Support</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Customer Support</th>
               </tr>
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Ticket Management</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">AI Chatbot Support</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">Account Manager Support</td>
                 <td style="padding: 12px">✅</td>
               </tr>
@@ -2815,30 +2804,32 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th style="background-color: #dedddd; color: black; text-align: left; padding: 12px; font-size: 16px; border-radius: 10px;">Technological Support</th>
+                <th style="background-color: #F3F4F6; color: black; text-align: left; padding: 12px; font-size: 16px; " class="new-border-class">Technological Support</th>
               </tr>
 
 
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Secure Server</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">Unlimited Cloud Capacity For Each Client</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">24 Hours Maintenance</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border">
                 <td style="padding: 10px; white-space: nowrap;">System Status Updates</td>
                 <td style="padding: 12px">✅</td>
               </tr>
-              <tr class="d-flex align-items-center justify-content-between">
+              <tr class="d-flex align-items-center justify-content-between mobile-border-class-custom-border" style="border-bottom: 1px #e5e7eb solid;">
                 <td style="padding: 10px; white-space: nowrap;">New Version Updates</td>
                 <td style="padding: 12px">✅</td>
               </tr>
+
+
             </table>
           </div>
         </div>
@@ -3031,8 +3022,8 @@
               </ul>
             </div>
             <!-- Column 3: Catch Us On Social Media -->
-            <div class="col-lg-3" style="margin-top: 30px">
-              <h3 class="font-weight-bold" style="color: #a733ff; margin-left: 90px">Other Pages</h3>
+            <div class="col-lg-4" style="margin-top: 30px">
+              <h3 class="font-weight-bold" style="color: #a733ff; margin-left: 110px">Other Pages</h3>
               <ul class="list list-unstyled">
                 <li style="margin-left: 3px">
                   <a href="privacy.html">
