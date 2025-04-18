@@ -1276,8 +1276,8 @@
         /* border-left: #e5e7eb 1px solid;
         border-right: #e5e7eb 1px solid; */
         border: #e5e7eb 1px solid;
-        font-size: 17px;
-        color: black;
+        font-size: 16px;
+        color: rgb(80, 80, 80);
 
     }
     .mobile-border-class-custom-border {
@@ -1397,7 +1397,7 @@
 .hero-button {
   position: absolute;
   padding: 6px 24px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   background-color: #ff4040;
   color: white;
@@ -1405,7 +1405,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
-  height: 40px;
+  height: 43px;
   top: 250px;
 }
 
@@ -1476,6 +1476,9 @@
   visibility: visible;
 }
 
+.custom-font-size-header{
+    font-size: 20px !important;
+}
     </style>
   </head>
 
@@ -1594,12 +1597,12 @@
     <section class="demo-hero-section" >
         <div class="demo-hero-container">
           <h1 class="demo-hero-title" style="font-size: 36px !important;">Plans Designed For Travel Businesses Of All Sizes</h1>
-          <p class="demo-hero-subtext">Choose the perfect plan for your business needs</p>
+          <p class="demo-hero-subtext" style="font-size: 20px;">Choose the perfect plan for your business needs</p>
           
           <div class="hero-image-wrapper d-none d-md-flex">
             <img src="./img/Hero Section Image/CTA.webp" alt="Hero Image" />
-            <span style="position: absolute; top: 150px; font-size: 24px; font-weight: 600;line-height:1.2;color:  #000;">Not sure which plan fits your travel business? <br> Let us help you.</span>
-            <button class="hero-button"><a style="color: white; text-decoration: none;" href="schedule-demo.html">Contact Sales Representative</a></button>
+            <span style="position: absolute; top: 150px; font-size: 24px !important; font-weight: 600;line-height:1.2;color:  #000;">Not sure which plan fits your travel business? <br> Let us help you.</span>
+            <button class="hero-button" ><a style="color: white; text-decoration: none;" href="schedule-demo.html">Contact Sales Representative</a></button>
           </div>
 
           <div class="d-block d-sm-none mobile-hero">
@@ -1619,7 +1622,7 @@
             <!-- Trust Plan -->
             <div class="pricing-card">
               <h3 class="plan-name">RouteMaestro Trust</h3>
-              <div class="plan-price">Free</div>
+              <div class="plan-price" style="font-size: 18px;">Free</div>
               <!-- <p class="plan-subtitle">Includes 1 User</p> -->
               <div class="highlight-box mt-3">Includes 1 User</div>
               <ul class="features ">
@@ -1636,7 +1639,7 @@
             <div class="pricing-card ">
               <!-- <div class="badge">Most Popular</div> -->
               <h3 class="plan-name">RouteMaestro Pro</h3>
-              <div class="plan-price">₹35,000 / Year</div>
+              <div class="plan-price">₹35,000 <span style="font-size: 18px;">/Year</span></div>
               <!-- <p class="plan-subtitle">Upto 10 Users</p> -->
               <div class="highlight-box mt-3">Upto 10 Users</div>
               <ul class="features">
@@ -1653,7 +1656,7 @@
             <div class="pricing-card">
               <h3 class="plan-name">RouteMaestro Enterprise</h3>
               <div style="height: 100%;  justify-content: center; display: flex; flex-direction: column;">
-                  <div class="plan-price">Contact Us</div>
+                  <div class="plan-price" style="font-size: 18px;">Contact Us</div>
                   <div class="highlight-box">Custom Requirements?</div>
                   <p class="plan-subtitle">Need More Advanced Features ?</p>
                   <!-- <div class="highlight-box">Need More Advanced Features ?</div> -->
@@ -1662,7 +1665,7 @@
             </div>
           </div>
 
-          <h2 style="text-align: center; font-size: 32px; font-weight: 700; color: #1f2937; margin-bottom: 20px;">
+          <h2 style="text-align: center; font-size: 24px; font-weight: 700; color: #1f2937; margin-bottom: 20px;">
             Features Comparison
           </h2>
           
@@ -1673,12 +1676,12 @@
                     
         
                 <tr style="background-color: #323268;">
-                    <th class="custom-font-size" style="color: white; border-top-left-radius: 10px; background-color: #323268;">
+                    <th class="custom-font-size-header" style="color: white; border-top-left-radius: 10px; background-color: #323268;">
                         Features
                     </th>
-                    <th style="background-color: #323268; color: white;">Trust</th>
-                    <th style="background-color: #323268; color: white;">Pro</th>
-                    <th style="background-color: #323268; color: white; border-top-right-radius: 10px;">Enterprise</th>
+                    <th style="background-color: #323268; color: white; " class="custom-font-size-header">Trust</th>
+                    <th style="background-color: #323268; color: white;" class="custom-font-size-header">Pro</th>
+                    <th style="background-color: #323268; color: white; border-top-right-radius: 10px;" class="custom-font-size">Enterprise</th>
                 </tr>
                 
                 <tr style="background-color: #F3F4F6; color: black;">

@@ -44,7 +44,7 @@
   }
   
   .plan-price {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 800;
     color: #111827;
     margin-bottom: 4px;
@@ -103,13 +103,13 @@
     border: none;
     padding: 8px;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s ease;
     margin-top: auto;
     width: 100%;
-    height: 40px;
+    height: 43px;
   }
   
   .primary-button:hover {
