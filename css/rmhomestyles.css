@@ -1,0 +1,151 @@
+/* === Hero Section === */
+.rm-hero-section {
+    background-image: url('../img/homebackgroundimages/main.png');
+    background-size: cover;
+    padding: 100px 20px 200px;
+    text-align: center;
+    position: relative;
+    color: white;
+  }
+  
+  .rm-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .rm-hero-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .rm-hero-subtitle {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 2rem;
+  }
+  
+  /* === Buttons === */
+  .rm-hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .rm-btn {
+    height: 43px;
+    padding: 8px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .rm-btn-demo {
+    background-color: #fe6652;
+    color: white;
+  }
+  .rm-btn-demo:hover {
+    background-color: #fe6652;
+    color: #323268;
+  }
+  
+  .rm-btn-trial {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .rm-btn-trial:hover {
+    color: #fe6652;
+    /* background-color: white; */
+  }
+  
+  /* === Laptop Overlay Section === */
+  .rm-laptop-section {
+    position: relative;
+    margin-top: -150px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  
+  .rm-laptop-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  .rm-laptop-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .rm-screen-overlay {
+    position: absolute;
+    top: 13.3%;
+    left: 13.3%;
+    width: 73.5%;
+    height: 73.5%;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .rm-slideshow-track {
+    display: flex;
+    width: 400%;
+    animation: rm-slide 20s linear infinite;
+  }
+  
+  .rm-slideshow-track img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  
+  /* === Animation === */
+  @keyframes rm-slide {
+    0% {
+      transform: translateX(0%);
+    }
+    25% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-200%);
+    }
+    75% {
+      transform: translateX(-300%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  /* === Responsive === */
+  @media screen and (max-width: 768px) {
+    .rm-hero-title {
+      font-size: 1.75rem;
+    }
+  
+    .rm-hero-subtitle {
+      font-size: 1rem;
+    }
+  
+    .rm-laptop-section {
+      margin-top: -80px;
+    }
+  
+    .rm-btn {
+      padding: 10px 20px;
+      font-size: 0.95rem;
+    }
+  }
+  

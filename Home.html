@@ -55,6 +55,7 @@
 
   <!-- Head Libs -->
   <script src="vendor/modernizr/modernizr.min.js"></script>
+  <link rel="stylesheet" href="./css/rmhomestyles.css">
 
   <style>
     .btn-custom {
@@ -1259,7 +1260,7 @@
 
 .laptop-container {
     position: relative;
-    width: 900px;
+    width: 1100px;
   }
   
   .laptop-img {
@@ -1269,10 +1270,10 @@
   
   .screen-overlay {
     position: absolute;
-    top: 5.2%;
-    left: 11.7%;
-    width: 75.8%;
-    height: 75.3%;
+    top: 5.4%;
+    left: 11.8%;
+    width: 76.5%;
+    height: 78%;
     overflow: hidden;
     /* border-radius: 10px; */
   }
@@ -1287,8 +1288,8 @@
   .slideshow-track img {
     width: 100%;
     height: 100%;
-    image-rendering: auto;
-    /* image-rendering: smooth; */
+    /* image-rendering: auto; */
+    image-rendering: smooth;
     object-fit: cover;
     flex-shrink: 0;
   }
@@ -1392,120 +1393,25 @@
   </header>
 
   <div role="main" class="main">
-    <a href="schedule-demo.html" class="book-demo-btn"></a>
+    <a href="https://wa.me/61412566906" target="_blank" class="book-demo-btn"></a>
 
     <!-- section-1 -->
-    <section
-    class="main-section"
-    style="
-      height: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-image: url(img/homebackgroundimages/main.png);
-        background-size: cover;
-      padding: 1px 40px;"
-  >
-    <div
-      class="main-section-1"
-      style="
-        max-width: 1400px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      "
-    >
-      <!-- Left Side Content -->
-      <div
-        class="main-section-left myheadingClass"
-        style="width: 40%; padding-right: 30px; min-width: 320px"
-      >
-        <h1
-          class="heading text-white myheadingClass" 
-          style="font-size: 36px;  margin-bottom: 20px; font-weight: bold; "
-        >
-          Digitize Your Travel Infrastructure <br> With RouteMaestro
-        </h1>
-        <p
-          class="subheading text-white myheadingClass"
-          style="font-size: 18px; line-height: 1.8rem; color: #2f3268; margin-bottom: 20px"
-        >
-          An AI Powered Dynamic Travel Packaging & A Natural Workflow Booking Platform For Your Travel Business!
-        </p>
-        <div class="d-flex" style="gap:10px">
-        <a
-          href="schedule-demo.html"
-          class="d-none d-lg-block demo-button btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
-          style="width: 150px"
-        >
-          Schedule A Demo
-        </a>
-        <a
-  href="Pricing.html"
-  class="d-none d-lg-block  btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
-  style="width: 150px; background-color: transparent; color: white; border: 1px solid white !important; transition: all 0.3s ease; "
-  onmouseover=" this.style.color='#fe6652';"
-  onmouseout=" this.style.color='white';"
->
-  Start Free Trial
-</a>
-
-    </div>
-        <div
-          id="calendlyModal"
-          style="
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 87%;
-            height: 70%;
-            background: white;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            z-index: 1000;
-            padding: 10px;
-          "
-        >
-          <iframe id="calendlyIframe" width="100%" height="100%" style="border: 0"></iframe>
-          <button
-            id="closeCalendly"
-            data-link="https://calendly.com/arham-airnetmarketing1/30min"
-            style="
-              position: absolute;
-              top: 5px;
-              right: 10px;
-              background: red;
-              color: white;
-              border: none;
-              padding: 5px 10px;
-              cursor: pointer;
-            "
-          >
-            X
-          </button>
+   
+    <section class="rm-hero-section">
+        <div class="rm-hero-container">
+          <h1 class="rm-hero-title">Digitize Your Travel Infrastructure With RouteMaestro</h1>
+          <p class="rm-hero-subtitle">
+            An AI Powered Dynamic Travel Packaging & A Natural Workflow <br class="d-none d-md-block"/> Booking Platform For Your Travel Business!
+          </p>
+          <div class="rm-hero-buttons">
+            <a style="text-decoration: none;" href="schedule-demo.html" class="rm-btn rm-btn-demo">Schedule A Demo</a>
+            <a style="text-decoration: none;" href="Pricing.html" class="rm-btn rm-btn-trial">Start Free Trial</a>
+          </div>
         </div>
-      </div>
-  
-      <!-- Right Side Image -->
-     
-          <div
-            style="
-                width: 60%;
-              display:flex;
-              justify-content: center;
-              align-items: center;
-              margin: 0;
-              height: 80vh;
-            
-            "
-            class="custom-mobil-class"
-          >
-
-          <div class="laptop-container">
+      </section>
+      
+      <section class="rm-laptop-section">
+        <div class="laptop-container">
             <img src="./img/laptopimages/Device - Macbook Pro (1).webp" alt="Laptop" class="laptop-img">
         
             <div class="screen-overlay">
@@ -1515,43 +1421,13 @@
                 <img src="https://i.ibb.co/prxZWpVf/Package-1.webp" alt="Package-1" border="0">
                 <img src="https://i.ibb.co/kW9R9Dq/Dashboard.webp" alt="Dashboard" border="0">
                 <!-- cloned first slide -->
-
+        
               </div>
             </div>
           </div>
-          
+      </section>
+      
 
-            <!-- <video
-              id="myVideo"
-              src="Hero Section Laptop Video.webm"
-              controls
-              muted
-              playsinline
-              style="width: 100%; height: auto; max-height: 600px; transition: transform 0.3s ease"
-            ></video> -->
-          </div>
-       
-    
-  
-      <!-- Mobile Schedule Button -->
-      <div class="text-center d-flex d-lg-none" style="width: 100%; margin-top: 30px; gap: 4px">
-        <a
-          href="schedule-demo.html"
-          class="demo-button btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
-          style="width: 120px; white-space: nowrap"
-        >
-          Schedule A Demo
-        </a>
-        <a
-          href="Pricing.html"
-          class="demo-button btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
-          style="width: 120px; background: transparent; border: white 1px solid !important;"
-        >
-          Start Free Trial
-        </a>
-      </div>
-    </div>
-  </section>
   
 
     <!-- section-1-digitize-the-infrastructure -->
@@ -1627,7 +1503,7 @@
           <div class="col text-center">
             <h2 class="text-color-dark font-weight-medium text-8 mt-4-5 mb-4-5 appear-animation" style="letter-spacing: 0.1px;"
               data-appear-animation="fadeInRightShorterPlus" data-appear-animation-delay="100">
-              Leverage <strong> IP-driven Technology </strong> to Redefine Your Travel Business
+              Leverage <strong> IP-driven Technology </strong> to Maximize Your Travel Business Profits
             </h2>
             <p class="text-color-dark text-5 mb-4 appear-animation" data-appear-animation="fadeInRightShorterPlus"
               data-appear-animation-delay="100">
