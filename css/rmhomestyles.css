@@ -2,7 +2,7 @@
 .rm-hero-section {
     background-image: url('../img/homebackgroundimages/main.png');
     background-size: cover;
-    padding: 100px 20px 200px;
+    padding: 46px 20px 200px;
     text-align: center;
     position: relative;
     color: white;
@@ -56,8 +56,8 @@
   
   .rm-btn-trial {
     background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    color: #323268;
+    border: 1px solid #323268;
   }
   
   .rm-btn-trial:hover {
@@ -68,7 +68,7 @@
   /* === Laptop Overlay Section === */
   .rm-laptop-section {
     position: relative;
-    margin-top: -150px;
+    margin-top: -210px;
     z-index: 2;
     display: flex;
     justify-content: center;
