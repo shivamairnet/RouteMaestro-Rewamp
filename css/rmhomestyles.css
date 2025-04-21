@@ -1,151 +1,144 @@
-/* === Hero Section === */
-.rm-hero-section {
+.rm-hero {
     background-image: url('../img/homebackgroundimages/main.png');
     background-size: cover;
-    padding: 46px 20px 200px;
+    background-position: center;
+    padding: 3rem 1.5rem;
     text-align: center;
-    position: relative;
-    color: white;
   }
   
   .rm-hero-container {
-    max-width: 1200px;
+    max-width: 1140px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  @media (max-width: 1280px) {
+    .rm-hero-video {
+        padding-right: 20px;
+    }
   }
   
-  .rm-hero-title {
-    font-size: 36px;
+  @media (min-width: 768px) {
+    .rm-hero-container {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+  
+  .rm-hero-content {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .rm-hero h1 {
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
     color: white;
   }
   
-  .rm-hero-subtitle {
-    font-size: 18px;
-    color: white;
+  .rm-hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
     margin-bottom: 2rem;
-  }
-  
-  /* === Buttons === */
-  .rm-hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-  
-  .rm-btn {
-    height: 43px;
-    padding: 8px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .rm-btn-demo {
-    background-color: #fe6652;
     color: white;
   }
-  .rm-btn-demo:hover {
-    background-color: #fe6652;
-    color: #323268;
-  }
   
-  .rm-btn-trial {
-    background-color: transparent;
-    color: #323268;
-    border: 1px solid #323268;
-  }
+ 
   
-  .rm-btn-trial:hover {
-    color: #fe6652;
-    /* background-color: white; */
-  }
+ 
   
-  /* === Laptop Overlay Section === */
-  .rm-laptop-section {
-    position: relative;
-    margin-top: -210px;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    padding: 0 20px;
-  }
-  
-  .rm-laptop-container {
-    position: relative;
-    width: 100%;
+  .rm-hero-video {
+    padding-right: 100px;
+    flex: 1;
     max-width: 900px;
+    width: 100%;
+    border-radius: 1rem;    
+    overflow: hidden;
+
+  }
+
+  @media (max-width: 1280px) {
+    .rm-hero-content{
+        padding-left: 20px;
+    }
+    .rm-hero-video {
+        padding-right: 80px;
+    }
+  }
+  @media (max-width: 768px) {
+    .rm-hero-content{
+        padding-left:0px;
+    }
+    .rm-hero-video {
+        padding-right: 0px;
+    }
   }
   
-  .rm-laptop-img {
+  .rm-hero-video video {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 1rem;
+    /* object-fit: cover; */
   }
   
-  .rm-screen-overlay {
-    position: absolute;
-    top: 13.3%;
-    left: 13.3%;
-    width: 73.5%;
-    height: 73.5%;
-    overflow: hidden;
-    border-radius: 8px;
+
+
+  .rm-cta-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .rm-cta-group {
+   justify-content: center;
   }
-  
-  .rm-slideshow-track {
-    display: flex;
-    width: 400%;
-    animation: rm-slide 20s linear infinite;
+}
+
+.rm-btn {
+  padding: 0.2rem 1.5rem;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  height: 42px;
+}
+
+@media (max-width: 325px) {
+  .rm-btn {
+    
+    padding: 0.2rem ;
+   
   }
-  
-  .rm-slideshow-track img {
-    width: 100%;
-    height: auto;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-  
-  /* === Animation === */
-  @keyframes rm-slide {
-    0% {
-      transform: translateX(0%);
-    }
-    25% {
-      transform: translateX(-100%);
-    }
-    50% {
-      transform: translateX(-200%);
-    }
-    75% {
-      transform: translateX(-300%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-  
-  /* === Responsive === */
-  @media screen and (max-width: 768px) {
-    .rm-hero-title {
-      font-size: 1.75rem;
-    }
-  
-    .rm-hero-subtitle {
-      font-size: 1rem;
-    }
-  
-    .rm-laptop-section {
-      margin-top: -80px;
-    }
-  
-    .rm-btn {
-      padding: 10px 20px;
-      font-size: 0.95rem;
-    }
-  }
-  
+}
+
+/* Demo Button */
+.rm-btn-demo {
+  background-color: #fe6652;
+  color: white;
+  border: none;
+}
+
+.rm-btn-demo:hover {
+  background-color: #e65300;
+}
+
+/* Trial Button */
+.rm-btn-trial {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.rm-btn-trial:hover {
+  color: #fe6652;
+}
