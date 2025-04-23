@@ -1424,7 +1424,7 @@
           <!-- Right: Video -->
           <div class="rm-hero-video">
             <video
-              src="https://res.cloudinary.com/dnuxej9zh/video/upload/RM_Herso_Section_Video_pw9fzo.mp4"
+              src="video/Final Video Hero Section.mp4"
               autoplay
               muted
               loop
@@ -2279,37 +2279,105 @@
 
 
     <!-- section-7-cta-section -->
-    <section class="d-none d-md-block" style="
-           background-color: #07072c;
-           height: 600px;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           padding: 20px;
-         ">
-      <div style="
-             display: flex;
-      
-             width: 100%;
-             align-items: center;
-             justify-content: space-between;
-             background: url('img/RM Home Page Icons/RouteMaestrobg.webp') no-repeat center center/cover;
-             height: 500px;
-             margin: auto;
-           ">
-        <div style="flex: 1; display: flex; justify-content: center; align-items: center">
-          <img src="img/RM Home Page Icons/RouteMaestrofigurecta.png" alt="Centered Image"
-            style="max-width: 80%; height: auto" />
-        </div>
-        <div style="flex: 1.5; color: white; text-align: center; padding: 20px">
-          <h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff">See RouteMaestro In Action</h2>
-          <a href="schedule-demo.html"
-            class="btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2" style="width: 150px">
-            Schedule A Demo
+    <section
+    id="demoSection"
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    "
+  >
+    <div
+      id="demoContent"
+      style="
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        height: 100%;
+        background: url('img/footerimg/Frame 1618871210 (4) (1).png') no-repeat left center;
+        background-size: cover;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        padding: 20px;
+        box-sizing: border-box;
+      "
+    >
+      <!-- Left Background Area -->
+      <div
+        style="
+          flex: 1;
+          min-height: 300px;
+        "
+      ></div>
+  
+      <!-- Right Side CTA -->
+      <div
+        style="
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          color: white;
+          max-width: 500px;
+          width: 100%;
+          box-sizing: border-box;
+        "
+      >
+        <h2
+          style="
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #fff;
+            text-align: right;
+          "
+        >
+          See RouteMaestro In Action
+        </h2>
+        <a
+          href="schedule-demo.html"
+          class="btnnew btn border-0 font-weight-bold text-5-6 btn-px-5 py-3 mt-2"
+          style="
+            width: 150px;
+            display: inline-block;
+            text-align: center;
+          "
+        >
+          Schedule A Demo
         </a>
-        </div>
       </div>
-    </section>
+    </div>
+  
+    <script>
+      function updateSectionHeight() {
+        const section = document.getElementById('demoSection');
+        const content = document.getElementById('demoContent');
+        const screenHeight = window.innerHeight;
+  
+        section.style.height = screenHeight > 1000 ? '850px' : screenHeight + 'px';
+  
+        if (window.innerWidth < 768) {
+          section.style.display="none"
+        } else {
+          content.style.flexDirection = 'row';
+          content.style.alignItems = 'center';
+          content.style.backgroundPosition = 'left center';
+        }
+      }
+  
+      window.addEventListener('load', updateSectionHeight);
+      window.addEventListener('resize', updateSectionHeight);
+    </script>
+  </section>
 
     <!-- section-7-mobile -->
     <section class="d-md-none d-block"
