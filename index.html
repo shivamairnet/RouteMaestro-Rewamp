@@ -2301,7 +2301,7 @@
         width: 100%;
         max-width: 1200px;
         height: 100%;
-        background: url('img/footerimg/Frame 1618871210 (4) (1).png') no-repeat left center;
+        background: url('img/footerimg/Frame\ 1618871210\ \(6\).png') no-repeat left center;
         background-size: cover;
         border-radius: 20px;
         overflow: hidden;
@@ -2362,8 +2362,9 @@
         const section = document.getElementById('demoSection');
         const content = document.getElementById('demoContent');
         const screenHeight = window.innerHeight;
+        const optionalHeight = 500; // Optional height for smaller screens
   
-        section.style.height = screenHeight > 1000 ? '850px' : screenHeight + 'px';
+        section.style.height = screenHeight > 1000 ? '500px' : optionalHeight + 'px';
   
         if (window.innerWidth < 768) {
           section.style.display="none"
@@ -2378,7 +2379,6 @@
       window.addEventListener('resize', updateSectionHeight);
     </script>
   </section>
-
     <!-- section-7-mobile -->
     <section class="d-md-none d-block"
       style="background-color: #07072c; height: 500px; align-items: center; justify-content: center; padding: 20px">
